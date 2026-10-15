@@ -1,0 +1,58 @@
+{
+ "controles": [
+  {
+   "id": "OHADA-BILAN-EQUILIBRE",
+   "expression": "bilan.actif.total == bilan.passif.total",
+   "gravite": "bloquant",
+   "message": {
+    "fr": "Le total de l'actif est égal au total du passif.",
+    "es": "El total del activo es igual al total del pasivo."
+   }
+  },
+  {
+   "id": "OHADA-RESULTAT",
+   "expression": "compte_resultat.XI == bilan.passif.CJ",
+   "gravite": "bloquant",
+   "message": {
+    "fr": "Le résultat net du compte de résultat (XI) est égal au résultat du bilan (CJ).",
+    "es": "El resultado neto de la cuenta de resultados (XI) es igual al resultado del balance (CJ)."
+   }
+  },
+  {
+   "id": "OHADA-NOTE-POSTE",
+   "expression": "pour chaque note chiffrée : total(note) == poste(note)",
+   "gravite": "bloquant",
+   "message": {
+    "fr": "Chaque note chiffrée est égale au poste des états qu'elle détaille.",
+    "es": "Cada nota cifrada es igual a la partida de los estados que detalla."
+   }
+  },
+  {
+   "id": "OHADA-POSTE-LIGNE",
+   "expression": "pour chaque poste chiffré : une ligne existe dans le formulaire",
+   "gravite": "bloquant",
+   "message": {
+    "fr": "Chaque poste chiffré a sa ligne dans le formulaire.",
+    "es": "Cada partida cifrada tiene su línea en el formulario."
+   }
+  },
+  {
+   "id": "OHADA-TFT",
+   "expression": "tft.variation_tresorerie == bilan.tresorerie_N - bilan.tresorerie_N1",
+   "gravite": "bloquant",
+   "message": {
+    "fr": "La variation de trésorerie du TFT est égale à celle du bilan.",
+    "es": "La variación de tesorería del TFE es igual a la del balance."
+   }
+  },
+  {
+   "id": "OHADA-BALANCE",
+   "expression": "balance.debits == balance.credits",
+   "gravite": "bloquant",
+   "message": {
+    "fr": "La balance est équilibrée (soldes et mouvements).",
+    "es": "El balance de comprobación está cuadrado."
+   }
+  }
+ ]
+}

@@ -1,0 +1,2710 @@
+{
+ "feuilles": {
+  "note 1": {
+   "feuille": "Note 1 ",
+   "colonne_n": 3,
+   "roles": {
+    "3": "brut"
+   },
+   "lignes": {}
+  },
+  "note 3a": {
+   "feuille": "NOTE 3A",
+   "colonne_n": 4,
+   "roles": {
+    "4": "brut",
+    "10": "brut"
+   },
+   "lignes": {
+    "28": {
+     "expr": "AP 251",
+     "libelle": "Immobilisations incorporelles",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "29": {
+     "expr": "AP 252",
+     "libelle": "Immobilisation corporelles",
+     "origine": "rapprochement",
+     "score": 0.98
+    }
+   }
+  },
+  "note 3b": {
+   "feuille": "NOTE 3B",
+   "colonne_n": 5,
+   "roles": {
+    "5": "brut",
+    "14": "brut"
+   },
+   "lignes": {}
+  },
+  "note 3d": {
+   "feuille": "NOTE 3D ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "brut",
+    "3": "amort"
+   },
+   "lignes": {}
+  },
+  "note 4": {
+   "feuille": "NOTE 4 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct",
+    "5": "ech1",
+    "6": "ech2",
+    "7": "ech3"
+   },
+   "lignes": {
+    "22": {
+     "expr": "AS 297",
+     "libelle": "Dépréciations autres immobilisations",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "AR 296",
+     "libelle": "Dépréciations titres de participation",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "AS 276",
+     "libelle": "Intérêts courus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "AS 275",
+     "libelle": "Dépôts et cautionnements",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "AS 274",
+     "libelle": "Titres immobilisés",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "AS 273",
+     "libelle": "Créances sur l'Etat",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "AS 271",
+     "libelle": "Prêts et créances",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "AR 26,AS 277",
+     "libelle": "Titres de participation",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "AS 272",
+     "libelle": "Prêts au personnel",
+     "origine": "rapprochement",
+     "score": 0.97
+    }
+   }
+  },
+  "note 5": {
+   "feuille": "NOTE 5 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {}
+  },
+  "note 6": {
+   "feuille": "NOTE 6 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "21": {
+     "expr": "BB 39",
+     "libelle": "Dépréciations des stocks",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "BB 38",
+     "libelle": "Stocks en cours de route, en consignation ou en dépôt",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "BB 37",
+     "libelle": "Produits intermédiaires",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "BB 36",
+     "libelle": "Produits finis",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "BB 35",
+     "libelle": "Services en cours",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "BB 34",
+     "libelle": "Produits en cours",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "BB 33",
+     "libelle": "Autres approvisionnements",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "BB 32",
+     "libelle": "Matières premières et fournitures liées",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "BB 31",
+     "libelle": "Marchandises",
+     "origine": "rapprochement",
+     "score": 1.0
+    }
+   }
+  },
+  "note 7": {
+   "feuille": "NOTE 7 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct",
+    "5": "ech1",
+    "6": "ech2",
+    "7": "ech3"
+   },
+   "lignes": {
+    "30": {
+     "expr": "DI 4194+4198",
+     "libelle": "Autres clients créditeurs",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "29": {
+     "expr": "DI 4192",
+     "libelle": "Clients, avances reçues groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "28": {
+     "expr": "DI 4191",
+     "libelle": "Clients, avances reçues hors groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "24": {
+     "expr": "BI 491",
+     "libelle": "Dépréciations des comptes clients",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "BI 418",
+     "libelle": "Clients produits à recevoir",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "BI 416",
+     "libelle": "Créances litigieuses ou douteuses",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "BI 415",
+     "libelle": "Clients effets escomptés et non échus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "BI 414",
+     "libelle": "Créances sur cession d'immobilisations",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "BI 4112+4122",
+     "libelle": "Clients et effets à recevoir Groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "BI 412+4116-4122",
+     "libelle": "Clients et effets à recevoir avec réserves\n de propriété",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "BI 411-4112-4116+413",
+     "libelle": "Clients (hors réserves de propriété Groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    }
+   }
+  },
+  "note 8": {
+   "feuille": "NOTE 8 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct",
+    "5": "ech1",
+    "7": "ech3"
+   },
+   "lignes": {
+    "21": {
+     "expr": "BJ 492 à 497",
+     "libelle": "Dépréciations des autres créances",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "BJ 4746, 1861",
+     "libelle": "Comptes de liaison charges et produits",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "BJ 1851",
+     "libelle": "Comptes permanents non bloqués des établissements et des succursales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "BJ 4711,4717,4718,4721,4761,4719",
+     "libelle": "Autres débiteurs divers",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "BJ 4751",
+     "libelle": "Compte transitoire ajustement spécial lié à la révision du SYSCOHADA",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "BJ 461,462,463,466,467",
+     "libelle": "Apporteurs, associés et groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "BJ 4511,4521,458",
+     "libelle": "Organismes internationaux",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "BJ 4449,445,4487,449",
+     "libelle": "Etat et Collectivités publiques",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "BJ 4387",
+     "libelle": "Organismes sociaux",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "BJ 421,4287",
+     "libelle": "Personnel",
+     "origine": "rapprochement",
+     "score": 1.0
+    }
+   }
+  },
+  "note 9": {
+   "feuille": "NOTE 9 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {}
+  },
+  "note 10": {
+   "feuille": "NOTE 10 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {}
+  },
+  "note 11": {
+   "feuille": "NOTE 11 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "22": {
+     "expr": "BS 592,593,594",
+     "libelle": "Dépréciations",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "BS 551,552,553,554,558",
+     "libelle": "Caisse électronique mobile",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "BS 571,572,573",
+     "libelle": "Caisse",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "BS 536",
+     "libelle": "Etablissement financiers intérêts courus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "BS 532,533,538",
+     "libelle": "Autres établissement financiers",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "BS 531",
+     "libelle": "Chèques postaux",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "BS 5267",
+     "libelle": "Banques intérêts courus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "BS 523,524",
+     "libelle": "Autres Banques",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "BS 525",
+     "libelle": "Banques, dépôt à terme",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "BS 522",
+     "libelle": "Banques autres états région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "BS 521",
+     "libelle": "Banques locales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "BS 581,582,585,588",
+     "libelle": "Régies d’avances et virements accréditifs",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "17": {
+     "expr": "BS 541 à 545",
+     "libelle": "Instrument de trésorerie",
+     "origine": "rapprochement",
+     "score": 0.98
+    }
+   }
+  },
+  "note 14": {
+   "feuille": "NOTE 14   ",
+   "colonne_n": 5,
+   "roles": {
+    "5": "n",
+    "6": "n1",
+    "7": "var_abs"
+   },
+   "lignes": {
+    "25": {
+     "expr": "CH 121,129",
+     "libelle": "Report à nouveau",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "CG 118",
+     "libelle": "Réserves libres",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "CF 1131",
+     "libelle": "Réserves de plus-values nettes à long terme",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "CF 111",
+     "libelle": "Réserves légales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "CD 1058",
+     "libelle": "Autres primes",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "CD 1054",
+     "libelle": "Prime de conversion",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "CD 1053",
+     "libelle": "Prime de fusion",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "CD 1051",
+     "libelle": "Prime d'apport",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "CF 1132",
+     "libelle": "Réserves d'attribution gratuite d'actions au personnel salarié et aux dirigeants",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "20": {
+     "expr": "CF 1133, 1134,1138",
+     "libelle": "Autres réserves rglémentées",
+     "origine": "rapprochement",
+     "score": 0.98
+    },
+    "17": {
+     "expr": "CF 112",
+     "libelle": "Réserves statuaires",
+     "origine": "rapprochement",
+     "score": 0.97
+    },
+    "10": {
+     "expr": "CD 1052",
+     "libelle": "Prime d'émission",
+     "origine": "rapprochement",
+     "score": 0.76
+    }
+   }
+  },
+  "note 15a": {
+   "feuille": "NOTE 15A  ",
+   "colonne_n": 3,
+   "roles": {
+    "3": "n",
+    "4": "n1",
+    "5": "var_abs",
+    "6": "var_pct"
+   },
+   "lignes": {}
+  },
+  "note 15b": {
+   "feuille": "NOTE 15B ",
+   "colonne_n": 3,
+   "roles": {
+    "3": "n",
+    "4": "n1",
+    "5": "var_abs",
+    "6": "var_pct"
+   },
+   "lignes": {}
+  },
+  "note 16a": {
+   "feuille": "NOTE 16A ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct",
+    "5": "var_abs",
+    "6": "ech1",
+    "7": "ech2",
+    "8": "ech3"
+   },
+   "lignes": {
+    "40": {
+     "expr": "DC 1988",
+     "libelle": "Autres provisions",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "39": {
+     "expr": "DC 1985",
+     "libelle": "Provisions de droits à déduction",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "38": {
+     "expr": "DC 1984",
+     "libelle": "Provisions pour démantèlement et remise en état",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "37": {
+     "expr": "DC 1983",
+     "libelle": "Provisions de propre assureur",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "36": {
+     "expr": "DC 1981",
+     "libelle": "Provisions pour amendes et pénalités",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "35": {
+     "expr": "DC 197",
+     "libelle": "Provisions pour restructuration",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "33": {
+     "expr": "DC 1961",
+     "libelle": "Provisions pour pensions et obligations assimilées",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "32": {
+     "expr": "DC 195",
+     "libelle": "Provisions pour impôts",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "31": {
+     "expr": "DC 194",
+     "libelle": "Provisions pour pertes de change",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "30": {
+     "expr": "DC 193",
+     "libelle": "Provisions  pour pertes sur marchés à achèvement futur",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "28": {
+     "expr": "DC 191",
+     "libelle": "Provisions pour litiges",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "25": {
+     "expr": "DB 178",
+     "libelle": "Autres dettes de location acquisition",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "24": {
+     "expr": "DB 176",
+     "libelle": "Intérêts courus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "DB 174",
+     "libelle": "Location vente",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "22": {
+     "expr": "DB 173",
+     "libelle": "Crédit bail mobilier",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "DB 172",
+     "libelle": "Crédit bail immobilier",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "DA 184",
+     "libelle": "Comptes permanents bloqués des établissements et succursales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "DA 181 à 183",
+     "libelle": "Dettes liées à des participations",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "DA 168",
+     "libelle": "Autres emprunts et dettes",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "DA 166",
+     "libelle": "Interêts courus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "DA 164",
+     "libelle": "Avances reçues et comptes courants bloqués",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "DA 163",
+     "libelle": "Avances reçues de l'Etat",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "DA 162",
+     "libelle": "Emprunts et dettes auprès des établissements de crédit",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "13": {
+     "expr": "DA 165",
+     "libelle": "Dépôts et cautionnement reçus",
+     "origine": "rapprochement",
+     "score": 0.98
+    },
+    "29": {
+     "expr": "DC 192",
+     "libelle": "Provisions pour garantie donnée aux clients",
+     "origine": "rapprochement",
+     "score": 0.98
+    },
+    "34": {
+     "expr": "DC 1962",
+     "libelle": "Actif du régime du retraite",
+     "origine": "rapprochement",
+     "score": 0.96
+    },
+    "15": {
+     "expr": "DA 167",
+     "libelle": "Avances associées de conditions particulières",
+     "origine": "rapprochement",
+     "score": 0.96
+    },
+    "9": {
+     "expr": "DA 161",
+     "libelle": "Emprunts obligatoires",
+     "origine": "rapprochement",
+     "score": 0.95
+    }
+   }
+  },
+  "note 17": {
+   "feuille": "NOTE 17  ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct",
+    "6": "ech2",
+    "7": "ech3"
+   },
+   "lignes": {
+    "19": {
+     "expr": "BH 4098",
+     "libelle": "Autres fournisseurs débiteurs",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "BH 4092",
+     "libelle": "Fournisseurs, avances et acomptes (groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "BH 4091,4093,4094",
+     "libelle": "Fournisseurs, avances et acomptes (hors groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "DJ 4082",
+     "libelle": "Fournisseurs factures non parvenues (groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "DJ 4081,4083,4086",
+     "libelle": "Fournisseurs factures non parvenues (hors groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "DJ 4021,4023,4046,4047",
+     "libelle": "Fournisseurs effets à payer (hors groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "DJ 4011,4013,4016,4017,4041,4042",
+     "libelle": "Fournisseurs dettes en compte (hors groupe)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "DJ 4012,4022",
+     "libelle": "Fournisseur, dettes et effets à payer groupe",
+     "origine": "rapprochement",
+     "score": 0.99
+    }
+   }
+  },
+  "note 19": {
+   "feuille": "NOTE 19 ",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_abs",
+    "5": "var_pct",
+    "6": "ech1",
+    "7": "ech2",
+    "8": "ech3"
+   },
+   "lignes": {
+    "33": {
+     "expr": "DM 499",
+     "libelle": "Provisions pour risques à court terme (voir note 28)",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "28": {
+     "expr": "DM 1881",
+     "libelle": "Comptes de liaison des sociétés en participation",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "27": {
+     "expr": "DM 187",
+     "libelle": "Comptes de liaison charges et produits",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "26": {
+     "expr": "DM 1852",
+     "libelle": "Comptes permanents non bloqués des établissements et des succursales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "DM 4747,477",
+     "libelle": "Autres créditeurs divers",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "22": {
+     "expr": "DM 4752",
+     "libelle": "Compte transitoire ajustement spécial lié à la révision du SYSCOHADA",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "DM 4716",
+     "libelle": "Compte du factor",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "DM 4715",
+     "libelle": "Rémunérations d'administrateurs",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "DM 4713",
+     "libelle": "Obligataires",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "DM 4512,4522",
+     "libelle": "Organismes internationaux",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "DM 4726",
+     "libelle": "Versements restants à effectuer sur titres de placement non libérés",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "12": {
+     "expr": "DM 465",
+     "libelle": "Associés dividentes à payer",
+     "origine": "rapprochement",
+     "score": 0.96
+    },
+    "17": {
+     "expr": "DM 4712",
+     "libelle": "Crédits divers",
+     "origine": "rapprochement",
+     "score": 0.9
+    }
+   }
+  },
+  "note 20": {
+   "feuille": "NOTE 20 ",
+   "colonne_n": 5,
+   "roles": {
+    "5": "n",
+    "6": "n1",
+    "7": "var_pct"
+   },
+   "lignes": {
+    "18": {
+     "expr": "DR 561",
+     "libelle": "Crédit de trésorerie",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "DR 5261,566",
+     "libelle": "Banques intérêts courus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "DR 523,524",
+     "libelle": "Autres Banques",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "DR 521",
+     "libelle": "Banques locales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "DQ 564",
+     "libelle": "Escomptes de crédit de campagne",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "DQ 565",
+     "libelle": "Escomptes de crédits ordinaires",
+     "origine": "rapprochement",
+     "score": 0.98
+    },
+    "15": {
+     "expr": "DE 522",
+     "libelle": "Banques autres états régions",
+     "origine": "rapprochement",
+     "score": 0.98
+    }
+   }
+  },
+  "note 23": {
+   "feuille": "NOTE 23",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "13": {
+     "expr": "RG 618",
+     "libelle": "Autres transports",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "RG 616",
+     "libelle": "Transports de plis",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RG 614",
+     "libelle": "Transport du personnel",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "RG 613",
+     "libelle": "Transports pour le compte de tiers",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "RG 612",
+     "libelle": "Transports sur ventes",
+     "origine": "rapprochement",
+     "score": 1.0
+    }
+   }
+  },
+  "note 24": {
+   "feuille": "NOTE 24",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "21": {
+     "expr": "RH 638",
+     "libelle": "Autres charges externes",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "RH 635",
+     "libelle": "Cotisations",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "RH 634",
+     "libelle": "Redevances pour brevets, licences, logiciels, concession et droits similaires",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "RH 633",
+     "libelle": "Frais de formation du personnel",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "RH 631",
+     "libelle": "Frais bancaires",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "RH 628",
+     "libelle": "Frais de télécommunications",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "RH 627",
+     "libelle": "Publicité, publications, relations publiques",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "RH 626",
+     "libelle": "Etudes, recherches et documentation",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RH 624",
+     "libelle": "Entretien, réparations et maintenance",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "RH 623",
+     "libelle": "Redevances de location acquisition",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "RH 622",
+     "libelle": "Locations et charges locatives",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "8": {
+     "expr": "RH 621",
+     "libelle": "Sous-traitance générale",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "RH 632",
+     "libelle": "Rémunérations d’intermédiaires et de conseils",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "12": {
+     "expr": "RH 625",
+     "libelle": "Primes d’assurance",
+     "origine": "rapprochement",
+     "score": 0.97
+    }
+   }
+  },
+  "note 25": {
+   "feuille": "NOTE 25",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "13": {
+     "expr": "RI 648",
+     "libelle": "Autres impôts et taxes",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "RI 647",
+     "libelle": "Pénalités et amendes fiscales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "RI 645",
+     "libelle": "Impôts et taxes indirects",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "RI 641",
+     "libelle": "Impôts et taxes directs",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RI 646",
+     "libelle": "Droits d’enregistrement",
+     "origine": "rapprochement",
+     "score": 0.98
+    }
+   }
+  },
+  "note 26": {
+   "feuille": "NOTE 26",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "16": {
+     "expr": "RJ 656,657,6583,6588",
+     "libelle": "Autres charges diverses",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "RJ 6582",
+     "libelle": "Dons et mécénat",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "RJ 652",
+     "libelle": "Quote-part de résultat sur opérations faites en commun",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RJ 6515",
+     "libelle": "Pertes sur autres débiteurs",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "RJ 6511",
+     "libelle": "Pertes sur créances clients",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "RJ 6581",
+     "libelle": "Indemnités de fonction et autres rémunérations d’administrateurs",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "13": {
+     "expr": "RJ 654",
+     "libelle": "Valeur comptable des cessions courantes d’immobilisations",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "17": {
+     "expr": "RJ 659",
+     "libelle": "Charges pour provisions pour risques à court terme d’exploitation (voir note 28)",
+     "origine": "rapprochement",
+     "score": 0.91
+    }
+   }
+  },
+  "note 29": {
+   "feuille": "NOTE 29",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "26": {
+     "expr": "TK 777",
+     "libelle": "Gains sur cessions de titres de placement",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "24": {
+     "expr": "TK 774",
+     "libelle": "Revenus de placement",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "TK 773",
+     "libelle": "Escomptes obtenus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "22": {
+     "expr": "TK 772",
+     "libelle": "Revenus de participations",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "TK 771",
+     "libelle": "Intérêts de prêts et créances diverses",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "RM 678",
+     "libelle": "Pertes sur risques financiers",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "RM 6771",
+     "libelle": "Pertes sur cessions de titres de placement",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "RM 676",
+     "libelle": "Pertes de change",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "RM 675",
+     "libelle": "Escomptes des effets de commerce",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "RM 674",
+     "libelle": "Autres interêts",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RM 673",
+     "libelle": "Escomptes accordés",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "TK 775",
+     "libelle": "Intérêts dans loyers de locations acquisition",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "RM 671",
+     "libelle": "Intérêts des emprunts",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "28": {
+     "expr": "TK 779",
+     "libelle": "Reprises de charges pour dépréciation et provision à \ncourt terme à caractère financier (voir note 28)",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "18": {
+     "expr": "RM 679",
+     "libelle": "Charges pour dépréciation et provisions à court terme à \ncaractères financier (voir note 28)",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "16": {
+     "expr": "RM 6772",
+     "libelle": "Malis provenant d'attribution gratuite d'actions au\npersonnel salarié et aux dirigeants",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "27": {
+     "expr": "TK 778",
+     "libelle": "Gains risques financiers",
+     "origine": "rapprochement",
+     "score": 0.92
+    },
+    "25": {
+     "expr": "TK 776",
+     "libelle": "Gains de change",
+     "origine": "rapprochement",
+     "score": 0.73
+    }
+   }
+  },
+  "note 30": {
+   "feuille": "NOTE 30",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "27": {
+     "expr": "TO 849",
+     "libelle": "Reprises hors activités ordinaires",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "24": {
+     "expr": "TO 846",
+     "libelle": "Abandons de créances obtenus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "TO 845",
+     "libelle": "Dons et libéralités obtenus",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "TO 841",
+     "libelle": "Produits HAO constatés (1) à détailler",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "RQ 87",
+     "libelle": "Participation des travailleurs",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "RP 85",
+     "libelle": "Dotations hors activités ordinaires",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "RP 839",
+     "libelle": "Charges provisionnées HAO",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "RP 8361",
+     "libelle": "Abandons de créances consentis",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "RP 8351",
+     "libelle": "Dons et libéralités accordés",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RP 8341",
+     "libelle": "Pertes sur créances HAO",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "8": {
+     "expr": "RP 8311",
+     "libelle": "Charges HAO constatées (1) à détailler",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "26": {
+     "expr": "TO 86",
+     "libelle": "Reprise des charges pour dépréciations et provisions à court terme HAO",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "25": {
+     "expr": "TO 848",
+     "libelle": "Transfert de charges HAO",
+     "origine": "rapprochement",
+     "score": 0.98
+    },
+    "17": {
+     "expr": "RP 88",
+     "libelle": "subventions d’équilibre",
+     "origine": "rapprochement",
+     "score": 0.98
+    }
+   }
+  },
+  "note 31": {
+   "feuille": "NOTE 31",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "hist",
+    "5": "hist",
+    "6": "hist"
+   },
+   "lignes": {
+    "30": {
+     "expr": "RK 661,662,663,6661",
+     "libelle": "Masse salariale distribuée au cours de l’exercice (7)",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "31": {
+     "expr": "RK 664,665,6662,668",
+     "libelle": "Avantages sociaux versés au cours  de l’exercice (8) (sécurité sociale, œuvre sociales)",
+     "origine": "rapprochement",
+     "score": 0.99
+    },
+    "32": {
+     "expr": "RK 667",
+     "libelle": "Personnel extérieur facturé à l’entité (9)",
+     "origine": "rapprochement",
+     "score": 0.99
+    }
+   }
+  },
+  "note 34": {
+   "feuille": "NOTE 34",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {}
+  },
+  "note 16b": {
+   "feuille": "NOTE 16B",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n",
+    "4": "n1",
+    "5": "n1"
+   },
+   "lignes": {}
+  },
+  "note 16bbis": {
+   "feuille": "NOTE 16B BIS",
+   "colonne_n": 1,
+   "roles": {
+    "1": "net_n",
+    "2": "net_n1",
+    "3": "net_n",
+    "4": "net_n1",
+    "5": "net_n"
+   },
+   "lignes": {}
+  },
+  "note 16c": {
+   "feuille": "NOTE 16C",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1"
+   },
+   "lignes": {}
+  },
+  "note 18": {
+   "feuille": "NOTE 18",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_abs",
+    "5": "var_pct",
+    "7": "ech2",
+    "8": "ech3"
+   },
+   "lignes": {
+    "24": {
+     "expr": "DK 446,4486,4499",
+     "libelle": "Autres dettes Etat",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "DK 447",
+     "libelle": "Etat, impôts retenus à la source",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "22": {
+     "expr": "DK 443,4441",
+     "libelle": "Etat, TVA",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "DK 442",
+     "libelle": "Etat, impôts et taxes",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "DK 441",
+     "libelle": "Etat, impôts sur les bénéfices",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "DK 433,438-4387",
+     "libelle": "Autres organismes sociaux",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "DK 432",
+     "libelle": "Caisse de retraite",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "DK 423 à 427,4281,4286",
+     "libelle": "Autres personnel",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "DK 422",
+     "libelle": "Personnel rémunérations dues",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "DK 431",
+     "libelle": "Caisse de sécurisé sociale",
+     "origine": "rapprochement",
+     "score": 0.96
+    }
+   }
+  },
+  "note 27a": {
+   "feuille": "NOTE 27A",
+   "colonne_n": 2,
+   "roles": {
+    "2": "n",
+    "3": "n1",
+    "4": "var_pct"
+   },
+   "lignes": {
+    "15": {
+     "expr": "RK 668",
+     "libelle": "Autres charges sociales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "RK 667",
+     "libelle": "Rémunération transférée de personnel extérieur",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "RK 664",
+     "libelle": "Charges sociales",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RK 663",
+     "libelle": "Indemnités forfaitaires versées au personnel",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "RK 661,662",
+     "libelle": "Rémunérations directes versées au personnel",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "13": {
+     "expr": "RK 666",
+     "libelle": "Rémunérations et charges sociales de l’exploitant individuel",
+     "origine": "rapprochement",
+     "score": 0.99
+    }
+   }
+  },
+  "note 21": {
+   "feuille": "NOTE 21",
+   "colonne_n": 5,
+   "roles": {
+    "5": "n",
+    "6": "n1",
+    "7": "var_pct"
+   },
+   "lignes": {
+    "34": {
+     "expr": "TH 751 à 759",
+     "libelle": "Autres produits",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "33": {
+     "expr": "TG 711 à 718",
+     "libelle": "Subventions d'exploitation",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "32": {
+     "expr": "TF 721 à 726",
+     "libelle": "Production immobilisée",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "24": {
+     "expr": "TC 7055,7065",
+     "libelle": "Ventes sur internet",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "TC 7053,7054,7063,7064",
+     "libelle": "Ventes groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "22": {
+     "expr": "TC 7052,7062",
+     "libelle": "Ventes hors région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "TC 7051,7061",
+     "libelle": "Ventes dans la région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "18": {
+     "expr": "TB 7025,7035,7045",
+     "libelle": "Ventes sur internet",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "17": {
+     "expr": "TB 7023,7024,7033,7034,7043,7044",
+     "libelle": "Ventes groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "16": {
+     "expr": "TB 7022,7032,7042",
+     "libelle": "Ventes hors région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "15": {
+     "expr": "TB 7021,7031,7041",
+     "libelle": "Ventes dans la région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "12": {
+     "expr": "TA 7015",
+     "libelle": "Ventes sur internet",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "TA 7013,7014",
+     "libelle": "Ventes groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "TA 7012",
+     "libelle": "Ventes hors région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "TA 7011",
+     "libelle": "Ventes dans la région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "27": {
+     "expr": "TD 707",
+     "libelle": "Produits accesoires",
+     "origine": "rapprochement",
+     "score": 0.97
+    }
+   }
+  },
+  "note 22": {
+   "feuille": "NOTE 22",
+   "colonne_n": 5,
+   "roles": {
+    "5": "n",
+    "6": "n1",
+    "7": "var_pct"
+   },
+   "lignes": {
+    "32": {
+     "expr": "RE 6049,6059,6089",
+     "libelle": "Remises rabais, remises et ristournes",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "31": {
+     "expr": "RE 6045,6085",
+     "libelle": "Frais sur achats",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "30": {
+     "expr": "RE 6081,6082,6083",
+     "libelle": "Achats d'emballages",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "29": {
+     "expr": "RE 6057,6058",
+     "libelle": "Achats études, prestations de services, de travaux matériels et équipements",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "28": {
+     "expr": "RE 6056",
+     "libelle": "Petit matériel et outillages",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "27": {
+     "expr": "RE 6055,6047",
+     "libelle": "Fourniture de bureau",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "26": {
+     "expr": "RE 6054",
+     "libelle": "Fourniture d'entretien",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "25": {
+     "expr": "RE 6053",
+     "libelle": "Autres énergies",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "24": {
+     "expr": "RE 6052",
+     "libelle": "Electricité",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "23": {
+     "expr": "RE 6051",
+     "libelle": "Eau",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "22": {
+     "expr": "RE 6044,6046",
+     "libelle": "Fournitures d'atelier, d'usine et de magasin",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "21": {
+     "expr": "RE 6043",
+     "libelle": "Produits d'entretien",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "20": {
+     "expr": "RE 6042",
+     "libelle": "Matières combustibles",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "19": {
+     "expr": "RE 6041",
+     "libelle": "Matières consommables",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "11": {
+     "expr": "RC 6023,6024",
+     "libelle": "Achats groupe",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "10": {
+     "expr": "RC 6022",
+     "libelle": "Achats hors région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "9": {
+     "expr": "RC 6021",
+     "libelle": "Achats dans la région",
+     "origine": "rapprochement",
+     "score": 1.0
+    },
+    "14": {
+     "expr": "RA 6011",
+     "libelle": "Achat dans la région",
+     "origine": "rapprochement",
+     "score": 0.98
+    },
+    "15": {
+     "expr": "RA 6012",
+     "libelle": "Achat hors région",
+     "origine": "rapprochement",
+     "score": 0.97
+    },
+    "16": {
+     "expr": "RA 6013,6014",
+     "libelle": "Achat groupe",
+     "origine": "rapprochement",
+     "score": 0.96
+    }
+   }
+  }
+ },
+ "non_rapprochees": {
+  "note 1": [
+   {
+    "ligne": 10,
+    "libelle": "Dettes financières et ressources assimilées:"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Emprunts obligataires convertibles"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Autres emprunts obligataires"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Emprunts et detttes des établissements de crédit"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Autres dettes financières"
+   },
+   {
+    "ligne": 17,
+    "libelle": "Dettes de location-acquisition:"
+   },
+   {
+    "ligne": 18,
+    "libelle": "Dettes de crédit-bail immobilier"
+   },
+   {
+    "ligne": 19,
+    "libelle": "Dettes de crédit-bail mobilier"
+   },
+   {
+    "ligne": 20,
+    "libelle": "Dettes sur contrats de location-vente"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Dettes sur contrats de location-acquisition"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Dettes du passif circulant:"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Fournisseurs et comptes rattachés"
+   },
+   {
+    "ligne": 26,
+    "libelle": "Clients"
+   },
+   {
+    "ligne": 27,
+    "libelle": "Personnel"
+   },
+   {
+    "ligne": 28,
+    "libelle": "Sécurité sociale et organismes sociaux"
+   },
+   {
+    "ligne": 29,
+    "libelle": "Etat"
+   },
+   {
+    "ligne": 30,
+    "libelle": "Organismes internationaux"
+   },
+   {
+    "ligne": 31,
+    "libelle": "Associés et groupe"
+   },
+   {
+    "ligne": 32,
+    "libelle": "Créditeurs divers"
+   },
+   {
+    "ligne": 35,
+    "libelle": "ENGAGEMENTS FINANCIERS"
+   },
+   {
+    "ligne": 36,
+    "libelle": "Engagements consentis à des entités liées"
+   },
+   {
+    "ligne": 37,
+    "libelle": "Primes de remboursement non échues"
+   },
+   {
+    "ligne": 38,
+    "libelle": "Avals, cautions, garanties"
+   },
+   {
+    "ligne": 39,
+    "libelle": "Hypothèses, nantissements, gages, autres"
+   },
+   {
+    "ligne": 40,
+    "libelle": "Effets escomptés non échus"
+   },
+   {
+    "ligne": 41,
+    "libelle": "Créances commerciales et professionnelles cédées"
+   },
+   {
+    "ligne": 42,
+    "libelle": "Abandons de créances conditionnels"
+   }
+  ],
+  "note 3a": [
+   {
+    "ligne": 15,
+    "libelle": "Frais de développement et de prospection"
+   },
+   {
+    "ligne": 16,
+    "libelle": "Brevets, licences, logiciels et droits similaires"
+   },
+   {
+    "ligne": 17,
+    "libelle": "Fonds commercial et droit de bail"
+   },
+   {
+    "ligne": 18,
+    "libelle": "Autres immobilisations incorporelles"
+   },
+   {
+    "ligne": 20,
+    "libelle": "Terrains hors immeubles de placement"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Terrains - immeubles de placement"
+   },
+   {
+    "ligne": 22,
+    "libelle": "Bâtiments hors immeubles de placement"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Bâtiments - immeubles de placement"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Aménagements, agencements et installations"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Matériel, mobilier et actif biologiques"
+   },
+   {
+    "ligne": 26,
+    "libelle": "Matériel de transport"
+   },
+   {
+    "ligne": 31,
+    "libelle": "Titres de participation"
+   },
+   {
+    "ligne": 32,
+    "libelle": "Autres immobilisations financières"
+   },
+   {
+    "ligne": 37,
+    "libelle": "Toute variation significative doit être commentée,"
+   },
+   {
+    "ligne": 39,
+    "libelle": "Pour l'immobilisation incorporelle relative à la concession, faire un descriptif de l'accord"
+   },
+   {
+    "ligne": 41,
+    "libelle": "La nature de la créance"
+   },
+   {
+    "ligne": 42,
+    "libelle": "La durée de la concession"
+   },
+   {
+    "ligne": 43,
+    "libelle": "L'échéance"
+   }
+  ],
+  "note 3b": [
+   {
+    "ligne": 17,
+    "libelle": "Brevets, licences, logiciels et droits similaires"
+   },
+   {
+    "ligne": 18,
+    "libelle": "Fonds commercial et droit au bail"
+   },
+   {
+    "ligne": 19,
+    "libelle": "Autres immobilisations incorporelles"
+   },
+   {
+    "ligne": 22,
+    "libelle": "Terrains"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Bâtiments"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Aménagements, agencements et installations"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Matériel, mobilier et actifs biologiques"
+   },
+   {
+    "ligne": 26,
+    "libelle": "Matériel de transport"
+   },
+   {
+    "ligne": 31,
+    "libelle": "[¹] I : Crédit-bail immobilier ; M : Crédit-bail mobilier; A : Autres contrats (dédoubler le poste si montants significatifs)\nCommentaire: Indiquer la nature du bien, le nom du bailleur et la durée du bail"
+   }
+  ],
+  "note 3d": [
+   {
+    "ligne": 12,
+    "libelle": "Frais de développement et de prospection"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Brevets, licenees, logiciels et droits similaires"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Fonds commercial et droit au bail"
+   },
+   {
+    "ligne": 15,
+    "libelle": "Autres immobilisations incomporelles"
+   },
+   {
+    "ligne": 17,
+    "libelle": "Terrains\nBàtiments\nAménagements, agencements\nMatériel, bobilier et actifs biologiques\nMatériel de transport"
+   },
+   {
+    "ligne": 18,
+    "libelle": "Bâtiments"
+   },
+   {
+    "ligne": 19,
+    "libelle": "Aménagements, Agrééments"
+   },
+   {
+    "ligne": 20,
+    "libelle": "Matériels, Mobiliers et Actifs bilogiques"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Matériels de Transport"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Titres de participations"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Autres immobilisations financières"
+   },
+   {
+    "ligne": 31,
+    "libelle": "Mentionner la justification de la cession ainsi que la date d'aquisition et la date de sortie"
+   }
+  ],
+  "note 4": [
+   {
+    "ligne": 27,
+    "libelle": "Liste des filiales et participations:"
+   },
+   {
+    "ligne": 29,
+    "libelle": "Dénomination sociale"
+   },
+   {
+    "ligne": 47,
+    "libelle": "La nature de La créance"
+   },
+   {
+    "ligne": 48,
+    "libelle": "La durée de la concession"
+   },
+   {
+    "ligne": 49,
+    "libelle": "L'échéance"
+   },
+   {
+    "ligne": 51,
+    "libelle": "Dépréciation/ indiquer les évènements et les circonstances qui ont motivé la dépréciation ou la reprise"
+   }
+  ],
+  "note 5": [
+   {
+    "ligne": 10,
+    "libelle": "Créances sur cessions d'immobilisations"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Autres créances hors activités ordinaires"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Dépréciation des créances HAO"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Fournisseurs d'investissements"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Fournisseurs d'investissements effets à payer"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Versements restant à effectuer sur titres de\npaticipation et titres immobilisés non libérés"
+   },
+   {
+    "ligne": 26,
+    "libelle": "Autres dettes hors activités ordinaires"
+   }
+  ],
+  "note 6": [
+   {
+    "ligne": 26,
+    "libelle": "(supérieur à 5% du total de l'actif circulant),"
+   }
+  ],
+  "note 7": [
+   {
+    "ligne": 15,
+    "libelle": "Clients effets à recevoir (hors réserves de\npropriété Groupe)"
+   }
+  ],
+  "note 8": [
+   {
+    "ligne": 18,
+    "libelle": "Comptes de liaison des sociétés en participation"
+   }
+  ],
+  "note 9": [
+   {
+    "ligne": 9,
+    "libelle": "Titres de trésor et bons de caisse à court terme"
+   },
+   {
+    "ligne": 10,
+    "libelle": "Actions"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Obligations"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Bons de souscription"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Titres négociables hors régions"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Intérêts courus"
+   },
+   {
+    "ligne": 15,
+    "libelle": "Autres valeurs assimilés"
+   },
+   {
+    "ligne": 17,
+    "libelle": "Dépréciations des titres"
+   }
+  ],
+  "note 10": [
+   {
+    "ligne": 9,
+    "libelle": "Effets à encaisser"
+   },
+   {
+    "ligne": 10,
+    "libelle": "Effets à l’encaissement"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Chèques à encaisser"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Chèques à l’encaissement"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Cartes de crédit à encaisser"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Autres valeurs à encaisser"
+   },
+   {
+    "ligne": 16,
+    "libelle": "Dépréciations des valeurs à encaisser"
+   }
+  ],
+  "note 15a": [
+   {
+    "ligne": 9,
+    "libelle": "Etat"
+   },
+   {
+    "ligne": 10,
+    "libelle": "Régions"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Départements"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Communes et collectivités publiques décentralisées"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Entités publiques ou mixtes"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Entités et organismes privés"
+   },
+   {
+    "ligne": 15,
+    "libelle": "Organismes internationaux"
+   },
+   {
+    "ligne": 16,
+    "libelle": "Autres"
+   },
+   {
+    "ligne": 19,
+    "libelle": "Amortissements dérogatoires"
+   },
+   {
+    "ligne": 20,
+    "libelle": "Plus-value de cession à réinvestir"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Provisions spéciales de réévaluation"
+   },
+   {
+    "ligne": 22,
+    "libelle": "Provisions réglementées relatives aux immobilisations"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Provisions réglementées relatives aux stocks"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Provisions pour investissement"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Autres prvisions et fonds réglementés"
+   }
+  ],
+  "note 15b": [
+   {
+    "ligne": 10,
+    "libelle": "Titres participatifs"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Avances conditionnées"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Titres subordonnés à durée indéterminée (T.S.D.I)"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Obligations remboursables en actions (O.R.A)"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Autres"
+   }
+  ],
+  "note 19": [
+   {
+    "ligne": 10,
+    "libelle": "Apporteurs, opérations sur le capital"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Associés, compte courant"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Groupe, comptes courants"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Autres dettes associées"
+   }
+  ],
+  "note 31": [
+   {
+    "ligne": 10,
+    "libelle": "EXERCICES CONCERNES (¹) / NATURES DES INDICATIONS"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Capital social"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Actions ordinaires"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Actions à dividendes prioritaires (A.D.P) sans droit de vote"
+   },
+   {
+    "ligne": 15,
+    "libelle": "Actions nouvelles à émettre"
+   },
+   {
+    "ligne": 19,
+    "libelle": "Chiffre d’affaires hors taxes"
+   },
+   {
+    "ligne": 20,
+    "libelle": "Résultat des activités ordinaires (RAO) hors dotations et reprises (exploitation et financières)"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Participation des travailleurs aux bénéfices"
+   },
+   {
+    "ligne": 22,
+    "libelle": "Impôts sur le résultat"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Résultat net (4)"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Résultat distribué (5)"
+   },
+   {
+    "ligne": 26,
+    "libelle": "Dividende attribués à chaque action"
+   },
+   {
+    "ligne": 28,
+    "libelle": "Effectif moyen des travailleurs au cours de l’exercice (6)"
+   },
+   {
+    "ligne": 29,
+    "libelle": "Effectif moyen de personnel extérieur"
+   }
+  ],
+  "note 34": [
+   {
+    "ligne": 11,
+    "libelle": "ANALYSE DE L’ACTIVITE"
+   },
+   {
+    "ligne": 12,
+    "libelle": "SOLDE INTERMEDIAIRES DE GESTION"
+   },
+   {
+    "ligne": 13,
+    "libelle": "CHIFFRE D'AFFAIRES"
+   },
+   {
+    "ligne": 14,
+    "libelle": "MARGE COMMERCIALE"
+   },
+   {
+    "ligne": 15,
+    "libelle": "VALEUR AJOUTEE"
+   },
+   {
+    "ligne": 16,
+    "libelle": "EXCEDENT BRUT D'EXPLOITATION (EBE)"
+   },
+   {
+    "ligne": 17,
+    "libelle": "RESULTAT D’EXPLOITATION"
+   },
+   {
+    "ligne": 18,
+    "libelle": "RESULTAT FINANCIER"
+   },
+   {
+    "ligne": 19,
+    "libelle": "RESULTAT DES ACTIVITES ORDINAIRES"
+   },
+   {
+    "ligne": 20,
+    "libelle": "RESULTAT HORS ACTIVITES ORDINAIRES"
+   },
+   {
+    "ligne": 21,
+    "libelle": "RESULTAT NET"
+   },
+   {
+    "ligne": 22,
+    "libelle": "DETRMINATION DE LA CAPACITE D’AUTOFINANCEMENT"
+   },
+   {
+    "ligne": 23,
+    "libelle": "EBE"
+   },
+   {
+    "ligne": 24,
+    "libelle": "+valeurs comptables des cessions courantes d'immobilisation(compte 654)"
+   },
+   {
+    "ligne": 27,
+    "libelle": "+ Revenus financiers"
+   },
+   {
+    "ligne": 28,
+    "libelle": "+ Gains de change"
+   },
+   {
+    "ligne": 29,
+    "libelle": "+ Transfert de charges financières"
+   },
+   {
+    "ligne": 30,
+    "libelle": "+ Produits HAO"
+   },
+   {
+    "ligne": 31,
+    "libelle": "+ Transfert de charges HAO"
+   },
+   {
+    "ligne": 39,
+    "libelle": "ANALYSE DE LA RENTABILITE"
+   },
+   {
+    "ligne": 40,
+    "libelle": "Rentabilités économique = résultat d’exploitation (a) / (capitaux propres + dettes financières)"
+   },
+   {
+    "ligne": 41,
+    "libelle": "Rentabilité financière=résultat  net/capitaux propres"
+   },
+   {
+    "ligne": 42,
+    "libelle": "ANALYSE DE LA STRUCTURE FINANCIERE"
+   },
+   {
+    "ligne": 43,
+    "libelle": "Capitaux propres et ressources  assimilées"
+   },
+   {
+    "ligne": 44,
+    "libelle": "+ Dettes financières (*) et autres ressources assimilées (b)"
+   },
+   {
+    "ligne": 45,
+    "libelle": "= Ressources stables"
+   },
+   {
+    "ligne": 47,
+    "libelle": "= FONDS DE ROULEMENT (1)"
+   },
+   {
+    "ligne": 48,
+    "libelle": "Actif circulant d’exploitation (b)"
+   },
+   {
+    "ligne": 50,
+    "libelle": "= BESSOIN DE FINANCEMENT D’EXPLOITATION (2)"
+   },
+   {
+    "ligne": 51,
+    "libelle": "Actif circulant HAO(b)"
+   },
+   {
+    "ligne": 53,
+    "libelle": "= BESOIN DE FINANCEMENT HAO (3)"
+   },
+   {
+    "ligne": 56,
+    "libelle": "TRESORERIE NETTE  (5) = (1) - (4)"
+   },
+   {
+    "ligne": 57,
+    "libelle": "CONTRÔLE : TRESORERIE NETTE = (TRESORERIE-ACTIF)-(TRESORERIE-PASSIF)"
+   },
+   {
+    "ligne": 58,
+    "libelle": "ANALYSE DE LA VARIATION DE LA TRESORERIE"
+   },
+   {
+    "ligne": 59,
+    "libelle": "Flux de trésorerie des activités opérationnelles"
+   },
+   {
+    "ligne": 61,
+    "libelle": "+ Flux de trésorerie des activités de financement"
+   },
+   {
+    "ligne": 63,
+    "libelle": "ANALYSE DE LA VARIATION DE L’ENDETTEMENT FINANCIERE NET"
+   },
+   {
+    "ligne": 64,
+    "libelle": "Endettement financières brut (Dettes financières (*) + Trésorerie-Passif)"
+   },
+   {
+    "ligne": 66,
+    "libelle": "= ENDETTEMENT FINANCIERE NET"
+   },
+   {
+    "ligne": 68,
+    "libelle": "a) Résultat d’exploitation après impôt théorique sur le bénéfice.\n(b) Les écarts de conversion doivent être éliminés afin de ramener les créances et les dettes concernées à leur valeur initiale,"
+   },
+   {
+    "ligne": 69,
+    "libelle": "Dettes financières (*) = emprunts et dettes financières diverses + dettes de location acquisition."
+   }
+  ],
+  "note 16b": [
+   {
+    "ligne": 10,
+    "libelle": "Taux d’augmentation des salaires"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Taux d’actualisation"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Taux d’inflation"
+   },
+   {
+    "ligne": 13,
+    "libelle": "Probabilité d’être présent dans l’entité à la date de départ à la retraite (expérience passée)"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Probabilité d’être en vie à l’âge de départ à la retraite (table de mortalité)"
+   },
+   {
+    "ligne": 15,
+    "libelle": "Taux de rendement effectif des actifs des régimes"
+   },
+   {
+    "ligne": 19,
+    "libelle": "VARIATION DE LA VALEUR DE L’ENGAGEMENT DE RETRAITE AU COURS DE L'EXERCICE"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Obligation au titre des engagements de retraite à l’ouverture"
+   },
+   {
+    "ligne": 22,
+    "libelle": "Coût des services rendus au cours de l’exercice"
+   },
+   {
+    "ligne": 23,
+    "libelle": "Coût financier"
+   },
+   {
+    "ligne": 24,
+    "libelle": "Pertes actuarielles / (gain)"
+   },
+   {
+    "ligne": 25,
+    "libelle": "Prestations payées au cours de l’exercice"
+   },
+   {
+    "ligne": 26,
+    "libelle": "Coût des services passés"
+   },
+   {
+    "ligne": 27,
+    "libelle": "Obligation au titre des engagements de retraite à la clôture"
+   },
+   {
+    "ligne": 31,
+    "libelle": "ANALYSE DE SENSIBILITE DES HYPOTHESES ACTUARIELLES"
+   },
+   {
+    "ligne": 34,
+    "libelle": "Taux d’actualisation (variable de ... %)"
+   },
+   {
+    "ligne": 35,
+    "libelle": "Taux de progression des salaires (variation de …. % )"
+   },
+   {
+    "ligne": 36,
+    "libelle": "Taux de départ du personnel (variation de …. % )"
+   }
+  ],
+  "note 16bbis": [
+   {
+    "ligne": 10,
+    "libelle": "Valeur actuelle de l’obligation résultant de régimes financés"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Valeur actuelle des actifs affectés aux plans de retraite"
+   },
+   {
+    "ligne": 12,
+    "libelle": "Excèdent / Déficit de régime"
+   },
+   {
+    "ligne": 16,
+    "libelle": "Année N-1"
+   },
+   {
+    "ligne": 17,
+    "libelle": "VALEUR ACTUELLE DES ACTIFS DU REGIME"
+   },
+   {
+    "ligne": 20,
+    "libelle": "Actions"
+   },
+   {
+    "ligne": 21,
+    "libelle": "Obligations"
+   },
+   {
+    "ligne": 22,
+    "libelle": "Autres"
+   }
+  ],
+  "note 16c": [
+   {
+    "ligne": 10,
+    "libelle": "Actifs éventuels"
+   },
+   {
+    "ligne": 11,
+    "libelle": "Litiges"
+   },
+   {
+    "ligne": 14,
+    "libelle": "Passif éventuels"
+   },
+   {
+    "ligne": 15,
+    "libelle": "Litiges"
+   }
+  ],
+  "note 18": [
+   {
+    "ligne": 12,
+    "libelle": "Personnel avances et acomptes"
+   }
+  ]
+ },
+ "non_ecrites": {
+  "note 5 ligne 25": "Versements restant à effectuer sur titres non libérés : compte à confirmer (471x / 472x selon les plans d'entreprise)",
+  "note 8 ligne 18": "Comptes de liaison des sociétés en participation (188) : sens de présentation à confirmer",
+  "note 18 ligne 12": "Personnel, avances et acomptes (421) : créance présentée parmi les dettes sociales — à confirmer",
+  "note 15b": "Autres fonds propres : aucun poste du bilan ne les porte dans la table comptes -> postes"
+ }
+}

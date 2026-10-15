@@ -1,0 +1,1270 @@
+{
+ "_origine": "compta-ohada mapping-comptes-dsf.json v2.0",
+ "_regle": "plus long préfixe gagnant ; une règle propre au sens du solde (debiteur/crediteur) prime sur « tous »",
+ "regles": [
+  {
+   "prefixe": "101",
+   "sens": "tous",
+   "ref": "CA",
+   "nature": "passif",
+   "libelle": "Capital social"
+  },
+  {
+   "prefixe": "102",
+   "sens": "tous",
+   "ref": "CA",
+   "nature": "passif",
+   "libelle": "Capital par dotation"
+  },
+  {
+   "prefixe": "103",
+   "sens": "tous",
+   "ref": "CA",
+   "nature": "passif",
+   "libelle": "Capital personnel"
+  },
+  {
+   "prefixe": "104",
+   "sens": "tous",
+   "ref": "CA",
+   "nature": "passif",
+   "libelle": "Compte de l'exploitant"
+  },
+  {
+   "prefixe": "109",
+   "sens": "tous",
+   "ref": "CB",
+   "nature": "passif",
+   "libelle": "Apporteurs, capital souscrit non appelé (-)"
+  },
+  {
+   "prefixe": "105",
+   "sens": "tous",
+   "ref": "CD",
+   "nature": "passif",
+   "libelle": "Primes liées au capital social"
+  },
+  {
+   "prefixe": "106",
+   "sens": "tous",
+   "ref": "CE",
+   "nature": "passif",
+   "libelle": "Écarts de réévaluation"
+  },
+  {
+   "prefixe": "111",
+   "sens": "tous",
+   "ref": "CF",
+   "nature": "passif",
+   "libelle": "Réserve légale"
+  },
+  {
+   "prefixe": "112",
+   "sens": "tous",
+   "ref": "CF",
+   "nature": "passif",
+   "libelle": "Réserves statutaires ou contractuelles"
+  },
+  {
+   "prefixe": "113",
+   "sens": "tous",
+   "ref": "CF",
+   "nature": "passif",
+   "libelle": "Réserves réglementées"
+  },
+  {
+   "prefixe": "118",
+   "sens": "tous",
+   "ref": "CG",
+   "nature": "passif",
+   "libelle": "Autres réserves (réserves libres)"
+  },
+  {
+   "prefixe": "12",
+   "sens": "tous",
+   "ref": "CH",
+   "nature": "passif",
+   "libelle": "Report à nouveau"
+  },
+  {
+   "prefixe": "13",
+   "sens": "tous",
+   "ref": "CJ",
+   "nature": "resultat",
+   "libelle": "Résultat net (voir conventions.resultat)"
+  },
+  {
+   "prefixe": "14",
+   "sens": "tous",
+   "ref": "CL",
+   "nature": "passif",
+   "libelle": "Subventions d'investissement"
+  },
+  {
+   "prefixe": "15",
+   "sens": "tous",
+   "ref": "CM",
+   "nature": "passif",
+   "libelle": "Provisions réglementées"
+  },
+  {
+   "prefixe": "16",
+   "sens": "tous",
+   "ref": "DA",
+   "nature": "passif",
+   "libelle": "Emprunts et dettes financières diverses"
+  },
+  {
+   "prefixe": "18",
+   "sens": "tous",
+   "ref": "DA",
+   "nature": "passif",
+   "libelle": "Dettes liées à des participations, comptes de liaison"
+  },
+  {
+   "prefixe": "17",
+   "sens": "tous",
+   "ref": "DB",
+   "nature": "passif",
+   "libelle": "Dettes de location-acquisition"
+  },
+  {
+   "prefixe": "19",
+   "sens": "tous",
+   "ref": "DC",
+   "nature": "passif",
+   "libelle": "Provisions pour risques et charges"
+  },
+  {
+   "prefixe": "211",
+   "sens": "tous",
+   "ref": "AE",
+   "nature": "actif",
+   "libelle": "Frais de développement"
+  },
+  {
+   "prefixe": "212",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "actif",
+   "libelle": "Brevets, licences, concessions"
+  },
+  {
+   "prefixe": "213",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "actif",
+   "libelle": "Logiciels et sites internet"
+  },
+  {
+   "prefixe": "214",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "actif",
+   "libelle": "Marques"
+  },
+  {
+   "prefixe": "215",
+   "sens": "tous",
+   "ref": "AG",
+   "nature": "actif",
+   "libelle": "Fonds commercial"
+  },
+  {
+   "prefixe": "216",
+   "sens": "tous",
+   "ref": "AG",
+   "nature": "actif",
+   "libelle": "Droit au bail"
+  },
+  {
+   "prefixe": "217",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "actif",
+   "libelle": "Investissements de création"
+  },
+  {
+   "prefixe": "218",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "actif",
+   "libelle": "Autres droits et valeurs incorporels"
+  },
+  {
+   "prefixe": "219",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "actif",
+   "libelle": "Immobilisations incorporelles en cours"
+  },
+  {
+   "prefixe": "22",
+   "sens": "tous",
+   "ref": "AJ",
+   "nature": "actif",
+   "libelle": "Terrains"
+  },
+  {
+   "prefixe": "231",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "actif",
+   "libelle": "Bâtiments sur sol propre"
+  },
+  {
+   "prefixe": "232",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "actif",
+   "libelle": "Bâtiments sur sol d'autrui"
+  },
+  {
+   "prefixe": "233",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "actif",
+   "libelle": "Ouvrages d'infrastructure"
+  },
+  {
+   "prefixe": "237",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "actif",
+   "libelle": "Bâtiments mis en concession"
+  },
+  {
+   "prefixe": "239",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "actif",
+   "libelle": "Bâtiments en cours"
+  },
+  {
+   "prefixe": "234",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "actif",
+   "libelle": "Aménagements, agencements, installations techniques"
+  },
+  {
+   "prefixe": "235",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "actif",
+   "libelle": "Aménagements de bureaux"
+  },
+  {
+   "prefixe": "238",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "actif",
+   "libelle": "Autres installations et agencements"
+  },
+  {
+   "prefixe": "24",
+   "sens": "tous",
+   "ref": "AM",
+   "nature": "actif",
+   "libelle": "Matériel, mobilier et actifs biologiques"
+  },
+  {
+   "prefixe": "245",
+   "sens": "tous",
+   "ref": "AN",
+   "nature": "actif",
+   "libelle": "Matériel de transport"
+  },
+  {
+   "prefixe": "25",
+   "sens": "tous",
+   "ref": "AP",
+   "nature": "actif",
+   "libelle": "Avances et acomptes versés sur immobilisations"
+  },
+  {
+   "prefixe": "26",
+   "sens": "tous",
+   "ref": "AR",
+   "nature": "actif",
+   "libelle": "Titres de participation"
+  },
+  {
+   "prefixe": "27",
+   "sens": "tous",
+   "ref": "AS",
+   "nature": "actif",
+   "libelle": "Autres immobilisations financières"
+  },
+  {
+   "prefixe": "2811",
+   "sens": "tous",
+   "ref": "AE",
+   "nature": "amort",
+   "libelle": "Amort. frais de développement"
+  },
+  {
+   "prefixe": "2812",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "amort",
+   "libelle": "Amort. brevets, licences"
+  },
+  {
+   "prefixe": "2813",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "amort",
+   "libelle": "Amort. logiciels"
+  },
+  {
+   "prefixe": "2814",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "amort",
+   "libelle": "Amort. marques"
+  },
+  {
+   "prefixe": "2815",
+   "sens": "tous",
+   "ref": "AG",
+   "nature": "amort",
+   "libelle": "Amort. fonds commercial"
+  },
+  {
+   "prefixe": "2816",
+   "sens": "tous",
+   "ref": "AG",
+   "nature": "amort",
+   "libelle": "Amort. droit au bail"
+  },
+  {
+   "prefixe": "2817",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "amort",
+   "libelle": "Amort. investissements de création"
+  },
+  {
+   "prefixe": "2818",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "amort",
+   "libelle": "Amort. autres incorporels"
+  },
+  {
+   "prefixe": "281",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "amort",
+   "libelle": "Amort. incorporels (sous-compte non précisé)"
+  },
+  {
+   "prefixe": "282",
+   "sens": "tous",
+   "ref": "AJ",
+   "nature": "amort",
+   "libelle": "Amort. terrains (agencements)"
+  },
+  {
+   "prefixe": "2831",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "amort",
+   "libelle": "Amort. bâtiments sol propre"
+  },
+  {
+   "prefixe": "2832",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "amort",
+   "libelle": "Amort. bâtiments sol d'autrui"
+  },
+  {
+   "prefixe": "2833",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "amort",
+   "libelle": "Amort. ouvrages d'infrastructure"
+  },
+  {
+   "prefixe": "2837",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "amort",
+   "libelle": "Amort. bâtiments mis en concession"
+  },
+  {
+   "prefixe": "2834",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "amort",
+   "libelle": "Amort. aménagements, installations techniques"
+  },
+  {
+   "prefixe": "2835",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "amort",
+   "libelle": "Amort. aménagements de bureaux"
+  },
+  {
+   "prefixe": "2838",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "amort",
+   "libelle": "Amort. autres installations"
+  },
+  {
+   "prefixe": "283",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "amort",
+   "libelle": "Amort. bâtiments (sous-compte non précisé)"
+  },
+  {
+   "prefixe": "284",
+   "sens": "tous",
+   "ref": "AM",
+   "nature": "amort",
+   "libelle": "Amort. matériel, mobilier"
+  },
+  {
+   "prefixe": "2845",
+   "sens": "tous",
+   "ref": "AN",
+   "nature": "amort",
+   "libelle": "Amort. matériel de transport"
+  },
+  {
+   "prefixe": "2911",
+   "sens": "tous",
+   "ref": "AE",
+   "nature": "amort",
+   "libelle": "Dépréc. frais de développement"
+  },
+  {
+   "prefixe": "2912",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "amort",
+   "libelle": "Dépréc. brevets"
+  },
+  {
+   "prefixe": "2913",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "amort",
+   "libelle": "Dépréc. logiciels"
+  },
+  {
+   "prefixe": "2914",
+   "sens": "tous",
+   "ref": "AF",
+   "nature": "amort",
+   "libelle": "Dépréc. marques"
+  },
+  {
+   "prefixe": "2915",
+   "sens": "tous",
+   "ref": "AG",
+   "nature": "amort",
+   "libelle": "Dépréc. fonds commercial"
+  },
+  {
+   "prefixe": "2916",
+   "sens": "tous",
+   "ref": "AG",
+   "nature": "amort",
+   "libelle": "Dépréc. droit au bail"
+  },
+  {
+   "prefixe": "291",
+   "sens": "tous",
+   "ref": "AH",
+   "nature": "amort",
+   "libelle": "Dépréc. autres incorporels"
+  },
+  {
+   "prefixe": "292",
+   "sens": "tous",
+   "ref": "AJ",
+   "nature": "amort",
+   "libelle": "Dépréc. terrains"
+  },
+  {
+   "prefixe": "2934",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "amort",
+   "libelle": "Dépréc. aménagements"
+  },
+  {
+   "prefixe": "2935",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "amort",
+   "libelle": "Dépréc. aménagements de bureaux"
+  },
+  {
+   "prefixe": "2938",
+   "sens": "tous",
+   "ref": "AL",
+   "nature": "amort",
+   "libelle": "Dépréc. autres installations"
+  },
+  {
+   "prefixe": "293",
+   "sens": "tous",
+   "ref": "AK",
+   "nature": "amort",
+   "libelle": "Dépréc. bâtiments"
+  },
+  {
+   "prefixe": "294",
+   "sens": "tous",
+   "ref": "AM",
+   "nature": "amort",
+   "libelle": "Dépréc. matériel"
+  },
+  {
+   "prefixe": "2945",
+   "sens": "tous",
+   "ref": "AN",
+   "nature": "amort",
+   "libelle": "Dépréc. matériel de transport"
+  },
+  {
+   "prefixe": "295",
+   "sens": "tous",
+   "ref": "AP",
+   "nature": "amort",
+   "libelle": "Dépréc. avances sur immobilisations"
+  },
+  {
+   "prefixe": "296",
+   "sens": "tous",
+   "ref": "AR",
+   "nature": "amort",
+   "libelle": "Dépréc. titres de participation"
+  },
+  {
+   "prefixe": "297",
+   "sens": "tous",
+   "ref": "AS",
+   "nature": "amort",
+   "libelle": "Dépréc. autres immobilisations financières"
+  },
+  {
+   "prefixe": "3",
+   "sens": "tous",
+   "ref": "BB",
+   "nature": "actif",
+   "libelle": "Stocks et en-cours"
+  },
+  {
+   "prefixe": "39",
+   "sens": "tous",
+   "ref": "BB",
+   "nature": "amort",
+   "libelle": "Dépréciations des stocks"
+  },
+  {
+   "prefixe": "40",
+   "sens": "debiteur",
+   "ref": "BH",
+   "libelle": "Fournisseurs (débiteurs -> avances versées)"
+  },
+  {
+   "prefixe": "40",
+   "sens": "crediteur",
+   "ref": "DJ",
+   "libelle": "Fournisseurs (débiteurs -> avances versées)"
+  },
+  {
+   "prefixe": "409",
+   "sens": "debiteur",
+   "ref": "BH",
+   "libelle": "Fournisseurs débiteurs, avances et acomptes"
+  },
+  {
+   "prefixe": "409",
+   "sens": "crediteur",
+   "ref": "DJ",
+   "libelle": "Fournisseurs débiteurs, avances et acomptes"
+  },
+  {
+   "prefixe": "41",
+   "sens": "debiteur",
+   "ref": "BI",
+   "libelle": "Clients (créditeurs -> avances reçues)"
+  },
+  {
+   "prefixe": "41",
+   "sens": "crediteur",
+   "ref": "DI",
+   "libelle": "Clients (créditeurs -> avances reçues)"
+  },
+  {
+   "prefixe": "42",
+   "sens": "debiteur",
+   "ref": "BJ",
+   "libelle": "Personnel"
+  },
+  {
+   "prefixe": "42",
+   "sens": "crediteur",
+   "ref": "DK",
+   "libelle": "Personnel"
+  },
+  {
+   "prefixe": "43",
+   "sens": "debiteur",
+   "ref": "BJ",
+   "libelle": "Organismes sociaux"
+  },
+  {
+   "prefixe": "43",
+   "sens": "crediteur",
+   "ref": "DK",
+   "libelle": "Organismes sociaux"
+  },
+  {
+   "prefixe": "44",
+   "sens": "debiteur",
+   "ref": "BJ",
+   "libelle": "État et collectivités publiques"
+  },
+  {
+   "prefixe": "44",
+   "sens": "crediteur",
+   "ref": "DK",
+   "libelle": "État et collectivités publiques"
+  },
+  {
+   "prefixe": "45",
+   "sens": "debiteur",
+   "ref": "BJ",
+   "libelle": "Organismes internationaux"
+  },
+  {
+   "prefixe": "45",
+   "sens": "crediteur",
+   "ref": "DM",
+   "libelle": "Organismes internationaux"
+  },
+  {
+   "prefixe": "46",
+   "sens": "debiteur",
+   "ref": "BJ",
+   "libelle": "Apporteurs, associés et groupe"
+  },
+  {
+   "prefixe": "46",
+   "sens": "crediteur",
+   "ref": "DM",
+   "libelle": "Apporteurs, associés et groupe"
+  },
+  {
+   "prefixe": "47",
+   "sens": "debiteur",
+   "ref": "BJ",
+   "libelle": "Débiteurs et créditeurs divers (dont 476/477 constatés d'avance)"
+  },
+  {
+   "prefixe": "47",
+   "sens": "crediteur",
+   "ref": "DM",
+   "libelle": "Débiteurs et créditeurs divers (dont 476/477 constatés d'avance)"
+  },
+  {
+   "prefixe": "478",
+   "sens": "tous",
+   "ref": "BU",
+   "nature": "actif",
+   "libelle": "Écarts de conversion - actif"
+  },
+  {
+   "prefixe": "479",
+   "sens": "tous",
+   "ref": "DV",
+   "nature": "passif",
+   "libelle": "Écarts de conversion - passif"
+  },
+  {
+   "prefixe": "48",
+   "sens": "debiteur",
+   "ref": "BA",
+   "libelle": "Créances et dettes HAO"
+  },
+  {
+   "prefixe": "48",
+   "sens": "crediteur",
+   "ref": "DH",
+   "libelle": "Créances et dettes HAO"
+  },
+  {
+   "prefixe": "490",
+   "sens": "tous",
+   "ref": "BH",
+   "nature": "amort",
+   "libelle": "Dépréc. fournisseurs débiteurs"
+  },
+  {
+   "prefixe": "491",
+   "sens": "tous",
+   "ref": "BI",
+   "nature": "amort",
+   "libelle": "Dépréc. clients"
+  },
+  {
+   "prefixe": "492",
+   "sens": "tous",
+   "ref": "BJ",
+   "nature": "amort",
+   "libelle": "Dépréc. personnel"
+  },
+  {
+   "prefixe": "493",
+   "sens": "tous",
+   "ref": "BJ",
+   "nature": "amort",
+   "libelle": "Dépréc. organismes sociaux"
+  },
+  {
+   "prefixe": "494",
+   "sens": "tous",
+   "ref": "BJ",
+   "nature": "amort",
+   "libelle": "Dépréc. État"
+  },
+  {
+   "prefixe": "495",
+   "sens": "tous",
+   "ref": "BJ",
+   "nature": "amort",
+   "libelle": "Dépréc. organismes internationaux"
+  },
+  {
+   "prefixe": "496",
+   "sens": "tous",
+   "ref": "BJ",
+   "nature": "amort",
+   "libelle": "Dépréc. associés et groupe"
+  },
+  {
+   "prefixe": "497",
+   "sens": "tous",
+   "ref": "BJ",
+   "nature": "amort",
+   "libelle": "Dépréc. débiteurs divers"
+  },
+  {
+   "prefixe": "498",
+   "sens": "tous",
+   "ref": "BA",
+   "nature": "amort",
+   "libelle": "Dépréc. créances HAO"
+  },
+  {
+   "prefixe": "499",
+   "sens": "tous",
+   "ref": "DN",
+   "nature": "passif",
+   "libelle": "Provisions pour risques à court terme"
+  },
+  {
+   "prefixe": "50",
+   "sens": "tous",
+   "ref": "BQ",
+   "nature": "actif",
+   "libelle": "Titres de placement"
+  },
+  {
+   "prefixe": "51",
+   "sens": "tous",
+   "ref": "BR",
+   "nature": "actif",
+   "libelle": "Valeurs à encaisser"
+  },
+  {
+   "prefixe": "52",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Banques (créditrices -> trésorerie passif)"
+  },
+  {
+   "prefixe": "52",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Banques (créditrices -> trésorerie passif)"
+  },
+  {
+   "prefixe": "53",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Établissements financiers"
+  },
+  {
+   "prefixe": "53",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Établissements financiers"
+  },
+  {
+   "prefixe": "54",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Instruments de trésorerie"
+  },
+  {
+   "prefixe": "54",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Instruments de trésorerie"
+  },
+  {
+   "prefixe": "55",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Instruments de monnaie électronique"
+  },
+  {
+   "prefixe": "55",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Instruments de monnaie électronique"
+  },
+  {
+   "prefixe": "57",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Caisse"
+  },
+  {
+   "prefixe": "57",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Caisse"
+  },
+  {
+   "prefixe": "58",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Régies d'avances, virements internes (normalement soldés)"
+  },
+  {
+   "prefixe": "58",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Régies d'avances, virements internes (normalement soldés)"
+  },
+  {
+   "prefixe": "56",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Banques, crédits de trésorerie"
+  },
+  {
+   "prefixe": "56",
+   "sens": "crediteur",
+   "ref": "DR",
+   "libelle": "Banques, crédits de trésorerie"
+  },
+  {
+   "prefixe": "564",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Escompte de crédits de campagne"
+  },
+  {
+   "prefixe": "564",
+   "sens": "crediteur",
+   "ref": "DQ",
+   "libelle": "Escompte de crédits de campagne"
+  },
+  {
+   "prefixe": "565",
+   "sens": "debiteur",
+   "ref": "BS",
+   "libelle": "Escompte de crédits ordinaires"
+  },
+  {
+   "prefixe": "565",
+   "sens": "crediteur",
+   "ref": "DQ",
+   "libelle": "Escompte de crédits ordinaires"
+  },
+  {
+   "prefixe": "590",
+   "sens": "tous",
+   "ref": "BQ",
+   "nature": "amort",
+   "libelle": "Dépréc. titres de placement"
+  },
+  {
+   "prefixe": "591",
+   "sens": "tous",
+   "ref": "BQ",
+   "nature": "amort",
+   "libelle": "Dépréc. titres de placement"
+  },
+  {
+   "prefixe": "592",
+   "sens": "tous",
+   "ref": "BS",
+   "nature": "amort",
+   "libelle": "Dépréc. banques"
+  },
+  {
+   "prefixe": "593",
+   "sens": "tous",
+   "ref": "BS",
+   "nature": "amort",
+   "libelle": "Dépréc. établissements financiers"
+  },
+  {
+   "prefixe": "594",
+   "sens": "tous",
+   "ref": "BS",
+   "nature": "amort",
+   "libelle": "Dépréc. instruments de trésorerie"
+  },
+  {
+   "prefixe": "599",
+   "sens": "tous",
+   "ref": "DN",
+   "nature": "passif",
+   "libelle": "Provisions pour risques à court terme (trésorerie)"
+  },
+  {
+   "prefixe": "701",
+   "sens": "tous",
+   "ref": "TA",
+   "nature": "gestion",
+   "libelle": "Ventes de marchandises"
+  },
+  {
+   "prefixe": "702",
+   "sens": "tous",
+   "ref": "TB",
+   "nature": "gestion",
+   "libelle": "Ventes de produits finis"
+  },
+  {
+   "prefixe": "703",
+   "sens": "tous",
+   "ref": "TB",
+   "nature": "gestion",
+   "libelle": "Ventes de produits intermédiaires"
+  },
+  {
+   "prefixe": "704",
+   "sens": "tous",
+   "ref": "TB",
+   "nature": "gestion",
+   "libelle": "Ventes de produits résiduels"
+  },
+  {
+   "prefixe": "705",
+   "sens": "tous",
+   "ref": "TC",
+   "nature": "gestion",
+   "libelle": "Travaux facturés"
+  },
+  {
+   "prefixe": "706",
+   "sens": "tous",
+   "ref": "TC",
+   "nature": "gestion",
+   "libelle": "Services vendus"
+  },
+  {
+   "prefixe": "707",
+   "sens": "tous",
+   "ref": "TD",
+   "nature": "gestion",
+   "libelle": "Produits accessoires"
+  },
+  {
+   "prefixe": "71",
+   "sens": "tous",
+   "ref": "TG",
+   "nature": "gestion",
+   "libelle": "Subventions d'exploitation"
+  },
+  {
+   "prefixe": "72",
+   "sens": "tous",
+   "ref": "TF",
+   "nature": "gestion",
+   "libelle": "Production immobilisée"
+  },
+  {
+   "prefixe": "73",
+   "sens": "tous",
+   "ref": "TE",
+   "nature": "gestion",
+   "libelle": "Variation des stocks de biens et services produits"
+  },
+  {
+   "prefixe": "75",
+   "sens": "tous",
+   "ref": "TH",
+   "nature": "gestion",
+   "libelle": "Autres produits"
+  },
+  {
+   "prefixe": "77",
+   "sens": "tous",
+   "ref": "TK",
+   "nature": "gestion",
+   "libelle": "Revenus financiers et assimilés"
+  },
+  {
+   "prefixe": "781",
+   "sens": "tous",
+   "ref": "TI",
+   "nature": "gestion",
+   "libelle": "Transferts de charges d'exploitation"
+  },
+  {
+   "prefixe": "787",
+   "sens": "tous",
+   "ref": "TM",
+   "nature": "gestion",
+   "libelle": "Transferts de charges financières"
+  },
+  {
+   "prefixe": "791",
+   "sens": "tous",
+   "ref": "TJ",
+   "nature": "gestion",
+   "libelle": "Reprises de provisions et dépréciations d'exploitation"
+  },
+  {
+   "prefixe": "798",
+   "sens": "tous",
+   "ref": "TJ",
+   "nature": "gestion",
+   "libelle": "Reprises d'amortissements"
+  },
+  {
+   "prefixe": "799",
+   "sens": "tous",
+   "ref": "TJ",
+   "nature": "gestion",
+   "libelle": "Reprises de subventions d'investissement"
+  },
+  {
+   "prefixe": "797",
+   "sens": "tous",
+   "ref": "TL",
+   "nature": "gestion",
+   "libelle": "Reprises de provisions et dépréciations financières"
+  },
+  {
+   "prefixe": "601",
+   "sens": "tous",
+   "ref": "RA",
+   "nature": "gestion",
+   "libelle": "Achats de marchandises"
+  },
+  {
+   "prefixe": "6031",
+   "sens": "tous",
+   "ref": "RB",
+   "nature": "gestion",
+   "libelle": "Variation des stocks de marchandises"
+  },
+  {
+   "prefixe": "602",
+   "sens": "tous",
+   "ref": "RC",
+   "nature": "gestion",
+   "libelle": "Achats de matières premières et fournitures liées"
+  },
+  {
+   "prefixe": "6032",
+   "sens": "tous",
+   "ref": "RD",
+   "nature": "gestion",
+   "libelle": "Variation des stocks de matières premières"
+  },
+  {
+   "prefixe": "604",
+   "sens": "tous",
+   "ref": "RE",
+   "nature": "gestion",
+   "libelle": "Achats stockés de matières et fournitures consommables"
+  },
+  {
+   "prefixe": "605",
+   "sens": "tous",
+   "ref": "RE",
+   "nature": "gestion",
+   "libelle": "Autres achats"
+  },
+  {
+   "prefixe": "608",
+   "sens": "tous",
+   "ref": "RE",
+   "nature": "gestion",
+   "libelle": "Achats d'emballages"
+  },
+  {
+   "prefixe": "6033",
+   "sens": "tous",
+   "ref": "RF",
+   "nature": "gestion",
+   "libelle": "Variation des stocks d'autres approvisionnements"
+  },
+  {
+   "prefixe": "61",
+   "sens": "tous",
+   "ref": "RG",
+   "nature": "gestion",
+   "libelle": "Transports"
+  },
+  {
+   "prefixe": "62",
+   "sens": "tous",
+   "ref": "RH",
+   "nature": "gestion",
+   "libelle": "Services extérieurs A"
+  },
+  {
+   "prefixe": "63",
+   "sens": "tous",
+   "ref": "RH",
+   "nature": "gestion",
+   "libelle": "Services extérieurs B"
+  },
+  {
+   "prefixe": "64",
+   "sens": "tous",
+   "ref": "RI",
+   "nature": "gestion",
+   "libelle": "Impôts et taxes"
+  },
+  {
+   "prefixe": "65",
+   "sens": "tous",
+   "ref": "RJ",
+   "nature": "gestion",
+   "libelle": "Autres charges"
+  },
+  {
+   "prefixe": "66",
+   "sens": "tous",
+   "ref": "RK",
+   "nature": "gestion",
+   "libelle": "Charges de personnel"
+  },
+  {
+   "prefixe": "681",
+   "sens": "tous",
+   "ref": "RL",
+   "nature": "gestion",
+   "libelle": "Dotations aux amortissements d'exploitation"
+  },
+  {
+   "prefixe": "691",
+   "sens": "tous",
+   "ref": "RL",
+   "nature": "gestion",
+   "libelle": "Dotations aux provisions et dépréciations d'exploitation"
+  },
+  {
+   "prefixe": "67",
+   "sens": "tous",
+   "ref": "RM",
+   "nature": "gestion",
+   "libelle": "Frais financiers et charges assimilées"
+  },
+  {
+   "prefixe": "687",
+   "sens": "tous",
+   "ref": "RN",
+   "nature": "gestion",
+   "libelle": "Dotations aux amortissements à caractère financier"
+  },
+  {
+   "prefixe": "697",
+   "sens": "tous",
+   "ref": "RN",
+   "nature": "gestion",
+   "libelle": "Dotations aux provisions et dépréciations financières"
+  },
+  {
+   "prefixe": "82",
+   "sens": "tous",
+   "ref": "TN",
+   "nature": "gestion",
+   "libelle": "Produits des cessions d'immobilisations"
+  },
+  {
+   "prefixe": "84",
+   "sens": "tous",
+   "ref": "TO",
+   "nature": "gestion",
+   "libelle": "Produits HAO"
+  },
+  {
+   "prefixe": "86",
+   "sens": "tous",
+   "ref": "TO",
+   "nature": "gestion",
+   "libelle": "Reprises HAO"
+  },
+  {
+   "prefixe": "88",
+   "sens": "tous",
+   "ref": "TO",
+   "nature": "gestion",
+   "libelle": "Subventions d'équilibre"
+  },
+  {
+   "prefixe": "81",
+   "sens": "tous",
+   "ref": "RO",
+   "nature": "gestion",
+   "libelle": "Valeurs comptables des cessions d'immobilisations"
+  },
+  {
+   "prefixe": "83",
+   "sens": "tous",
+   "ref": "RP",
+   "nature": "gestion",
+   "libelle": "Charges HAO"
+  },
+  {
+   "prefixe": "85",
+   "sens": "tous",
+   "ref": "RP",
+   "nature": "gestion",
+   "libelle": "Dotations HAO"
+  },
+  {
+   "prefixe": "87",
+   "sens": "tous",
+   "ref": "RQ",
+   "nature": "gestion",
+   "libelle": "Participation des travailleurs"
+  },
+  {
+   "prefixe": "89",
+   "sens": "tous",
+   "ref": "RS",
+   "nature": "gestion",
+   "libelle": "Impôts sur le résultat"
+  },
+  {
+   "prefixe": "9",
+   "sens": "tous",
+   "ref": null,
+   "nature": "hors_etats",
+   "libelle": "Engagements hors bilan et analytique : hors des états, signalé"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+# Couche de zone CEMAC — générée par outils/convertir_references.py.
+couche: cemac
+version: '2025.1'
+valide_du: '2025-01-01'
+valide_au: null
+monnaie: XAF
+statut: brouillon
+validation:
+  expert: null
+  date: null
+  liasses_reproduites: 0
+herite_de:
+- ohada/2017.1
+remarque: 'Aucun paramètre fiscal à ce niveau : IS, TVA et minimum de perception sont
+  fixés par chaque loi de finances nationale.'

@@ -1,0 +1,621 @@
+{
+ "postes": {
+  "AD": {
+   "etat": "actif",
+   "libelle": "Immobilisations incorporelles",
+   "note": "3",
+   "total": [
+    "AE",
+    "AF",
+    "AG",
+    "AH"
+   ]
+  },
+  "AE": {
+   "etat": "actif",
+   "libelle": "Frais de développement et de prospection",
+   "note": "3"
+  },
+  "AF": {
+   "etat": "actif",
+   "libelle": "Brevets, licences, logiciels et droits similaires",
+   "note": "3"
+  },
+  "AG": {
+   "etat": "actif",
+   "libelle": "Fonds commercial et droit au bail",
+   "note": "3"
+  },
+  "AH": {
+   "etat": "actif",
+   "libelle": "Autres immobilisations incorporelles",
+   "note": "3"
+  },
+  "AI": {
+   "etat": "actif",
+   "libelle": "Immobilisations corporelles",
+   "note": "3",
+   "total": [
+    "AJ",
+    "AK",
+    "AL",
+    "AM",
+    "AN"
+   ]
+  },
+  "AJ": {
+   "etat": "actif",
+   "libelle": "Terrains",
+   "note": "3"
+  },
+  "AK": {
+   "etat": "actif",
+   "libelle": "Bâtiments",
+   "note": "3"
+  },
+  "AL": {
+   "etat": "actif",
+   "libelle": "Aménagements, agencements et installations",
+   "note": "3"
+  },
+  "AM": {
+   "etat": "actif",
+   "libelle": "Matériel, mobilier et actifs biologiques",
+   "note": "3"
+  },
+  "AN": {
+   "etat": "actif",
+   "libelle": "Matériel de transport",
+   "note": "3"
+  },
+  "AP": {
+   "etat": "actif",
+   "libelle": "Avances et acomptes versés sur immobilisations",
+   "note": "3"
+  },
+  "AQ": {
+   "etat": "actif",
+   "libelle": "Immobilisations financières",
+   "note": "4",
+   "total": [
+    "AR",
+    "AS"
+   ]
+  },
+  "AR": {
+   "etat": "actif",
+   "libelle": "Titres de participation",
+   "note": "4"
+  },
+  "AS": {
+   "etat": "actif",
+   "libelle": "Autres immobilisations financières",
+   "note": "4"
+  },
+  "AZ": {
+   "etat": "actif",
+   "libelle": "TOTAL ACTIF IMMOBILISÉ",
+   "total": [
+    "AD",
+    "AI",
+    "AP",
+    "AQ"
+   ]
+  },
+  "BA": {
+   "etat": "actif",
+   "libelle": "Actif circulant HAO",
+   "note": "5"
+  },
+  "BB": {
+   "etat": "actif",
+   "libelle": "Stocks et encours",
+   "note": "6"
+  },
+  "BG": {
+   "etat": "actif",
+   "libelle": "Créances et emplois assimilés",
+   "total": [
+    "BH",
+    "BI",
+    "BJ"
+   ]
+  },
+  "BH": {
+   "etat": "actif",
+   "libelle": "Fournisseurs avances versées",
+   "note": "17"
+  },
+  "BI": {
+   "etat": "actif",
+   "libelle": "Clients",
+   "note": "7"
+  },
+  "BJ": {
+   "etat": "actif",
+   "libelle": "Autres créances",
+   "note": "8"
+  },
+  "BK": {
+   "etat": "actif",
+   "libelle": "TOTAL ACTIF CIRCULANT",
+   "total": [
+    "BA",
+    "BB",
+    "BG"
+   ]
+  },
+  "BQ": {
+   "etat": "actif",
+   "libelle": "Titres de placement",
+   "note": "9"
+  },
+  "BR": {
+   "etat": "actif",
+   "libelle": "Valeurs à encaisser",
+   "note": "10"
+  },
+  "BS": {
+   "etat": "actif",
+   "libelle": "Banques, chèques postaux, caisse et assimilés",
+   "note": "11"
+  },
+  "BT": {
+   "etat": "actif",
+   "libelle": "TOTAL TRÉSORERIE-ACTIF",
+   "total": [
+    "BQ",
+    "BR",
+    "BS"
+   ]
+  },
+  "BU": {
+   "etat": "actif",
+   "libelle": "Écart de conversion-Actif",
+   "note": "12"
+  },
+  "BZ": {
+   "etat": "actif",
+   "libelle": "TOTAL GÉNÉRAL ACTIF",
+   "total": [
+    "AZ",
+    "BK",
+    "BT",
+    "BU"
+   ]
+  },
+  "CA": {
+   "etat": "passif",
+   "libelle": "Capital",
+   "note": "13"
+  },
+  "CB": {
+   "etat": "passif",
+   "libelle": "Apporteurs capital non appelé (-)",
+   "note": "13"
+  },
+  "CD": {
+   "etat": "passif",
+   "libelle": "Primes liées au capital social",
+   "note": "14"
+  },
+  "CE": {
+   "etat": "passif",
+   "libelle": "Écarts de réévaluation",
+   "note": "3E"
+  },
+  "CF": {
+   "etat": "passif",
+   "libelle": "Réserves indisponibles",
+   "note": "14"
+  },
+  "CG": {
+   "etat": "passif",
+   "libelle": "Réserves libres",
+   "note": "14"
+  },
+  "CH": {
+   "etat": "passif",
+   "libelle": "Report à nouveau (+ ou -)",
+   "note": "14"
+  },
+  "CJ": {
+   "etat": "passif",
+   "libelle": "Résultat net de l'exercice (bénéfice + ou perte -)"
+  },
+  "CL": {
+   "etat": "passif",
+   "libelle": "Subventions d'investissement",
+   "note": "15"
+  },
+  "CM": {
+   "etat": "passif",
+   "libelle": "Provisions réglementées",
+   "note": "15"
+  },
+  "CP": {
+   "etat": "passif",
+   "libelle": "TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILÉES",
+   "total": [
+    "CA",
+    "CB",
+    "CD",
+    "CE",
+    "CF",
+    "CG",
+    "CH",
+    "CJ",
+    "CL",
+    "CM"
+   ]
+  },
+  "DA": {
+   "etat": "passif",
+   "libelle": "Emprunts et dettes financières diverses",
+   "note": "16"
+  },
+  "DB": {
+   "etat": "passif",
+   "libelle": "Dettes de location-acquisition",
+   "note": "16"
+  },
+  "DC": {
+   "etat": "passif",
+   "libelle": "Provisions pour risques et charges",
+   "note": "16"
+  },
+  "DD": {
+   "etat": "passif",
+   "libelle": "TOTAL DETTES FINANCIÈRES ET RESSOURCES ASSIMILÉES",
+   "total": [
+    "DA",
+    "DB",
+    "DC"
+   ]
+  },
+  "DF": {
+   "etat": "passif",
+   "libelle": "TOTAL RESSOURCES STABLES",
+   "total": [
+    "CP",
+    "DD"
+   ]
+  },
+  "DH": {
+   "etat": "passif",
+   "libelle": "Dettes circulantes HAO",
+   "note": "5"
+  },
+  "DI": {
+   "etat": "passif",
+   "libelle": "Clients, avances reçues",
+   "note": "7"
+  },
+  "DJ": {
+   "etat": "passif",
+   "libelle": "Fournisseurs d'exploitation",
+   "note": "17"
+  },
+  "DK": {
+   "etat": "passif",
+   "libelle": "Dettes fiscales et sociales",
+   "note": "18"
+  },
+  "DM": {
+   "etat": "passif",
+   "libelle": "Autres dettes",
+   "note": "19"
+  },
+  "DN": {
+   "etat": "passif",
+   "libelle": "Provisions pour risques à court terme",
+   "note": "19"
+  },
+  "DP": {
+   "etat": "passif",
+   "libelle": "TOTAL PASSIF CIRCULANT",
+   "total": [
+    "DH",
+    "DI",
+    "DJ",
+    "DK",
+    "DM",
+    "DN"
+   ]
+  },
+  "DQ": {
+   "etat": "passif",
+   "libelle": "Banques, crédits d'escompte",
+   "note": "20"
+  },
+  "DR": {
+   "etat": "passif",
+   "libelle": "Banques, établissements financiers et crédits de trésorerie",
+   "note": "20"
+  },
+  "DT": {
+   "etat": "passif",
+   "libelle": "TOTAL TRÉSORERIE-PASSIF",
+   "total": [
+    "DQ",
+    "DR"
+   ]
+  },
+  "DV": {
+   "etat": "passif",
+   "libelle": "Écart de conversion-Passif",
+   "note": "12"
+  },
+  "DZ": {
+   "etat": "passif",
+   "libelle": "TOTAL GÉNÉRAL PASSIF",
+   "total": [
+    "DF",
+    "DP",
+    "DT",
+    "DV"
+   ]
+  },
+  "TA": {
+   "etat": "resultat",
+   "libelle": "Ventes de marchandises",
+   "note": "21"
+  },
+  "RA": {
+   "etat": "resultat",
+   "libelle": "Achats de marchandises",
+   "note": "22"
+  },
+  "RB": {
+   "etat": "resultat",
+   "libelle": "Variation de stocks de marchandises",
+   "note": "6"
+  },
+  "XA": {
+   "etat": "resultat",
+   "libelle": "MARGE COMMERCIALE",
+   "total": [
+    "TA",
+    "RA",
+    "RB"
+   ]
+  },
+  "TB": {
+   "etat": "resultat",
+   "libelle": "Ventes de produits fabriqués",
+   "note": "21"
+  },
+  "TC": {
+   "etat": "resultat",
+   "libelle": "Travaux, services vendus",
+   "note": "21"
+  },
+  "TD": {
+   "etat": "resultat",
+   "libelle": "Produits accessoires",
+   "note": "21"
+  },
+  "XB": {
+   "etat": "resultat",
+   "libelle": "CHIFFRE D'AFFAIRES",
+   "total": [
+    "TA",
+    "TB",
+    "TC",
+    "TD"
+   ]
+  },
+  "TE": {
+   "etat": "resultat",
+   "libelle": "Production stockée (ou déstockage)",
+   "note": "6"
+  },
+  "TF": {
+   "etat": "resultat",
+   "libelle": "Production immobilisée",
+   "note": "21"
+  },
+  "TG": {
+   "etat": "resultat",
+   "libelle": "Subventions d'exploitation",
+   "note": "21"
+  },
+  "TH": {
+   "etat": "resultat",
+   "libelle": "Autres produits",
+   "note": "21"
+  },
+  "TI": {
+   "etat": "resultat",
+   "libelle": "Transferts de charges d'exploitation",
+   "note": "12"
+  },
+  "RC": {
+   "etat": "resultat",
+   "libelle": "Achats de matières premières et fournitures liées",
+   "note": "22"
+  },
+  "RD": {
+   "etat": "resultat",
+   "libelle": "Variation de stocks de matières premières",
+   "note": "6"
+  },
+  "RE": {
+   "etat": "resultat",
+   "libelle": "Autres achats",
+   "note": "22"
+  },
+  "RF": {
+   "etat": "resultat",
+   "libelle": "Variation de stocks d'autres approvisionnements",
+   "note": "6"
+  },
+  "RG": {
+   "etat": "resultat",
+   "libelle": "Transports",
+   "note": "23"
+  },
+  "RH": {
+   "etat": "resultat",
+   "libelle": "Services extérieurs",
+   "note": "24"
+  },
+  "RI": {
+   "etat": "resultat",
+   "libelle": "Impôts et taxes",
+   "note": "25"
+  },
+  "RJ": {
+   "etat": "resultat",
+   "libelle": "Autres charges",
+   "note": "26"
+  },
+  "XC": {
+   "etat": "resultat",
+   "libelle": "VALEUR AJOUTÉE",
+   "total": [
+    "XB",
+    "RA",
+    "RB",
+    "TE",
+    "TF",
+    "TG",
+    "TH",
+    "TI",
+    "RC",
+    "RD",
+    "RE",
+    "RF",
+    "RG",
+    "RH",
+    "RI",
+    "RJ"
+   ]
+  },
+  "RK": {
+   "etat": "resultat",
+   "libelle": "Charges de personnel",
+   "note": "27"
+  },
+  "XD": {
+   "etat": "resultat",
+   "libelle": "EXCÉDENT BRUT D'EXPLOITATION",
+   "total": [
+    "XC",
+    "RK"
+   ]
+  },
+  "TJ": {
+   "etat": "resultat",
+   "libelle": "Reprises d'amortissements, provisions et dépréciations",
+   "note": "28"
+  },
+  "RL": {
+   "etat": "resultat",
+   "libelle": "Dotations aux amortissements, provisions et dépréciations",
+   "note": "3C&28"
+  },
+  "XE": {
+   "etat": "resultat",
+   "libelle": "RÉSULTAT D'EXPLOITATION",
+   "total": [
+    "XD",
+    "TJ",
+    "RL"
+   ]
+  },
+  "TK": {
+   "etat": "resultat",
+   "libelle": "Revenus financiers et assimilés",
+   "note": "29"
+  },
+  "TL": {
+   "etat": "resultat",
+   "libelle": "Reprises de provisions et dépréciations financières",
+   "note": "28"
+  },
+  "TM": {
+   "etat": "resultat",
+   "libelle": "Transferts de charges financières",
+   "note": "12"
+  },
+  "RM": {
+   "etat": "resultat",
+   "libelle": "Frais financiers et charges assimilées",
+   "note": "29"
+  },
+  "RN": {
+   "etat": "resultat",
+   "libelle": "Dotations aux provisions et dépréciations financières",
+   "note": "3C&28"
+  },
+  "XF": {
+   "etat": "resultat",
+   "libelle": "RÉSULTAT FINANCIER",
+   "total": [
+    "TK",
+    "TL",
+    "TM",
+    "RM",
+    "RN"
+   ]
+  },
+  "XG": {
+   "etat": "resultat",
+   "libelle": "RÉSULTAT DES ACTIVITÉS ORDINAIRES",
+   "total": [
+    "XE",
+    "XF"
+   ]
+  },
+  "TN": {
+   "etat": "resultat",
+   "libelle": "Produits des cessions d'immobilisations",
+   "note": "3D"
+  },
+  "TO": {
+   "etat": "resultat",
+   "libelle": "Autres produits HAO",
+   "note": "30"
+  },
+  "RO": {
+   "etat": "resultat",
+   "libelle": "Valeurs comptables des cessions d'immobilisations",
+   "note": "3D"
+  },
+  "RP": {
+   "etat": "resultat",
+   "libelle": "Autres charges HAO",
+   "note": "30"
+  },
+  "XH": {
+   "etat": "resultat",
+   "libelle": "RÉSULTAT HORS ACTIVITÉS ORDINAIRES",
+   "total": [
+    "TN",
+    "TO",
+    "RO",
+    "RP"
+   ]
+  },
+  "RQ": {
+   "etat": "resultat",
+   "libelle": "Participation des travailleurs",
+   "note": "30"
+  },
+  "RS": {
+   "etat": "resultat",
+   "libelle": "Impôts sur le résultat"
+  },
+  "XI": {
+   "etat": "resultat",
+   "libelle": "RÉSULTAT NET",
+   "total": [
+    "XG",
+    "XH",
+    "RQ",
+    "RS"
+   ]
+  }
+ }
+}

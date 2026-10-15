@@ -1,0 +1,15 @@
+# Couche commune OHADA — générée par outils/convertir_references.py ; ne pas modifier à la main.
+couche: ohada
+version: '2017.1'
+valide_du: '2018-01-01'
+valide_au: null
+systemes:
+- SN
+- SMT
+statut: brouillon
+validation:
+  expert: null
+  date: null
+  liasses_reproduites: 0
+moteur_minimal: '0.1'
+referentiel: AUDCIF 2017 — SYSCOHADA révisé
