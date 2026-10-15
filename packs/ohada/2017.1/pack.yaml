@@ -13,3 +13,10 @@ validation:
   liasses_reproduites: 0
 moteur_minimal: '0.1'
 referentiel: AUDCIF 2017 — SYSCOHADA révisé
+gabarit_sn:
+  origine: CM
+  feuilles_nationales: ^(cf\d|autres annexes fisca|c[o]?\d ?-? ?note)
+  mentions_entete:
+    republique du cameroun: entete.republique
+    ministere des finances: entete.ministere
+    direction generale des impots: entete.administration

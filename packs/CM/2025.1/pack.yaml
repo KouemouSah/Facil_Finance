@@ -1,0 +1,32 @@
+# Pack pays CAMEROUN — DSF système normal et système minimal de trésorerie.
+# Contenu rédigé et sourcé (pas généré) : chaque taux porte son article ; voir SOURCES.md.
+pays: CM
+version: "2025.1"
+valide_du: "2025-01-01"          # dates de CLÔTURE couvertes (exercice 2025 et suivants)
+valide_au: null                  # ouvert jusqu'au pack suivant (loi de finances qui change l'IS ou la DSF)
+monnaie: XAF
+langues_liasse: [fr, en]
+systemes: [SN, SMT]
+herite_de: [ohada/2017.1, cemac/2025.1]
+# Préversion (décision D9) : pas d'expert-comptable inscrit à ce stade ; Claude fait office d'expert à partir
+# des textes officiels. Le pack ne peut passer « valide » qu'avec un expert inscrit à l'ONECCA et 10 liasses
+# réelles reproduites (règle du format, vérifiée par facil_pack.py valider).
+statut: brouillon
+validation:
+  expert: null
+  date: null
+  liasses_reproduites: 0
+  expertise_provisoire: "Claude — décision D9 du porteur (15/10/2026), risque R14"
+moteur_minimal: "0.1"
+# Formulaire SN : celui de la couche OHADA (même origine DGI Cameroun), qui porte les FORMULES.
+# Comparé au formulaire officiel « verrouillé » publié par la DGI : positions des 148 postes et libellés des
+# 241 lignes de notes écrites par le moteur IDENTIQUES ; seules diffèrent des coquilles de libellés et
+# l'absence de formules dans la version verrouillée. Preuve : verifications/formulaire-officiel.md.
+gabarit_sn:
+  heritage: ohada/2017.1
+  feuilles_conservees: true      # les annexes fiscales camerounaises (CF, C1/C2-NOTE…) sont celles de ce pays
+  officiel_compare:
+    fichier: CM_DSF_SN_DGI_format_verrouille.xlsx
+    url: https://www.impots.cm/sites/default/files/uploads/DSF_Normal_DGIFORMAT_VERROUILLEVF.xlsx
+    sha256: 26d8a15b6125df5d744b66cd1d70e6f69f09f30599ed7db36690e0a42cbb75aa
+    compare_le: "2026-10-16"

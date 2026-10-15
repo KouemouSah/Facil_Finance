@@ -1,0 +1,60 @@
+{
+ "_source": "DGI Cameroun — annexe DSF révisée SYSCOHADA, système minimal de trésorerie (PDF scanné), page 5 du formulaire : « Modèle bilan et compte de résultat du système minimal »",
+ "_statut": "PROPOSÉ — structure relevée sur le formulaire officiel ; correspondance des comptes à éprouver sur une liasse SMT réelle (aucune dans le corpus au 16/10/2026)",
+ "_methode": "Bilan SMT : soldes de la balance. Compte de résultat SMT : encaissements et décaissements, tirés du GRAND LIVRE (contreparties des comptes de trésorerie 52 et 57) ; une balance seule ne suffit pas, le moteur le signale.",
+ "feuilles": {
+  "bilan smt": {
+   "lignes": {
+    "actif.immobilisations": {"libelle": "Immobilisations", "note": "1", "comptes": ["2"], "deduire": ["28", "29"], "solde": "debiteur", "remarque": "à faire figurer si le montant est significatif"},
+    "actif.stocks": {"libelle": "Stocks", "note": "2", "comptes": ["3"], "deduire": ["39"], "solde": "debiteur"},
+    "actif.clients_debiteurs": {"libelle": "Clients et débiteurs divers", "note": "3", "comptes": ["41", "46", "47"], "solde": "debiteur"},
+    "actif.caisse": {"libelle": "Caisse", "comptes": ["57"], "solde": "debiteur"},
+    "actif.banque": {"libelle": "Banque (en + ou en -)", "comptes": ["52"], "solde": "net", "remarque": "un découvert se porte en négatif à l'actif (formulaire)"},
+    "actif.total": {"libelle": "Total actif", "somme": ["actif.immobilisations", "actif.stocks", "actif.clients_debiteurs", "actif.caisse", "actif.banque"]},
+    "passif.compte_exploitant": {"libelle": "Compte exploitant", "comptes": ["10"], "solde": "crediteur"},
+    "passif.resultat": {"libelle": "Résultat exercice", "egal": "compte de resultat smt:G"},
+    "passif.emprunt": {"libelle": "Emprunt", "note": "3", "comptes": ["16", "17"], "solde": "crediteur"},
+    "passif.fournisseurs_crediteurs": {"libelle": "Fournisseurs et créditeurs divers", "comptes": ["40", "42", "43", "44", "46", "47"], "solde": "crediteur"},
+    "passif.total": {"libelle": "Total passif", "somme": ["passif.compte_exploitant", "passif.resultat", "passif.emprunt", "passif.fournisseurs_crediteurs"]}
+   }
+  },
+  "compte de resultat smt": {
+   "lignes": {
+    "recettes.ventes": {"libelle": "Recettes sur ventes ou prestation de services", "note": "4", "encaissements_contrepartie": ["70"]},
+    "recettes.autres": {"libelle": "Autres recettes sur activités", "note": "4", "encaissements_contrepartie": ["71", "75", "77"]},
+    "A": {"libelle": "TOTAL DES RECETTES SUR PRODUITS", "somme": ["recettes.ventes", "recettes.autres"]},
+    "depenses.achats": {"libelle": "Dépenses sur achats", "note": "4", "decaissements_contrepartie": ["60"]},
+    "depenses.loyers": {"libelle": "Dépenses sur loyers", "note": "4", "decaissements_contrepartie": ["622"]},
+    "depenses.salaires": {"libelle": "Dépenses sur salaires", "note": "4", "decaissements_contrepartie": ["66"]},
+    "depenses.impots": {"libelle": "Dépenses sur impôts et taxes", "note": "4", "decaissements_contrepartie": ["64"]},
+    "depenses.interets": {"libelle": "Charge d'intérêts", "decaissements_contrepartie": ["67"]},
+    "depenses.autres": {"libelle": "Autres dépenses sur activités", "note": "4", "decaissements_contrepartie": ["61", "62", "63", "65"], "exclure": ["622"]},
+    "B": {"libelle": "TOTAL DÉPENSES SUR CHARGES", "somme": ["depenses.achats", "depenses.loyers", "depenses.salaires", "depenses.impots", "depenses.interets", "depenses.autres"]},
+    "C": {"libelle": "SOLDE : excédent (+) ou insuffisance (-) de recettes (C = A - B)", "formule": "A - B"},
+    "variation.stocks": {"libelle": "- Variations des stocks N/N-1", "note": "2", "variation_comptes": ["3"]},
+    "variation.creances": {"libelle": "- Variations des créances N/N-1", "note": "3", "variation_comptes": ["41", "46", "47"]},
+    "variation.dettes": {"libelle": "+ Variations des dettes d'exploitation N/N-1", "note": "3", "variation_comptes": ["40", "42", "43", "44"]},
+    "F": {"libelle": "DOTATIONS AMORTISSEMENTS", "comptes": ["681"], "solde": "debiteur"},
+    "G": {"libelle": "RÉSULTAT EXERCICE (G = C - D + E - F)", "formule": "C - D + E - F",
+          "a_trancher": "Le formulaire écrit G = C - D + E - F sans définir D et E. Lecture retenue, cohérente avec le passage de la trésorerie au résultat : D = variation des stocks et des créances, E = variation des dettes. À confirmer avec la notice ou un expert inscrit (R14)."}
+   }
+  }
+ },
+ "notes": {
+  "NOTE 1": "Suivi du matériel, du mobilier et des cautions",
+  "NOTE 2": "État des stocks",
+  "NOTE 3": "État des créances et des dettes non échues au 31 décembre",
+  "NOTE 4": "Journal de trésorerie",
+  "NOTE 5": "Journal de suivi des créances impayées",
+  "NOTE 6": "Journal de suivi des dettes à payer",
+  "T1": "Tableau de suivi des amortissements déductibles réputés différés en période déficitaire",
+  "T2": "Immobilisations : plus-values et moins-values de cession",
+  "T3": "Immobilisations financières",
+  "T4": "Extrait de la balance générale fournisseurs",
+  "T5": "Synthèse des impôts et taxes versés",
+  "T6": "Tableau de passage du résultat comptable avant impôt au résultat fiscal",
+  "T7": "Détermination de l'impôt sur le résultat : impôt sur le bénéfice fiscal",
+  "T8": "Détermination de l'impôt sur le résultat : minimum de perception",
+  "T9": "Récapitulatif des versements d'acomptes et des retenues subies d'impôt sur les sociétés de l'exercice"
+ }
+}

@@ -111,7 +111,21 @@ def main() -> int:
         "systemes": ["SN", "SMT"], "statut": "brouillon",
         "validation": {"expert": None, "date": None, "liasses_reproduites": 0},
         "moteur_minimal": "0.1", "referentiel": "AUDCIF 2017 — SYSCOHADA révisé",
+        # Le gabarit SN commun est le formulaire de la DGI du Cameroun : ses feuilles fiscales sont
+        # NATIONALES. Le producteur les retire, sauf si le pack pays les déclare (feuilles_conservees).
+        "gabarit_sn": {"origine": "CM", "feuilles_nationales": r"^(cf\d|autres annexes fisca|c[o]?\d ?-? ?note)",
+                       "mentions_entete": {"republique du cameroun": "entete.republique",
+                                           "ministere des finances": "entete.ministere",
+                                           "direction generale des impots": "entete.administration"}},
     }, "# Couche commune OHADA — générée par outils/convertir_references.py ; ne pas modifier à la main.\n")
+    # Notes extra-comptables : quand elles s'appliquent (racines de comptes), toujours, ou sur saisie seulement.
+    ecrire_json(o / "declencheurs.json", {
+        "_regle": "une note extra-comptable n'est produite que si la balance montre qu'elle s'applique",
+        "si_comptes": {"note 1": ["16", "17", "18"], "note 3b": ["17"], "note 3d": ["81", "82"], "note 3e": ["106"],
+                       "note 16b": ["196"], "note 16bbis": ["196"], "note 27b": ["66"], "note 13": ["10"]},
+        "toujours": ["note 2"],
+        "si_renseignee": ["note 3f", "note 16c", "note 35", "notes stat sociale et envi", "notes stat a caractere commerci",
+                          "note 32", "note 33"]})
     ecrire_json(o / "correspondances" / "comptes.json", {
         "_origine": "compta-ohada mapping-comptes-dsf.json v" + str(mapping["_meta"].get("version")),
         "_regle": "plus long préfixe gagnant ; une règle propre au sens du solde (debiteur/crediteur) prime sur « tous »",

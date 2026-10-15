@@ -1,0 +1,44 @@
+{
+ "_regle": "une note extra-comptable n'est produite que si la balance montre qu'elle s'applique",
+ "si_comptes": {
+  "note 1": [
+   "16",
+   "17",
+   "18"
+  ],
+  "note 3b": [
+   "17"
+  ],
+  "note 3d": [
+   "81",
+   "82"
+  ],
+  "note 3e": [
+   "106"
+  ],
+  "note 16b": [
+   "196"
+  ],
+  "note 16bbis": [
+   "196"
+  ],
+  "note 27b": [
+   "66"
+  ],
+  "note 13": [
+   "10"
+  ]
+ },
+ "toujours": [
+  "note 2"
+ ],
+ "si_renseignee": [
+  "note 3f",
+  "note 16c",
+  "note 35",
+  "notes stat sociale et envi",
+  "notes stat a caractere commerci",
+  "note 32",
+  "note 33"
+ ]
+}
