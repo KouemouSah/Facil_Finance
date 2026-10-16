@@ -1,0 +1,390 @@
+{
+ "_meta": {
+  "source_unique": "compta-ohada/lib/parametres_fiscaux_ge.json — les copies des skills sont synchronisées par tools/sync_lib.py ; ne jamais éditer une copie.",
+  "source": "Ley n°1/2024 de 19 de noviembre, Código General de Impuestos de Guinea Ecuatorial — texte : datas/ley_tributaria_2024.md",
+  "verifie_le": "2026-09-28",
+  "vigueur": "Appliqué par la DEF GE 2025 du dossier pilote ; date d'entrée en vigueur exacte À CONFIRMER par un fiscaliste.",
+  "regle": "Aucun taux n'est écrit dans le code : tout vient d'ici, avec son article. Modifier une valeur = citer l'article qui la fonde."
+ },
+ "parametres": {
+  "is_taux": {
+   "valeur": 0.25,
+   "article": "art. 75.2",
+   "texte": "El tipo de gravamen del Impuesto sobre Sociedades se fija en 25%.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "is_arrondi_base": {
+   "valeur": 1000,
+   "article": "art. 75.1",
+   "texte": "cualquier fracción del beneficio imponible inferior a 1.000 FCFA será despreciable.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "cmf_taux": {
+   "valeur": 0.015,
+   "article": "art. 75.3",
+   "texte": "no podrá ser inferior al que resulte de la aplicación del 1,5% sobre el volumen de ingresos […] Cuota Mínima Fiscal.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "cmf_exoneration_nouvelles": {
+   "valeur": true,
+   "article": "art. 75.4",
+   "texte": "En ningún caso, la disposición prevista en el punto 3) […] será aplicable a las sociedades de nueva creación.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "cmf_acomptes": {
+   "valeur": [
+    "07-15",
+    "01-15"
+   ],
+   "article": "art. 80.2",
+   "texte": "Un primer pago, a más tardar el día (15) de julio […] El último pago, a más tardar el día (15) de enero del ejercicio siguiente.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "cmf_retenue_etat": {
+   "valeur": 0.015,
+   "article": "art. 80.3",
+   "texte": "retención o descuento a la fuente, equivalente al 1,5% del valor de los servicios ejecutados y cobrados […] en concepto de Cuota Mínima Fiscal.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "deficit_report_exercices": {
+   "valeur": 5,
+   "article": "art. 73.2",
+   "texte": "el excedente del déficit, se reconducirá durante los cinco (5) ejercicios siguientes.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "dons_plafond_ca": {
+   "valeur": 0.0025,
+   "article": "art. 64.2",
+   "texte": "los pagos a organismos reconocidos de interés público […] situados en Guinea Ecuatorial, serán deducibles de un límite máximo del 0,25% de la cifra de negocios.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "relations_publiques_plafond_ca": {
+   "valeur": 0.0025,
+   "article": "art. 64.3",
+   "texte": "Serán igualmente deducibles de un límite del 0,25% de la cifra de negocios, los gastos de relaciones públicas […]",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "bonification_nouvelles": {
+   "valeur": 0.5,
+   "article": "art. 77.4",
+   "texte": "Gozarán de una bonificación del 50% todas las empresas de nueva creación en los primeros cinco (5) ejercicios fiscales.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "def_delai_mois": {
+   "valeur": 6,
+   "article": "art. 79.1.b",
+   "texte": "Presentar una Declaración Estadística y Fiscal Anual (DEF) […] dentro de los seis (6) meses al cierre del periodo de imposición.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "is_paiement_jours": {
+   "valeur": 15,
+   "article": "art. 80.1",
+   "texte": "deberá ser autoliquidada y pagada a más tardar quince (15) días siguientes a la fecha de presentación de la DEF.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "iva_taux_general": {
+   "valeur": 0.15,
+   "article": "art. 155.2",
+   "texte": "Tipo general de 15%: aplicable a todas las operaciones imponibles, con exclusión de las sujetas al tipo reducido de 5% y 0%.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "iva_taux_reduit": {
+   "valeur": 0.05,
+   "article": "art. 155.3",
+   "texte": "Tipo reducido de 5% aplicable a los productos recogidos en el cuadro siguiente […]",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "iva_deduction": {
+   "valeur": true,
+   "article": "art. 156.1",
+   "texte": "El IVA repercutido sobre los elementos del precio de una operación imponible, será deducible del IVA soportado […]",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "etat_salaires": {
+   "valeur": true,
+   "article": "art. 32.1",
+   "texte": "estará obligada a adjuntar en su Declaración Estadística y Fiscal anual (DEF), un estado detallado de los sueldos y salarios pagados […] a) El nombre, apellidos, categoría, profesión, función y dirección; b) El importe de los sueldos y salarios imponibles […]",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "etat_paiements_tiers": {
+   "valeur": true,
+   "article": "art. 27.2",
+   "texte": "una declaración mencionando el nombre del beneficiario, la dirección exacta, el NIF, la naturaleza de la operación, así como el importe total pagado a éstos; indicando el monto sin impuesto, el impuesto y el total […]",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "tiers_non_declares": {
+   "valeur": true,
+   "article": "art. 27.4",
+   "texte": "Las cantidades no declaradas o cuyo beneficiario esté incorrectamente identificado, tendrán la consideración de rentas ocultas […]",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  },
+  "non_residents_taux": {
+   "valeur": 0.1,
+   "article": "art. 76",
+   "texte": "Los obligados tributarios no residentes, pagarán […] un tipo de gravamen equivalente al 10% sobre la facturación bruta obtenida en Guinea Ecuatorial […] siempre y cuando el gasto sea imputado en los estados financieros de la empresa situada en Guinea Ecuatorial.",
+   "source": "Ley n°1/2024 de 19 de noviembre — Código General de Impuestos de Guinea Ecuatorial",
+   "url": "datas/ley_tributaria_2024.md",
+   "consulte_le": "2026-09-28"
+  }
+ },
+ "_interpretations": "Choix laissés à l'ENTREPRISE (profil) là où la loi est ambiguë ou la pratique diverge. Chaque entrée : défaut = lecture stricte. Un profil qui s'en écarte est appliqué, mais l'écart est CHIFFRÉ dans les avertissements, avec la justification donnée.",
+ "interpretations": {
+  "arrondi_base_is": {
+   "defaut": true,
+   "article": "art. 75.1",
+   "question": "Écarter la fraction de base imposable inférieure à 1 000 FCFA ?"
+  },
+  "arrondi_is_franc": {
+   "defaut": true,
+   "article": "convention",
+   "question": "Arrondir l'IS au franc (le XAF n'a pas de subdivision en usage) ?"
+  },
+  "base_cmf": {
+   "defaut": "ca",
+   "choix": [
+    "ca",
+    "produits_totaux"
+   ],
+   "article": "art. 75.3 / 80.2",
+   "question": "Base de la Cuota Mínima : chiffre d'affaires (comptes 70) ou tous les produits (« volumen de ingresos ») ?"
+  },
+  "tf3_iva_deductible": {
+   "defaut": "ligne_distincte",
+   "choix": [
+    "ligne_distincte",
+    "dans_paiements"
+   ],
+   "article": "art. 156",
+   "question": "TF3 : présenter l'IVA déductible sur une ligne distincte (défaut), ou dans la section « pagos » comme l'a fait la DEF du dossier pilote ? (la section « pagos » appelle normalement des cartas de pago)"
+  }
+ },
+ "comptes": {
+  "_note": "Racines SYSCOHADA révisé utilisées par TF3/TF4/TF5 ; un profil peut les remplacer (profil.comptes).",
+  "iva_collectee": [
+   "443"
+  ],
+  "iva_deductible": [
+   "445"
+  ],
+  "iva_due": [
+   "444"
+  ],
+  "tresorerie": [
+   "52",
+   "53",
+   "54",
+   "55",
+   "57"
+  ],
+  "ca": [
+   "70"
+  ],
+  "salaires_national": [
+   "661"
+  ],
+  "salaires_non_national": [
+   "662"
+  ],
+  "irpf": [
+   "4472"
+  ],
+  "irpf_non_national_mots": [
+   "expat",
+   "non nation",
+   "etranger",
+   "extranjer",
+   "no nacional"
+  ],
+  "tf5": [
+   "62",
+   "63",
+   "667"
+  ],
+  "impot_benefices": [
+   "441"
+  ],
+  "cmf_mots": [
+   "cuota",
+   "minim",
+   "cmf",
+   "acompte",
+   "a cuenta",
+   "anticipo",
+   "retenue 1",
+   "retencion 1",
+   "1,5",
+   "1.5"
+  ],
+  "is_anterieur_mots": [
+   "control fiscal",
+   "controle fiscal",
+   "redressement",
+   "regul",
+   "rappel",
+   "solde is",
+   "liquidacion"
+  ]
+ },
+ "_faits": "Faits sur l'ENTREPRISE (profil). Inconnus = QUESTION d'entrée, jamais une supposition silencieuse ; la réponse oriente l'application de la loi, que l'utilisateur valide.",
+ "faits": {
+  "nouvelle_societe": {
+   "article": "art. 75.4 / 77.4",
+   "question": "La société est-elle de création récente (cinq premiers exercices) ? — exonération de CMF et bonification de 50 %."
+  },
+  "paiements_non_residents": {
+   "article": "art. 76",
+   "indices_libelles": [
+    "etranger",
+    "extranjer",
+    "non resident",
+    "no residente",
+    "exterieur"
+   ],
+   "question": "Des prestations facturées par des NON-RÉSIDENTS sont-elles imputées en charges en GE ? — 10 % sur la facturation brute (art. 76)."
+  },
+  "iva_ca_sans_tva": {
+   "portee": "tf3",
+   "article": "art. 155",
+   "choix": [
+    "exonere",
+    "hors_champ",
+    "a_regulariser"
+   ],
+   "question": "Une partie du chiffre d'affaires ne porte AUCUNE IVA facturée : est-elle exonérée (-> colonne « base exonerada »), hors champ, ou à régulariser (IVA due non facturée) ?"
+  },
+  "marches_publics": {
+   "article": "art. 80.3",
+   "indices_libelles": [
+    "etat",
+    "estado",
+    "collectivit",
+    "ministere",
+    "ministerio",
+    "public"
+   ],
+   "question": "La société est-elle payée par l'État ou des entités publiques ? — retenue de 1,5 % à la source au titre de la CMF (art. 80.3), imputable sur l'IS."
+  }
+ },
+ "_propositions": "Le NUMÉRO de compte ne suffit pas : les plans d'entreprise s'écartent de la nomenclature (dossier pilote : 6582 libellé « autres charges diverses », pas des dons). Une proposition « reintegration » n'est émise que si le LIBELLÉ du compte contient l'un des mots_cles ; sinon elle devient une « question », libellé réel à l'appui. Sans libellé : question.",
+ "propositions_gl": [
+  {
+   "prefixes": [
+    "64",
+    "65",
+    "67",
+    "81",
+    "83",
+    "84"
+   ],
+   "ligne": "impuestos",
+   "type": "reintegration",
+   "libelle_regex": "\\biss\\b|\\biss\\s?\\d{2}|impuesto sobre (las )?sociedades|impot sur (les |le )?(benefices|resultat|societes)|\\bis\\s?(19|20)?\\d{2}\\b",
+   "exclure": [
+    "recar",
+    "majoration",
+    "penal",
+    "multa",
+    "amende",
+    "interet",
+    "demora"
+   ],
+   "article": "art. 62.3.a",
+   "motif": "Impôt sur les sociétés (principal) comptabilisé en charge : l'IS n'est pas déductible de la base imposable, y compris celui d'un exercice antérieur (rappel, contrôle fiscal)."
+  }
+ ],
+ "propositions": [
+  {
+   "prefixes": [
+    "647"
+   ],
+   "ligne": "multas",
+   "type": "reintegration",
+   "mots_cles": [
+    "penal",
+    "amende",
+    "multa",
+    "sancion",
+    "recargo",
+    "majoration",
+    "interet de retard",
+    "demora"
+   ],
+   "article": "art. 62.3.d",
+   "motif": "Recargos, sanciones, interés de demora y confiscaciones : non déductibles."
+  },
+  {
+   "prefixes": [
+    "6582",
+    "6583"
+   ],
+   "ligne": "donaciones",
+   "type": "reintegration",
+   "mots_cles": [
+    "don",
+    "mecenat",
+    "liberalit",
+    "parrainage",
+    "donacion",
+    "sponsor",
+    "subvention accordee"
+   ],
+   "article": "art. 64.1-64.2",
+   "motif": "Libéralités et dons non déductibles, sauf organismes d'intérêt public situés en GE dans la limite de 0,25 % du CA (à examiner)."
+  },
+  {
+   "prefixes": [
+    "89"
+   ],
+   "ligne": "impuestos",
+   "type": "information",
+   "article": "art. 62.3.a",
+   "motif": "L'IS n'est pas déductible : le calcul part du résultat AVANT impôt, il n'y a donc rien à réintégrer."
+  },
+  {
+   "prefixes": [
+    "6258",
+    "6257"
+   ],
+   "ligne": "diversos",
+   "type": "question",
+   "article": "art. 63.1.c",
+   "motif": "Assurance maladie : déductible seulement si la couverture bénéficie à l'ensemble du personnel. Sinon, réintégrer."
+  }
+ ]
+}

@@ -292,6 +292,7 @@ class PackResolu:
     pays: str
     versions: list[str]                              # de la plus générale à la plus spécifique
     parametres: dict = field(default_factory=dict)
+    fiscal: dict = field(default_factory=dict)       # autres sections de fiscal/parametres.json (interprétations, comptes…)
     comptes: list = field(default_factory=list)
     postes: dict = field(default_factory=dict)
     sn: dict = field(default_factory=dict)
@@ -337,8 +338,12 @@ def resoudre(racine_packs: Path, pack: Pack) -> PackResolu:
     regles: dict[tuple, dict] = {}
     controles: dict[str, dict] = {}
     for c in couches:
-        for cle, v in ((c.json("fiscal/parametres.json") or {}).get("parametres") or {}).items():
+        fiscal = c.json("fiscal/parametres.json") or {}
+        for cle, v in (fiscal.get("parametres") or {}).items():
             poser("param", cle, v, c.ident, r.parametres)
+        for section, v in fiscal.items():
+            if section != "parametres":
+                poser("fiscal", section, v, c.ident, r.fiscal)
         for code, poste in ((c.json("correspondances/postes.json") or {}).get("postes") or {}).items():
             poser("poste", code, poste, c.ident, r.postes)
         for regle in (c.json("correspondances/comptes.json") or {}).get("regles") or []:

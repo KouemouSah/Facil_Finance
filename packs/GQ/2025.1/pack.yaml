@@ -1,0 +1,27 @@
+# Pack pays GUINÉE ÉQUATORIALE — converti depuis le plugin compta-ohada par outils/convertir_ge.py.
+pays: GQ
+version: '2025.1'
+valide_du: '2025-01-01'
+valide_au: null
+monnaie: XAF
+langues_liasse:
+- es
+- fr
+systemes:
+- SN
+- SMT
+herite_de:
+- ohada/2017.1
+- cemac/2025.1
+statut: brouillon
+validation:
+  expert: null
+  date: null
+  liasses_reproduites: 1
+  reference: 'DEF 2025 déposée d''un dossier pilote (anonymisé) : 3 952 cellules identiques,
+    0 écart inexpliqué'
+moteur_minimal: '0.1'
+gabarit_def:
+  fichier: gabarits/def_ge.xlsx
+  structure: structure/def_ge.json
+  traductions: structure/i18n-def.json

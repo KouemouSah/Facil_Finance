@@ -1,0 +1,225 @@
+{
+ "_meta": {
+  "source": "Code général des impôts du Cameroun, édition 2026 (à jour au 01/01/2026), DGI ; recoupé avec l'édition 2024 : une valeur identique dans les deux éditions est retenue comme en vigueur pour l'exercice 2025",
+  "url_cgi_2026": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+  "url_cgi_2024": "https://www.impots.cm/sites/default/files/documents/CGI%202024%20version%20francaise.pdf",
+  "consulte_le": "2026-10-16",
+  "etabli_par": "Claude, à partir des textes officiels (décision D9) — rapport : travaux/recherche-fiscal-CM.md",
+  "limite": "Les lois de finances 2025 et 2026 promulguées sont des scans non lus en entier ; l'édition 2025 du CGI n'est plus en ligne (erreur 404). À faire confirmer par un expert-comptable inscrit avant toute vente (R14)."
+ },
+ "parametres": {
+  "is.taux_normal": {
+   "valeur": 0.3,
+   "unite": "taux",
+   "article": "CGI art. 17",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "taux de l'impôt sur les sociétés : 30 %, majoré des centimes additionnels communaux (33 %)"
+  },
+  "is.taux_reduit": {
+   "valeur": 0.25,
+   "unite": "taux",
+   "article": "CGI art. 17 bis",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "25 % (27,5 % avec les CAC) pour les entreprises dont le chiffre d'affaires est inférieur ou égal à 3 milliards"
+  },
+  "is.seuil_ca_taux_reduit": {
+   "valeur": 3000000000,
+   "unite": "XAF",
+   "article": "CGI art. 17 bis",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16"
+  },
+  "cac.taux": {
+   "valeur": 0.1,
+   "unite": "taux",
+   "article": "CGI art. C 83 (éd. 2026) ; art. C 54 (éd. 2024)",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "centimes additionnels communaux : 10 % du principal de l'IS, de l'IRPP et de la TVA"
+  },
+  "acompte.taux_reel": {
+   "valeur": 0.02,
+   "unite": "taux",
+   "article": "CGI art. 21 (1) a ; arrêté n° 00000001/MINFI/DGI du 07/01/2025",
+   "source": "CGI éd. 2026 ; arrêté du 07/01/2025",
+   "url": "https://www.impots.cm/sites/default/files/documents/ARRETE%20N%C2%B0001%20DU%2007%20JANV%202025%20VF-compress%C3%A9.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "acompte mensuel de 2 % du chiffre d'affaires (2,2 % avec les CAC), versé au plus tard le 15 du mois suivant"
+  },
+  "minimum_perception.taux": {
+   "valeur": 0.02,
+   "unite": "taux",
+   "article": "CGI art. 22 (2) et 23",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "minimum de perception : 2 % (2,2 % avec les CAC) du chiffre d'affaires de l'exercice ; l'impôt dû est le plus élevé de l'IS et de ce minimum",
+   "base": "chiffre d'affaires de l'exercice",
+   "preuve": "DSF 2025 publiée de la SIC, tableau CF1 : minimum proportionnel 100 455 367 = 2 % × CA de l'exercice 5 022 768 363 (tests/test_demo_sic.py)"
+  },
+  "minimum_perception.taux_marge_administree": {
+   "valeur": 0.14,
+   "unite": "taux",
+   "article": "CGI art. 22 (2)",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "secteurs à marge administrée : 14 % de la marge brute"
+  },
+  "deficits.report_exercices": {
+   "valeur": 4,
+   "unite": "exercices",
+   "article": "CGI art. 12",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "report des déficits sur les quatre exercices suivants (six ans pour les établissements de crédit)"
+  },
+  "deficits.report_exercices_banques": {
+   "valeur": 6,
+   "unite": "exercices",
+   "article": "CGI art. 12",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16"
+  },
+  "tva.taux_general": {
+   "valeur": 0.175,
+   "unite": "taux",
+   "article": "CGI art. 142",
+   "source": "CGI éd. 2026 et 2024 ; arrêté du 07/01/2025",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "TVA : 17,5 % (19,25 % avec les CAC). Le taux réduit de 10 % créé par la loi de finances 2026 ne s'applique pas à 2025"
+  },
+  "tva.taux_zero": {
+   "valeur": 0.0,
+   "unite": "taux",
+   "article": "CGI art. 142",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16"
+  },
+  "reintegration.frais_siege_plafond_benefice": {
+   "valeur": 0.025,
+   "unite": "taux",
+   "article": "CGI art. 7-A-1",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "frais de siège et d'assistance technique : 2,5 % du bénéfice imposable avant leur déduction"
+  },
+  "reintegration.frais_siege_plafond_ca_deficit": {
+   "valeur": 0.01,
+   "unite": "taux",
+   "article": "CGI art. 7-A-1",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "1 % du chiffre d'affaires en cas de déficit continu ou pour une entreprise nouvelle"
+  },
+  "reintegration.frais_siege_plafond_btp": {
+   "valeur": 0.01,
+   "unite": "taux",
+   "article": "CGI art. 7-A-1",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "entreprises de bâtiment et travaux publics : 1 % du chiffre d'affaires"
+  },
+  "reintegration.frais_siege_plafond_bureaux_etudes": {
+   "valeur": 0.05,
+   "unite": "taux",
+   "article": "CGI art. 7-A-1",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16"
+  },
+  "reintegration.dons_plafond_ca": {
+   "valeur": 0.005,
+   "unite": "taux",
+   "article": "CGI art. 7-A-5",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "dons et libéralités : 0,5 % du chiffre d'affaires (5 % pour les clubs sportifs d'élite)"
+  },
+  "reintegration.dons_plafond_ca_clubs_sportifs": {
+   "valeur": 0.05,
+   "unite": "taux",
+   "article": "CGI art. 7-A-5",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16"
+  },
+  "reintegration.interets_cca_marge_taux_beac": {
+   "valeur": 0.02,
+   "unite": "taux",
+   "article": "CGI art. 7-B",
+   "source": "CGI éd. 2026 et 2024",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "intérêts des comptes courants d'associés : taux des avances de la BEAC majoré de 2 points ; capital entièrement libéré ; convention enregistrée"
+  },
+  "reintegration.interets_cca_ratio_avances_capitaux_propres": {
+   "valeur": 1.5,
+   "unite": "coefficient",
+   "article": "CGI art. 7-B",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "associés détenant au moins 25 % : avances limitées à 1,5 fois les capitaux propres"
+  },
+  "reintegration.interets_cca_plafond_resultat": {
+   "valeur": 0.25,
+   "unite": "taux",
+   "article": "CGI art. 7-B",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "associés détenant au moins 25 % : intérêts déductibles limités à 25 % du résultat avant impôt"
+  },
+  "regime_reel.seuil_ca": {
+   "valeur": 50000000,
+   "unite": "XAF",
+   "article": "CGI art. 93 quater et 93 quinquies",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "régime du réel : chiffre d'affaires hors taxes d'au moins 50 millions ; maintien deux ans si le chiffre d'affaires passe sous le seuil"
+  },
+  "dsf.date_limite_grandes_entreprises": {
+   "valeur": "03-15",
+   "unite": "mois-jour",
+   "article": "CGI art. 18",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "dépôt de la DSF au plus tard le 15 mars (grandes entreprises)"
+  },
+  "dsf.date_limite_moyennes_entreprises": {
+   "valeur": "04-15",
+   "unite": "mois-jour",
+   "article": "CGI art. 18",
+   "source": "CGI éd. 2026",
+   "url": "https://www.impots.cm/sites/default/files/documents/CODE%20GENERAL%20DES%20IMPOTS%202026%20SITE%20DGI%20VERSION%20FRANCAISE.pdf",
+   "consulte_le": "2026-10-16",
+   "texte": "15 avril pour les moyennes entreprises et les centres spécialisés"
+  }
+ },
+ "non_confirme": {
+  "vehicules_tourisme_plafond_base": "aucun plafond de base amortissable dans le CGI ; seuls des taux maximaux (25 % matériel léger en ville, 33,33 % matériel lourd ou en brousse)",
+  "taux_avances_beac_2025": "valeur chiffrée non recherchée (le CGI dit « taux des avances BEAC + 2 points »)",
+  "minimum_perception_liberatoire": "caractère libératoire et date du solde de l'IS : écrits pour l'IRPP sur les bénéfices commerciaux, pas dans la section IS",
+  "lois_de_finances_2025_2026": "textes promulgués scannés, non lus en entier ; circulaire de la loi de finances 2026 non trouvée",
+  "seuils_smt": "seuils du système minimal de trésorerie non recherchés (AUDCIF, art. 13)",
+  "tva_taux_zero_liste": "liste des opérations au taux zéro non relue",
+  "minimum_perception_base": "la recherche (lecture du CGI art. 23) indiquait le CA de l'exercice PRÉCÉDENT ; la DSF déposée de la SIC applique le CA de l'EXERCICE — retenu ici, à faire confirmer par un expert inscrit (R14)"
+ }
+}
