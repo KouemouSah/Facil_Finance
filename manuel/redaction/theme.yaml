@@ -1,0 +1,7 @@
+# Surcharge du thème Facil du plugin documents-pro, pour le manuel d'utilisation : seules ces clés changent.
+entreprise:
+  siret: "108 750 407 00018"
+  pays: "Paris, France"
+produit: "Facil DEF"
+entete: "Manuel d'utilisation {produit}"
+mention: "Manuel d'utilisation, usage interne"

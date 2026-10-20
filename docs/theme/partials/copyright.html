@@ -1,0 +1,15 @@
+{#- Pied de page : icône, copyright à l'année calculée, version, liens vers les pages qui existent. -#}
+<div class="md-copyright facil-pied">
+  <div class="facil-pied__marque">
+    <img class="facil-pied__icone" src="{{ 'assets/icon.png' | url }}" alt="" aria-hidden="true" width="22" height="22">
+    <span>© <span class="annee-courante">{{ config.extra.annee_construction }}</span> {{ config.extra.editeur }}</span>
+  </div>
+  <div class="facil-pied__meta">
+    {{ config.extra.produit }} · documentation projet · construite le {{ config.extra.construite_le }}{% if config.extra.confidentiel %} · <strong>Confidentiel</strong>{% endif %}
+  </div>
+</div>
+<nav class="facil-pied__liens" aria-label="Liens du pied de page">
+  {% for lien in config.extra.liens_pied %}
+    <a href="{{ lien.page | url }}">{{ lien.titre }}</a>
+  {% endfor %}
+</nav>

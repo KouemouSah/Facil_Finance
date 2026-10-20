@@ -1,0 +1,84 @@
+type: presentation
+fichier: Presentacion-comercial-Facil-DEF
+theme: theme-commercial-es.yaml
+options:
+  sans_tiret_long: true
+  mots_interdits: ["a confirmar", "a completar"]   # noms de clients : garde du dépôt (outils/garde_confidentialite.py), jamais en clair ici
+meta:
+  kicker: "Facil DEF  ·  Guinea Ecuatorial"
+  titre_ligne1: "Su DEF SYSCOHADA,"
+  titre_ligne2: "lista para validar"
+  sous_titre: "De la balanza a la declaración validada, en su equipo, sin volver a teclear"
+  projet: "0.13.0"
+  date: "Octubre 2026"
+  libelles: {projet: "Versión", contact: "Contacto"}
+
+diapositives:
+  - mise_en_page: couverture
+    notes: "Facil DEF produce la Declaración Estadística y Fiscal (DEF) de Guinea Ecuatorial según el modelo SYSCOHADA revisado, a partir de la balanza y del libro mayor. El mensaje: la DEF se calcula automáticamente; el experto solo decide y valida."
+
+  - mise_en_page: deux_colonnes
+    entete: "El problema"
+    rubrique: "Problema y respuesta"
+    titre: "La DEF se teclea de nuevo cada año; Facil DEF la calcula"
+    accent: "Facil DEF la calcula"
+    gauche_titre: "Hoy"
+    droite_titre: "Con Facil DEF"
+    lignes:
+      - ["Los importes de la balanza se copian en decenas de hojas", "Todos los estados, notas y cuadros fiscales se **calculan** a partir de la balanza"]
+      - ["Los comparativos N-1 se retoman a mano, a veces desde un papel escaneado", "La DEF anterior, incluso **escaneada**, se lee en el equipo y se prueba con las fórmulas"]
+      - ["Las opciones fiscales se deciden sin dejar rastro escrito", "Cada ajuste muestra su **efecto sobre el impuesto**; cada respuesta queda registrada"]
+      - ["Las diferencias se descubren en el momento de la presentación", "Un **informe de control** y un **análisis plurianual** se entregan con cada versión"]
+    notes: "Insistir en la recaptura y en la trazabilidad: el valor no es solo el tiempo ganado, es una DEF en la que cada cifra se justifica."
+
+  - mise_en_page: captures
+    entete: "El producto"
+    rubrique: "Cómo funciona"
+    titre: "Una frase a Claude, un formulario guiado, una DEF validada"
+    accent: "una DEF validada"
+    items:
+      - {image: captures/c12.png, titre: "Pedir", legende: "« Prepara la DEF 2025 de… »: se crea la carpeta"}
+      - {image: captures/c18.png, titre: "Decidir", legende: "Ajustes propuestos, con su efecto sobre el IS"}
+      - {image: captures/c20.png, titre: "Explicar", legende: "Variaciones explicadas por las cuentas"}
+      - {image: captures/c23.png, titre: "Validar", legende: "Versión definitiva, sin marca de agua, a su nombre"}
+    note: "Capturas del producto (interfaz en francés), datos del cliente ocultos."
+    notes: "Recorrer el proceso: se deposita la balanza, Claude genera la versión borrador, el formulario plantea solo las preguntas que los archivos no resuelven y la validación nominativa produce la versión definitiva."
+
+  - mise_en_page: cartes
+    entete: "Las garantías"
+    rubrique: "Confianza"
+    titre: "Cifras justificadas, datos que permanecen en su empresa"
+    accent: "que permanecen en su empresa"
+    items:
+      - {icone: shield-check, titre: "Datos en el equipo", texte: "Cálculos, archivos y formulario permanecen en el ordenador; Claude solo recibe seudónimos, con los importes ocultos."}
+      - {icone: badge-check, titre: "Nada validado en su lugar", texte: "La versión definitiva exige todas las respuestas obligatorias y una validación nominativa."}
+      - {icone: scan-line, titre: "Escaneos leídos y probados", texte: "Un importe leído en una DEF escaneada solo se retoma si verifica las fórmulas SYSCOHADA."}
+      - {icone: file-search, titre: "Todo queda registrado", texte: "Informe de control: respuestas aplicadas, origen, fecha y validador, para cada versión."}
+    bande: {icone: monitor-check, titre: "Instalado en cinco minutos", texte: "Un único archivo para Claude Desktop en Windows, todo incluido: nada más que instalar."}
+    notes: "Estas garantías responden a las objeciones habituales: confidencialidad, responsabilidad de la validación, fiabilidad de lo retomado del año anterior."
+
+  - mise_en_page: cartes
+    entete: "Ficha de producto"
+    rubrique: "Ficha de producto"
+    titre: "Facil DEF de un vistazo"
+    accent: "de un vistazo"
+    items:
+      - {icone: users, titre: "Para quién", texte: "Despachos de expertos contables y servicios contables de empresas en Guinea Ecuatorial."}
+      - {icone: file-input, titre: "Usted deposita", texte: "Balanza y libro mayor; opcionalmente la DEF anterior, en Excel o escaneada, y el logotipo."}
+      - {icone: files, titre: "Usted recibe", texte: "Estados SYSCOHADA, TF1 a TF5, versión en español, informes PDF, control y análisis financiero (17 ratios)."}
+      - {icone: laptop, titre: "Requisitos", texte: "Windows y Claude Desktop; nada más que instalar. Manual ilustrado incluido."}
+    bande: {icone: calendar-check, titre: "Demostración con sus propios archivos", texte: "Traiga una balanza: la versión borrador se genera delante de usted."}
+    notes: "Ficha para dejar tras la reunión: se lee sola. Las condiciones comerciales se presentan aparte, según el número de expedientes."
+
+  - mise_en_page: fin
+    kicker: "Próximo paso"
+    ligne1: "Vea su DEF"
+    ligne2: "tomar forma."
+    texte: "Una demostración con la balanza que usted elija, en su equipo."
+    cta: {icone: calendar-check, kicker: "Solicitar una demostración", titre: "sah@emacsah.com"}
+    raisons_titre: "Por qué Facil DEF"
+    raisons:
+      - {titre: "Primero lo automático", texte: "La DEF completa se calcula antes de la primera pregunta."}
+      - {titre: "Después las preguntas", texte: "Solo las que sus archivos no resuelven, una sola vez."}
+      - {titre: "Validada por usted", texte: "Cada respuesta registrada, la versión definitiva a su nombre."}
+    notes: "Cerrar con la llamada a la acción: proponer una fecha de demostración con los archivos del cliente potencial."

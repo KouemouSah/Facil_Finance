@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "role": "Profil de MARQUE de l'entreprise — réutilisé par les rapports (A4) ET les decks. S'adapte à la charte graphique / au logo.",
+    "AVERTISSEMENT": "EXEMPLE. Dériver du logo (Claude analyse l'image) ou de la charte fournie, puis CONFIRMER avec l'utilisateur. Ne rien imposer."
+  },
+  "entreprise": "ANONYMISER",
+  "logo": "assets/logo.png",
+  "palette": {
+    "primaire": "#0F172A",
+    "accent1": "#4A7C0C",
+    "accent2": "#C2410C",
+    "accent3": "#0F766E",
+    "fond": "#FAF8F3"
+  },
+  "polices": { "titres": "Fraunces (ou charte)", "texte": "Inter (ou charte)" },
+  "titre_convention": "Rapport financier — {entreprise} — {période}",
+  "auteur_ou_departement": "Service Comptabilité",
+  "contact": "Service Comptabilité",
+  "confidentialite": "Confidentiel — usage interne",
+  "notes": [
+    "auteur_ou_departement : un DÉPARTEMENT (ex. 'Service Comptabilité') convient, pas forcément une personne.",
+    "contact : un e-mail OU un département OU vide selon le rapport.",
+    "titre : adapter selon le livrable (ex. 'Reporting de gestion — Mars 2026'), pas un 'titre projet' figé.",
+    "Decks : reporter la palette dans le <style> de thème (voir presentation-decks/assets/theme.example.css)."
+  ]
+}

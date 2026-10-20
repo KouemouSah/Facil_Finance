@@ -1,0 +1,174 @@
+[
+ {
+  "id": "sources.def_precedente",
+  "categorie": "Sources",
+  "question": "Aucune DEF de l'exercice précédent : s'il en existe une, déposez-la dans 01_sources puis régénérez (elle fournit les comparatifs N-1 des notes) ; sinon, confirmez le premier exercice.",
+  "type": "choix",
+  "options": [
+   "premier exercice"
+  ],
+  "obligatoire": true,
+  "impact": "colonnes N-1 des notes vides",
+  "contexte": "Le bilan N-1 est tiré des soldes d'ouverture de la balance. La question disparaît d'elle-même quand la DEF est déposée.",
+  "defaut": null
+ },
+ {
+  "id": "identite.raison_sociale",
+  "categorie": "Identité de l'entité",
+  "question": "Dénomination sociale",
+  "type": "texte",
+  "options": [],
+  "obligatoire": true,
+  "impact": "",
+  "contexte": "Saisie une seule fois : reprise en page de garde, dans tous les en-têtes et sur la couverture du rapport.",
+  "defaut": null
+ },
+ {
+  "id": "identite.adresse",
+  "categorie": "Identité de l'entité",
+  "question": "Adresse complète",
+  "type": "texte",
+  "options": [],
+  "obligatoire": true,
+  "impact": "",
+  "contexte": "Saisie une seule fois : reprise en page de garde, dans tous les en-têtes et sur la couverture du rapport.",
+  "defaut": null
+ },
+ {
+  "id": "identite.nif",
+  "categorie": "Identité de l'entité",
+  "question": "Numéro d'identification fiscale (NIF)",
+  "type": "texte",
+  "options": [],
+  "obligatoire": true,
+  "impact": "",
+  "contexte": "Saisie une seule fois : reprise en page de garde, dans tous les en-têtes et sur la couverture du rapport.",
+  "defaut": null
+ },
+ {
+  "id": "fait.nouvelle_societe",
+  "categorie": "Faits sur l'entreprise",
+  "question": "La société est-elle de création récente (cinq premiers exercices) ? — exonération de CMF et bonification de 50 %.",
+  "type": "oui_non",
+  "options": [
+   "oui",
+   "non"
+  ],
+  "obligatoire": true,
+  "impact": "",
+  "contexte": "art. 75.4 / 77.4",
+  "defaut": null
+ },
+ {
+  "id": "fait.paiements_non_residents",
+  "categorie": "Faits sur l'entreprise",
+  "question": "Des prestations facturées par des NON-RÉSIDENTS sont-elles imputées en charges en GE ? — 10 % sur la facturation brute (art. 76).",
+  "type": "oui_non",
+  "options": [
+   "oui",
+   "non"
+  ],
+  "obligatoire": true,
+  "impact": "",
+  "contexte": "art. 76 — indices dans la balance : 1 compte(s)",
+  "defaut": null
+ },
+ {
+  "id": "fait.marches_publics",
+  "categorie": "Faits sur l'entreprise",
+  "question": "La société est-elle payée par l'État ou des entités publiques ? — retenue de 1,5 % à la source au titre de la CMF (art. 80.3), imputable sur l'IS.",
+  "type": "oui_non",
+  "options": [
+   "oui",
+   "non"
+  ],
+  "obligatoire": true,
+  "impact": "",
+  "contexte": "art. 80.3 — indices dans la balance : 1 compte(s)",
+  "defaut": null
+ },
+ {
+  "id": "reint.64710000",
+  "categorie": "Réintégrations fiscales (TF1)",
+  "question": "Réintégrer [montant] du compte [montant] ?",
+  "type": "decision",
+  "options": [
+   "accepter",
+   "refuser"
+  ],
+  "obligatoire": true,
+  "impact": "IS [montant]",
+  "contexte": "Recargos, sanciones, interés de demora y confiscaciones : non déductibles. (art. 62.3.d)",
+  "defaut": null
+ },
+ {
+  "id": "reint.64780000",
+  "categorie": "Réintégrations fiscales (TF1)",
+  "question": "Réintégrer [montant] du compte [montant] ?",
+  "type": "decision",
+  "options": [
+   "accepter",
+   "refuser"
+  ],
+  "obligatoire": true,
+  "impact": "IS [montant]",
+  "contexte": "Recargos, sanciones, interés de demora y confiscaciones : non déductibles. (art. 62.3.d)",
+  "defaut": null
+ },
+ {
+  "id": "reint.65820000",
+  "categorie": "Réintégrations fiscales (TF1)",
+  "question": "Réintégrer [montant] du compte [montant] ?",
+  "type": "decision",
+  "options": [
+   "accepter",
+   "refuser"
+  ],
+  "obligatoire": true,
+  "impact": "à examiner",
+  "contexte": "Le libellé « AUTRES CHARGES DIVERSES » ne correspond pas à la nomenclature (6582/6583 = donaciones) : la nature réelle des dépenses est à examiner. Libéralités et dons non déductibles, sauf organismes d'intérêt public situés en GE dans la limite de 0,25 % du CA (à examiner). (art. 64.1-64.2)",
+  "defaut": null
+ },
+ {
+  "id": "reint.65830000",
+  "categorie": "Réintégrations fiscales (TF1)",
+  "question": "Réintégrer [montant] du compte [montant] ?",
+  "type": "decision",
+  "options": [
+   "accepter",
+   "refuser"
+  ],
+  "obligatoire": true,
+  "impact": "IS [montant]",
+  "contexte": "Libéralités et dons non déductibles, sauf organismes d'intérêt public situés en GE dans la limite de 0,25 % du CA (à examiner). (art. 64.1-64.2)",
+  "defaut": null
+ },
+ {
+  "id": "reint.62580000",
+  "categorie": "Réintégrations fiscales (TF1)",
+  "question": "Réintégrer [montant] du compte [montant] ?",
+  "type": "decision",
+  "options": [
+   "accepter",
+   "refuser"
+  ],
+  "obligatoire": true,
+  "impact": "à examiner",
+  "contexte": "Assurance maladie : déductible seulement si la couverture bénéficie à l'ensemble du personnel. Sinon, réintégrer. (art. 63.1.c)",
+  "defaut": null
+ },
+ {
+  "id": "reint.64800000",
+  "categorie": "Réintégrations fiscales (TF1)",
+  "question": "Réintégrer [montant] du compte [montant] ?",
+  "type": "decision",
+  "options": [
+   "accepter",
+   "refuser"
+  ],
+  "obligatoire": true,
+  "impact": "IS [montant]",
+  "contexte": "IS (principal) comptabilisé en charge, reconnu par la structure de la pièce : l'IS n'est pas déductible, y compris celui d'un exercice antérieur (rappel, contrôle fiscal). À confirmer avec le comptable. (art. 62.3.a)",
+  "defaut": null
+ }
+]

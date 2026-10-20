@@ -4,7 +4,7 @@
 
 1. validation de tous les packs (format, sources, signatures)
 2. tests et contre-épreuves (pytest)
-3. parité du noyau avec le plugin compta-ohada (si présent sur le poste)
+3. parité du noyau avec le plugin compta-ohada (plugin/compta-ohada, dans le dépôt)
 Code 1 dès qu'une étape échoue : le commit est refusé.
 """
 from __future__ import annotations
@@ -24,8 +24,6 @@ ETAPES = [
 def main() -> int:
     echec = False
     for nom, commande in ETAPES:
-        if nom.startswith("parité") and not (DEPOT.parent / "compta-ohada").exists():
-            print(f"[saut] {nom} : plugin absent de ce poste"); continue
         r = subprocess.run(commande, cwd=DEPOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
         derniere = (r.stdout.strip().splitlines() or [""])[-1]
         print(f"[{'ok' if r.returncode == 0 else 'ÉCHEC'}] {nom} — {derniere}")

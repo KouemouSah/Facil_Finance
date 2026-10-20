@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "role": "Cartographie cellule-à-cellule pour peupler AUTOMATIQUEMENT un modèle DSF.",
+    "modele": "DSF_Normal_MODELE-PAR-DEFAUT.xlsx",
+    "AVERTISSEMENT": "EXEMPLE à valider. Un cell-map est PROPRE À CHAQUE MODÈLE : il faut ouvrir chaque Note du modèle de l'utilisateur et relever la cellule de saisie exacte (colonne N et N-1). Ne pas utiliser tel quel sans vérification.",
+    "colonnes": {"n": "exercice N", "n1": "exercice N-1"}
+  },
+  "cells": [
+    {"source": "ref", "ref": "TA", "sheet": "NOTE 21", "cell_n": "E13", "cell_n1": "F13", "libelle": "Ventes de marchandises"},
+    {"source": "ref", "ref": "TC", "sheet": "NOTE 21", "cell_n": "E16", "cell_n1": "F16", "libelle": "Travaux, services vendus (BTP)"},
+    {"source": "ref", "ref": "RA", "sheet": "NOTE 22", "cell_n": "E12", "cell_n1": "F12", "libelle": "Achats de marchandises"},
+    {"source": "ref", "ref": "RC", "sheet": "NOTE 22", "cell_n": "E17", "cell_n1": "F17", "libelle": "Achats matières et fournitures"},
+    {"source": "note3c", "categorie": "Matériel de transport", "champ": "brut", "sheet": "NOTE 3C", "cell_n": "C20", "libelle": "Matériel de transport - valeur brute"},
+    {"source": "note3c", "categorie": "Matériel de transport", "champ": "amort", "sheet": "NOTE 3C", "cell_n": "D20", "libelle": "Matériel de transport - amortissements"},
+    {"source": "intake", "cle": "effectif_total", "sheet": "INFORMATIONS GENERALES", "cell_n": "C25", "libelle": "Effectif total"},
+    {"source": "intake", "cle": "raison_sociale", "sheet": "PAGE DE GARDE", "cell_n": "C5", "libelle": "Raison sociale"}
+  ]
+}

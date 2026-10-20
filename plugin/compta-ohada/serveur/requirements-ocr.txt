@@ -1,0 +1,5 @@
+# Installé SANS dépendances et sans contrôle de version Python (tools/construire_runtime.py) : la 1.4.4 déclare
+# « Python < 3.13 » alors que le paquet est en Python pur et que toutes ses dépendances (requirements.txt) ont des
+# roues cp313. La version est FIGÉE : c'est celle avec laquelle la lecture a été mise au point et prouvée
+# (tests/test_ocr_def.py, rejoué sur le runtime embarqué).
+rapidocr_onnxruntime==1.4.4

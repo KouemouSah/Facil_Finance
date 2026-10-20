@@ -1,0 +1,5 @@
+.outils/venv/
+.outils/staging/
+.outils/mkdocs.genere.yml
+site/
+.doc-projet/a-revoir.jsonl

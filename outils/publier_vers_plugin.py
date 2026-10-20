@@ -1,6 +1,6 @@
 """Publie le noyau du moteur (source unique) vers le plugin compta-ohada, puis vérifie la parité.
 
-  publier_vers_plugin.py [--plugin C:/DSF/compta-ohada]          copie, puis lance sync_lib.py du plugin
+  publier_vers_plugin.py [--plugin plugin/compta-ohada]          copie, puis lance sync_lib.py du plugin
   publier_vers_plugin.py --check [--plugin …]                     code 1 si une copie du plugin diverge
 
 Le plugin reste installable seul (il embarque ses copies) ; mais ses copies ne se modifient plus chez lui.
@@ -31,7 +31,7 @@ def ecarts(plugin: Path) -> list[str]:
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--plugin", default=str(Path(__file__).resolve().parents[2] / "compta-ohada"))
+    p.add_argument("--plugin", default=str(Path(__file__).resolve().parents[1] / "plugin" / "compta-ohada"))
     p.add_argument("--check", action="store_true")
     a = p.parse_args()
     plugin = Path(a.plugin)

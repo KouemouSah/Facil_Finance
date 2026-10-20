@@ -1,0 +1,263 @@
+type: document
+fichier: Manual-de-uso-Facil-DEF
+theme: theme-es.yaml
+options:
+  sommaire: true
+  sans_tiret_long: true
+  mots_interdits: ["a confirmar", "a completar"]   # pas « TODO » : le contrôle ignore la casse et « todo » est espagnol
+meta:
+  kicker: "Manual de uso  ·  Extensión de Claude Desktop"
+  titre_ligne1: "Facil DEF"
+  titre_ligne2: "de la balanza a la DEF validada"
+  sous_titre: "Instalar la extensión, depositar los archivos, responder a las preguntas, validar y encontrar los entregables"
+  destinataire: "Equipos contables usuarios"
+  projet: "0.13.0"
+  signature: ["Facil AI Solutions Architect", "DEF Versión 0.13.0", "Octubre 2026"]
+  date: "Octubre 2026"
+  libelles:
+    porteur: "Editor"
+    projet: "Versión"
+    destinataire: "Para"
+    sommaire: "Índice"
+    sommaire_titre: "Qué contiene este manual"
+    sommaire_accent: "este manual"
+    contact: "Contacto"
+    annexe: "Anexo"
+sommaire_encadre:
+  icone: info
+  titre: "Cómo leer este manual."
+  texte: "Los capítulos I a V siguen el orden de un primer uso, de la instalación a la versión definitiva. El capítulo VI reúne las peticiones que puede hacer a Claude y el capítulo VII las situaciones particulares. La interfaz del producto y las capturas están en francés: cada botón se cita tal como aparece en pantalla, seguido de su traducción. En las capturas, el nombre del cliente, sus identificadores y los datos personales están ocultos por un bloque opaco."
+
+chapitres:
+  - rubrique: "Síntesis"
+    numero: false
+    titre: "Una DEF producida en su equipo, verificada y luego validada por usted"
+    accent: "validada por usted"
+    blocs:
+      - {type: lead, texte: "Facil DEF calcula la Declaración Estadística y Fiscal (DEF) de Guinea Ecuatorial según el modelo SYSCOHADA revisado, a partir de la balanza de comprobación y del libro mayor: primero lo automático, después las preguntas."}
+      - {type: texte, texte: "Usted deposita sus archivos en una carpeta de trabajo. La extensión reconoce cada archivo por su contenido, produce una versión **borrador** completa y luego le plantea, de una sola vez, únicamente las preguntas que ningún archivo permite resolver. Usted responde en un formulario local; la versión **definitiva** solo se produce tras su validación, a su nombre."}
+      - type: points
+        items:
+          - {icone: zap, titre: "Primero lo automático", texte: "Estados SYSCOHADA del sistema normal adaptados a sus datos, cuadros fiscales de Guinea Ecuatorial (TF1 a TF5), informes PDF, anexo de la balanza, informe de control y análisis financiero."}
+          - {icone: list-checks, titre: "Después las preguntas, una sola vez", texte: "Identidad, hechos sobre la empresa, ajustes fiscales, opciones de interpretación: cada respuesta se reincorpora en los libros Excel y en los PDF."}
+          - {icone: shield-check, titre: "Sus datos permanecen en el equipo", texte: "Cálculos, archivos y formulario permanecen en su ordenador; lo que Claude recibe está seudonimizado y los importes, ocultos."}
+      - {type: encadre, icone: badge-check, titre: "Nada se valida en su lugar.", texte: "Una versión borrador lleva la marca de agua « PROJET - NON VALIDÉ » (borrador, no validado). La versión definitiva exige que todas las preguntas obligatorias tengan respuesta y que una persona identificada la valide; el informe de control registra entonces cada respuesta aplicada, su origen, su fecha y quién validó.", apres: 0}
+
+  - rubrique: "Instalación"
+    titre: "Instalar la extensión en cinco minutos, sin nada más que instalar"
+    accent: "sin nada más que instalar"
+    blocs:
+      - {type: texte, texte: "La extensión se entrega en un único archivo, **facil-def.mcpb**. Python y todos los componentes, incluido el lector de DEF escaneadas, van incluidos: ningún programa adicional, ningún derecho de administrador. Funciona en Claude Desktop con Windows."}
+      - type: etapes
+        libelle: "Los pasos"
+        items:
+          - "Abrir la configuración de Claude Desktop"
+          - "Ir a Extensiones y luego a Configuración avanzada"
+          - "Instalar una extensión: elegir facil-def.mcpb"
+          - "Confirmar la instalación"
+      - {type: h2, texte: "1.1  Abrir la configuración de Claude Desktop"}
+      - {type: texte, texte: "En Claude Desktop, haga clic en su nombre, abajo a la izquierda, y luego en **Paramètres** (Configuración; atajo Ctrl + coma). La ventana de configuración se abre en la pestaña General."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c1.png, titre: "Pantalla de inicio", legende: "Su nombre, abajo a la izquierda, abre el menú de la cuenta."}
+          - {image: captures/c2.png, titre: "Menú de la cuenta", legende: "« Paramètres » (Configuración) abre la ventana de ajustes."}
+      - {type: h2, texte: "1.2  Abrir la pestaña Extensiones", saut_page: true}
+      - {type: texte, texte: "En la columna de la izquierda, sección **Cet ordinateur** (Este ordenador), elija **Extensions** (Extensiones). Si todavía no hay ninguna extensión instalada, la página lo indica. Haga clic en **Paramètres avancés** (Configuración avanzada)."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c3.png, titre: "Configuración, pestaña General", legende: "Sección « Cet ordinateur »: Sistema, Extensiones, Desarrollador."}
+          - {image: captures/c4.png, titre: "Pestaña Extensiones", legende: "« Paramètres avancés » lleva a la instalación de un archivo .mcpb."}
+      - {type: h2, texte: "1.3  Instalar el archivo facil-def.mcpb"}
+      - {type: texte, texte: "En la sección **Développeur d'extension** (Desarrollador de extensiones), haga clic en **Installer une extension** (Instalar una extensión) y seleccione el archivo **facil-def.mcpb** recibido. También puede arrastrar el archivo directamente sobre la página Extensiones."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c5.png, titre: "Desarrollador de extensiones", legende: "Botón « Installer une extension »."}
+          - {image: captures/c6.png, titre: "Elección del archivo", legende: "Seleccione facil-def.mcpb y luego « Ouvrir » (Abrir)."}
+      - {type: h2, texte: "1.4  Comprobar y confirmar", saut_page: true}
+      - {type: texte, texte: "Claude Desktop presenta la extensión **Facil DEF, Guinée équatoriale** y su descripción. La franja roja es el aviso estándar de Claude Desktop para toda extensión instalada fuera del catálogo: instale únicamente un archivo recibido de Facil. Haga clic en **Installer** (Instalar) y confirme."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c7.png, titre: "Presentación de la extensión", legende: "Descripción y botón « Installer »."}
+          - {image: captures/c8.png, titre: "Confirmación", legende: "Haga clic en « Installer » en la ventana de confirmación."}
+      - {type: h2, texte: "1.5  La extensión está instalada y activada"}
+      - {type: texte, texte: "La extensión aparece como **Activée** (Activada), con los botones Configurer (Configurar) y Désinstaller (Desinstalar), y después en la lista de extensiones instaladas en su ordenador. Para una nueva versión, basta con reinstalar el nuevo archivo .mcpb: sus carpetas de trabajo y sus respuestas se conservan."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c9.png, titre: "Extensión activada", legende: "Interruptor « Activé » y botón « Configurer »."}
+          - {image: captures/c11.png, titre: "Lista de extensiones", legende: "Facil DEF figura entre las extensiones instaladas."}
+
+  - rubrique: "Configuración"
+    titre: "Dos ajustes y valores por defecto seguros"
+    accent: "valores por defecto seguros"
+    blocs:
+      - {type: texte, texte: "El botón **Configurer** (Configurar) abre dos ajustes, ambos opcionales. Si se dejan vacíos, el funcionamiento es seguro y local."}
+      - type: tableau
+        entetes: ["Ajuste", "Por defecto", "Cuándo cambiarlo"]
+        largeurs: [45, 75, 60]
+        lignes:
+          - ["**Carpeta de trabajo**", "Documentos\\Facil-DEF; si sus Documentos se sincronizan con OneDrive, %USERPROFILE%\\Facil-DEF, que permanece local", "Para trabajar en otra carpeta local (botón « Parcourir », Examinar)"]
+          - ["**Nombre de la entidad visible para Claude**", "Desactivado: Claude solo ve seudónimos (ENTITE-A…)", "Activado, el nombre de la entidad es legible en la conversación; terceros, identidad e importes siguen protegidos"]
+      - {type: image, image: captures/c10.png, largeur: 150, legende: "Ajustes de la extensión: carpeta de trabajo y nombre de la entidad visible. « Enregistrer » (Guardar) aplica los cambios."}
+      - {type: encadre, icone: shield-check, titre: "Recomendación.", texte: "Mantenga desactivado el nombre de la entidad: la conversación sigue siendo útil con los seudónimos, que Claude reutiliza tal cual y que el servidor convierte a su valor real en su equipo.", apres: 0}
+
+  - rubrique: "Preparación"
+    titre: "Una frase a Claude crea la carpeta; usted deposita en ella sus archivos"
+    accent: "usted deposita en ella sus archivos"
+    blocs:
+      - {type: h2, texte: "3.1  Pedir la DEF a Claude", avant: 0}
+      - {type: texte, texte: "Abra una nueva conversación y escriba simplemente, por ejemplo: **« Prepara la DEF 2025 de [nombre de la entidad] »**. Claude utiliza la extensión, crea la carpeta de trabajo de la entidad y del ejercicio, y le indica qué depositar."}
+      - {type: image, image: captures/c12.png, largeur: 150, legende: "Primera petición: se crea la carpeta de trabajo y se espera la balanza en la subcarpeta 01_sources."}
+      - {type: h2, texte: "3.2  La carpeta de trabajo", saut_page: true}
+      - {type: texte, texte: "La carpeta de trabajo contiene una carpeta por entidad y, dentro, una carpeta por ejercicio. Cada ejercicio tiene cuatro subcarpetas y dos archivos de seguimiento."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c13.png, titre: "Carpeta Facil-DEF", legende: "Una carpeta por entidad; la caja fuerte y el registro permanecen en el equipo."}
+          - {image: captures/c14.png, titre: "Carpeta del ejercicio", legende: "01_sources, 02_xls, 03_pdf, 04_questions, LISEZMOI y manifiesto."}
+      - type: tableau
+        entetes: ["Elemento", "Contenido"]
+        largeurs: [45, 135]
+        lignes:
+          - ["**01_sources**", "Sus archivos: es la única carpeta en la que usted deposita algo"]
+          - ["**02_xls**", "Libros producidos: estados SYSCOHADA, versión en español, informe de control, análisis financiero"]
+          - ["**03_pdf**", "PDF producidos: informes FR y ES, anexos de la balanza, control, estados SYSCOHADA, análisis financiero"]
+          - ["**04_questions**", "Preguntas, respuestas, historial de versiones, acceso directo al formulario"]
+          - ["**manifeste.json**", "Registro de cada versión: huellas de las fuentes leídas, respuestas aplicadas, entregables, validador"]
+      - {type: h2, texte: "3.3  Qué depositar en 01_sources", saut_page: true}
+      - {type: texte, texte: "Deposite sus archivos tal como salen de su programa contable: la extensión los reconoce **por su contenido**, no por su nombre."}
+      - type: tableau
+        entetes: ["Archivo", "Carácter", "Formatos", "Qué aporta"]
+        largeurs: [42, 26, 34, 78]
+        lignes:
+          - ["**Balanza** del ejercicio", "obligatoria, o el libro mayor", "xls, xlsx, csv", "Todos los importes del ejercicio; los saldos de apertura dan el balance N-1"]
+          - ["**Libro mayor**", "recomendado", "xls, xlsx, csv", "TF3 a TF5, impuesto pagado; por sí solo permite reconstruir la balanza"]
+          - ["**DEF del ejercicio anterior**", "opcional", "xlsx o PDF escaneado", "Comparativos N-1, cuenta de resultados N-1, identidad de la portada"]
+          - ["**Ficha de la entidad**", "opcional", "xlsx, csv, txt", "Razón social, NIF, dirección… de una vez por todas"]
+          - ["**Logotipo** de la entidad", "opcional", "png, jpg", "Portada y cubierta del informe; nombre de archivo que contenga « logo »"]
+      - {type: note, texte: "Una DEF anterior escaneada se lee en su equipo, en segundo plano: en las pruebas bastaron menos de 3 minutos para una DEF de 44 páginas; la duración varía según el ordenador. Solo se retoman los importes probados por las fórmulas SYSCOHADA; los demás se le presentan para su verificación."}
+      - {type: encadre, icone: refresh-cw, titre: "¿Un archivo añadido después de la generación?", texte: "El formulario lo indica con una franja « Nouveaux fichiers dans 01_sources » (nuevos archivos en 01_sources) y bloquea la validación hasta la regeneración: una versión nunca se valida sobre archivos que no ha leído.", apres: 0}
+
+  - rubrique: "Formulario"
+    titre: "El formulario local: cada respuesta se guarda, paso a paso"
+    accent: "paso a paso"
+    blocs:
+      - {type: texte, texte: "Tras la primera generación, pida a Claude que **abra el formulario**. Se abre en su navegador, en una dirección local (127.0.0.1) protegida por un token: nombres e importes son legibles en claro, sin pasar por la conversación. También se deja un acceso directo **formulaire.url** en 04_questions."}
+      - type: liste_icones
+        items:
+          - {icone: save, titre: "Guardar y continuar", texte: "Cada paso se guarda al pasar al siguiente; cerrar la página no pierde nada."}
+          - {icone: circle-check, titre: "Barra de pasos", texte: "Una marca verde indica un paso completo; un clic en un paso lleva directamente a él."}
+          - {icone: asterisk, titre: "Obligatorio u opcional", texte: "El asterisco rojo marca las preguntas obligatorias: solo ellas condicionan la validación."}
+          - {icone: timer, titre: "Cierre automático", texte: "Tras 15 minutos de inactividad o 12 horas como máximo, con un aviso previo de un minuto; sus respuestas quedan guardadas y Claude vuelve a abrir el formulario cuando lo pida."}
+      - {type: h2, texte: "4.1  Fuentes"}
+      - {type: texte, texte: "Lo que falta para calcular o completar la DEF. Sin DEF del ejercicio anterior, elija **premier exercice** (primer ejercicio) o **DEF précédente indisponible** (DEF anterior no disponible); si acaba de depositar una DEF escaneada, el paso indica que su lectura está en curso: regenere unos minutos más tarde."}
+      - {type: image, image: captures/c15.png, largeur: 150, legende: "Paso Fuentes: la DEF anterior escaneada se está leyendo en el equipo."}
+      - {type: h2, texte: "4.2  Identidad de la entidad"}
+      - {type: texte, texte: "Se introduce una sola vez y se retoma en la portada, en los encabezados y en la cubierta del informe. Cuando una ficha de la entidad, la DEF anterior o la validación del ejercicio anterior la aportan, se **propone** con su origen: revísela y corríjala si es necesario. La forma jurídica se elige en una lista."}
+      - {type: image, image: captures/c16.png, largeur: 150, legende: "Paso Identidad: denominación, dirección y NIF obligatorios (ocultos aquí)."}
+      - {type: h2, texte: "4.3  Hechos sobre la empresa"}
+      - {type: texte, texte: "Hechos que los archivos no dicen y que cambian el impuesto: creación reciente, prestaciones de no residentes, pago por el Estado. Cada pregunta cita su artículo y, cuando la balanza los contiene, los indicios encontrados. Responda **sí** o **no**."}
+      - {type: image, image: captures/c17.png, largeur: 150, legende: "Paso Hechos: cada respuesta modifica el cálculo del impuesto."}
+      - {type: h2, texte: "4.4  Ajustes fiscales (TF1)", saut_page: true}
+      - {type: texte, texte: "El motor fiscal propone ajustes a partir de la balanza: sanciones, donaciones, gastos no deducibles. Cada tarjeta indica el importe, la cuenta, el motivo y el **efecto sobre el impuesto**. **Aceptar** aplica el ajuste; **rechazar** lo descarta. Una propuesta nunca se aplica sin su acuerdo."}
+      - {type: image, image: captures/c18.png, largeur: 150, legende: "Paso Ajustes: el efecto sobre el IS se muestra para cada decisión."}
+      - {type: h2, texte: "4.5  Opciones de interpretación (opcional)", saut_page: true}
+      - {type: texte, texte: "Sin respuesta, se aplica la lectura estricta de la ley (« par défaut », por defecto). Cualquier otra opción se aplica y su diferencia se cuantifica en el informe. Aquí se elige el **modelo de los estados**: SYSCOHADA sistema normal por defecto, o formato GE."}
+      - {type: image, image: captures/c19.png, largeur: 150, legende: "Paso Interpretaciones: base imponible, redondeos, CMF, presentación, modelo de los estados."}
+      - {type: h2, texte: "4.6  Análisis financiero (opcional)"}
+      - {type: texte, texte: "Para cada variación significativa entre los dos últimos ejercicios, el formulario indica las cuentas que explican la diferencia y los puntos que conviene verificar. La **causa** solo la conoce la empresa: su respuesta figura en el informe de análisis, con su fecha."}
+      - {type: image, image: captures/c20.png, largeur: 150, legende: "Paso Análisis: causas de las variaciones, que documenta la empresa."}
+
+  - rubrique: "Validación"
+    titre: "Validar a su nombre y encontrar los entregables definitivos"
+    accent: "encontrar los entregables definitivos"
+    blocs:
+      - {type: texte, texte: "El paso **Validation** (Validación) resume la versión, su estado y el número de preguntas obligatorias aún abiertas. Tras sus respuestas, haga clic primero en **Régénérer la DEF avec les réponses** (Regenerar la DEF con las respuestas) y revise la versión borrador; después escriba el nombre de la persona que valida y haga clic en **Valider** (Validar). El botón permanece inactivo mientras quede una pregunta obligatoria abierta."}
+      - {type: image, image: captures/c21.png, largeur: 150, legende: "Resumen, validación nominativa y acceso a las carpetas de los entregables."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c22.png, titre: "Generación en curso", legende: "La página se actualiza sola al terminar el cálculo."}
+          - {image: captures/c23.png, titre: "Versión definitiva producida", legende: "Estado « definitive », sin marca de agua, registrada en el manifiesto."}
+      - {type: h2, texte: "5.1  Los entregables", saut_page: true}
+      - {type: texte, texte: "Cada versión se numera (v1, v2…) y nunca sobrescribe la anterior. Los archivos de una versión borrador terminan en « _projet »; los de la versión definitiva, no."}
+      - {type: image, image: captures/c24.png, largeur: 78, legende: "Carpeta 03_pdf: la versión borrador v1 y la versión definitiva v2, una al lado de la otra."}
+      - type: tableau
+        entetes: ["Entregable", "Contenido", "Uso"]
+        largeurs: [55, 80, 45]
+        lignes:
+          - ["**DEF_…_SYSCOHADA_FR**", "Estados según el modelo SYSCOHADA sistema normal, adaptados a los datos, con los cuadros fiscales GE", "Para presentar tras revisión y firma"]
+          - ["**DEF_…_ES**", "Versión en español en formato GE", "Para presentar según la práctica"]
+          - ["**…_rapport_FR / _ES**", "Informe PDF de la DEF", "Lectura, archivo"]
+          - ["**…_annexe-balance_FR / _ES**", "Balanza anexa (art. 79.2)", "Documento adjunto"]
+          - ["**…_controle**", "Controles, respuestas aplicadas, validador", "Interno, nunca se presenta"]
+          - ["**…_analyse-financiere**", "Análisis plurianual: estados comparados, ratios, variaciones explicadas", "Interno, nunca se presenta"]
+      - {type: encadre, icone: pen-line, titre: "Antes de la presentación.", texte: "La DEF se presenta tras la revisión y la firma de la dirección y del experto contable. No modifique directamente los libros producidos: corrija una respuesta y regenere, para que libros Excel y PDF sigan siendo idénticos.", apres: 0}
+
+  - rubrique: "Conversación"
+    titre: "Lo que puede pedir a Claude, en lenguaje corriente"
+    accent: "en lenguaje corriente"
+    blocs:
+      - type: tableau
+        entetes: ["Usted escribe", "Claude"]
+        largeurs: [75, 105]
+        lignes:
+          - ["« Prepara la DEF 2025 de [entidad] »", "Crea o encuentra la carpeta de trabajo, indica qué depositar y genera la versión borrador"]
+          - ["« Ya está depositado, genera »", "Genera una nueva versión borrador y resume las preguntas abiertas"]
+          - ["« Abre el formulario de la DEF »", "Abre el formulario local en su navegador"]
+          - ["« ¿Qué preguntas siguen abiertas? »", "Enumera las preguntas obligatorias, agrupadas, con su efecto"]
+          - ["« Prepara y valida la DEF 2025 de [entidad], validada por [nombre] »", "Genera, plantea en un solo mensaje las preguntas restantes y valida con el nombre indicado tras su clic de confirmación"]
+          - ["« Enumera mis carpetas DEF »", "Entidades, ejercicios, última versión y estado"]
+      - {type: h2, texte: "6.1  Lo que Claude ve y lo que no ve"}
+      - {type: texte, texte: "Los cálculos, archivos y respuestas permanecen en su equipo. Lo que Claude recibe está seudonimizado: ENTITE-A, TIERS-001 o IDENT-002 designan nombres reales que usted conoce, y « [montant] » sustituye a cada importe. Claude reutiliza estos seudónimos tal cual; la extensión los convierte a su valor real. Todo lo transmitido queda registrado en **journal_sorties.jsonl**, en la raíz de la carpeta de trabajo."}
+      - {type: encadre, icone: lock, titre: "La validación sigue siendo un gesto explícito.", texte: "La herramienta de validación nunca está autorizada de antemano: Claude Desktop le pide confirmar cada validación, y Claude nunca inventa una respuesta a una pregunta obligatoria.", apres: 0}
+
+  - rubrique: "Situaciones particulares"
+    titre: "Qué hacer si…: las situaciones habituales y su gesto"
+    accent: "su gesto"
+    blocs:
+      - type: tableau
+        entetes: ["Situación", "Qué ocurre", "Gesto"]
+        largeurs: [52, 68, 60]
+        lignes:
+          - ["Franja « Nouveaux fichiers dans 01_sources »", "Se ha añadido, sustituido o retirado un archivo desde la última versión", "Hacer clic en « Régénérer maintenant » (Regenerar ahora)"]
+          - ["DEF escaneada « en cours de lecture » (en lectura)", "La lectura se ejecuta en segundo plano en el equipo", "Regenerar en unos minutos"]
+          - ["Paso « DEF précédente scannée : montants à vérifier »", "Algunos importes leídos no han podido probarse con las fórmulas", "Compararlos con la DEF en papel, corregir, guardar"]
+          - ["DEF anterior en formato .xls antiguo", "No se utiliza; la pregunta lo indica", "Guardarla en .xlsx y volver a depositarla"]
+          - ["DEF de un ejercicio distinto de N o N-1", "Se descarta, con el motivo indicado", "Depositar la DEF correcta o responder « indisponible » (no disponible)"]
+          - ["« Formulaire fermé » (formulario cerrado)", "Se alcanzaron 15 minutos de inactividad o 12 horas de duración", "Pedir a Claude que vuelva a abrir el formulario"]
+          - ["Página « L'enregistrement n'a pas abouti » (no se pudo guardar)", "Otro programa tenía momentáneamente abierto un archivo", "Hacer clic en « Réessayer » (Reintentar); si el error se repite, enviar 04_questions\\erreurs_formulaire.log"]
+          - ["Botón « Valider » inactivo", "Hay una pregunta obligatoria abierta, o las fuentes han cambiado", "Responder (enlaces « Répondre ») o regenerar"]
+          - ["Balanza « illisible » (ilegible) o ambigua", "Único caso que suspende el cálculo", "Elegir la lectura correcta propuesta o depositar otra balanza"]
+      - {type: note, texte: "Para una situación que no figure en esta tabla: descríbala a Claude en la conversación o contacte con Facil (datos en la última página)."}
+
+annexes:
+  - rubrique: "Anexo"
+    titre: "Glosario de los términos empleados"
+    accent: "términos empleados"
+    blocs:
+      - type: tableau
+        entetes: ["Término", "Sentido en este manual"]
+        largeurs: [45, 135]
+        lignes:
+          - ["**DEF / DSF**", "Declaración Estadística y Fiscal; en francés, DSF (Déclaration statistique et fiscale)"]
+          - ["**SYSCOHADA revisado**", "Sistema contable de la OHADA; « sistema normal » designa el juego completo de estados"]
+          - ["**N, N-1**", "Ejercicio declarado, ejercicio anterior"]
+          - ["**TF1 a TF5**", "Cuadros fiscales de la DEF: resultado fiscal, impuesto, IVA, IRPF, terceros"]
+          - ["**Versión borrador / definitiva**", "Versión de trabajo con marca de agua / versión validada a un nombre, sin marca de agua"]
+          - ["**Importe probado**", "Importe leído en una DEF escaneada y verificado por al menos una fórmula SYSCOHADA"]
+          - ["**Seudónimo**", "Nombre de sustitución (ENTITE-A, TIERS-001…) usado en la conversación en lugar de un nombre real"]
+
+fin:
+  kicker: "Para ir más lejos"
+  titre: "Una pregunta, una necesidad: hablemos."
+  accent: "hablemos."
+  texte: "Infórmenos de cualquier situación que este manual no cubra."
+  etapes:
+    - {icone: message-circle, titre: "Preguntar a Claude", texte: "En la conversación de la DEF."}
+    - {icone: file-text, titre: "Adjuntar el registro", texte: "erreurs_formulaire.log, si existe."}
+    - {icone: mail, titre: "Escribir a Facil", texte: "Datos de contacto abajo."}

@@ -1,0 +1,150 @@
+# SOURCE UNIQUE DU CALENDRIER de Facil Finance.
+# Toute date de planning des pages (plans, TDR, accueil) en DÉRIVE à la construction :
+#   {{cal:periode:<id>}}  → « 19-23/10 »        (étape ou tâche)
+#   {{cal:fin:<id>}}      → « 23/10 »           (fin d'une étape ou d'une tâche)
+#   {{cal:jalon:<id>}}    → « 30/10 »   ;  {{cal:jalon-long:<id>}} → « 30/11/2026 »
+#   {{cal:mois:<id>}}     → « novembre 2026 »   (jalon ou preuve)
+#   {{cal:preuve:<id>}}   → « 31/01/2027 »
+#   {{cal:pays:<code>}}   → « T2 2027 »         (trimestre de disponibilité du pack)
+#   {{cal:gantt}}  {{cal:roadmap-frise}}  {{cal:roadmap-tableau}}   → blocs entiers
+# Une date de planning écrite à la main dans ces pages fait échouer la construction.
+
+jalons:
+  v10: 2026-10-30
+  v11: 2026-11-06
+  v12: 2026-11-13
+  v20: 2026-11-20
+  v21: 2026-11-20
+  livraison: 2026-11-30
+
+# Preuves externes : ce que le codage ne compresse pas.
+preuves:
+  packs_cm_sn_10_liasses: 2027-01-31
+  v12_mois_certifie: 2026-12-31
+  banc_vocal: 2026-12-31
+  audit_securite: 2027-01-31
+  contrats_juriste: 2026-11-30
+
+# Étapes (sections du Gantt) et leurs tâches. Les libellés ne contiennent jamais « : ».
+etapes:
+  - id: s0
+    nom: Cadrage
+    debut: 2026-10-15
+    fin: 2026-10-17
+    taches:
+      - {id: s0a, libelle: "Documentation (TDR, PRD, ADR, plans)", debut: 2026-10-15, fin: 2026-10-17, etat: done}
+  - id: s1
+    nom: Sprint 1 · Fondations
+    debut: 2026-10-19
+    fin: 2026-10-23
+    taches:
+      - {id: s1a, libelle: "Format du pack, pack Cameroun (étalon)", debut: 2026-10-19, fin: 2026-10-23, etat: done}
+      - {id: s1b, libelle: "Moteur extrait, GE convertie au franc près", debut: 2026-10-19, fin: 2026-10-23, etat: done}
+  - id: s2
+    nom: Sprint 2 · V1.0
+    debut: 2026-10-26
+    fin: 2026-10-30
+    taches:
+      - {id: s2a, libelle: "Base, API, droits, sessions, interface", debut: 2026-10-26, fin: 2026-10-30, etat: active}
+      - {id: s2b, libelle: "Installeurs Windows et Linux, pack Sénégal", debut: 2026-10-26, fin: 2026-10-30}
+    jalons: [{id: v10, libelle: "Code V1.0 terminé"}]
+  - id: s3
+    nom: Sprint 3 · V1.1 et V1.2
+    debut: 2026-11-02
+    fin: 2026-11-13
+    taches:
+      - {id: s3a, libelle: "Kaem texte, catalogue, paquet IA", debut: 2026-11-02, fin: 2026-11-06}
+      - {id: s3b, libelle: "Saisie, lettrage, clôtures, TVA, OCR", debut: 2026-11-02, fin: 2026-11-13}
+    jalons: [{id: v11, libelle: "Code V1.1 terminé"}, {id: v12, libelle: "Code V1.2 terminé"}]
+  - id: s4
+    nom: Sprint 4 · V2.0 et V2.1
+    debut: 2026-11-09
+    fin: 2026-11-20
+    taches:
+      - {id: s4a, libelle: "SaaS — isolation, Keycloak, facturation", debut: 2026-11-09, fin: 2026-11-20}
+      - {id: s4b, libelle: "Voix, écoute, veille", debut: 2026-11-16, fin: 2026-11-20}
+    jalons: [{id: v20, libelle: "Code V2.0 et V2.1 terminé"}]
+  - id: s5
+    nom: Durcissement et recette
+    debut: 2026-11-16
+    fin: 2026-11-27
+    taches:
+      - {id: s5a, libelle: "Sécurité, performance, matrice d'installation", debut: 2026-11-16, fin: 2026-11-20, etat: crit}
+      - {id: recette, libelle: "Recette métier avec l'expert et les pilotes", debut: 2026-11-23, fin: 2026-11-27, etat: crit}
+    jalons: [{id: livraison, libelle: "Livraison"}]
+
+# Roadmap : trimestres après la livraison. Un pays apparaît dans le trimestre où son pack devient DISPONIBLE.
+trimestres:
+  - id: T4-2026
+    libelle: T4 2026
+    theme: Livrer
+    confiance: Haute pour le code, moyenne pour les pilotes
+    resultats:
+      - Codage des 5 versions avec Claude Code
+      - "Livraison le {{cal:jalon-long:livraison}}"
+      - 2 ou 3 pilotes installés
+      - Dépôt de la marque à l'OAPI
+      - Contrats rédigés par le juriste
+    pays: [GQ]
+  - id: T1-2027
+    libelle: T1 2027
+    theme: Prouver
+    confiance: Moyenne — dépend des experts locaux
+    resultats:
+      - Packs Cameroun et Sénégal validés (10 liasses réelles chacun)
+      - Audit de sécurité passé, SaaS ouvert
+      - 10 clients payants
+    pays: [CM, SN]
+  - id: T2-2027
+    libelle: T2 2027
+    theme: S'étendre
+    confiance: Moyenne
+    resultats:
+      - 30 liasses par pays publié
+      - Côte d'Ivoire si le modèle officiel est obtenu
+      - Télédéclaration SEN ETAFI
+      - 30 clients
+    pays: [TG, GA, CI]
+  - id: T3-2027
+    libelle: T3 2027
+    theme: Couvrir l'UEMOA
+    confiance: Basse — modèles officiels à obtenir
+    resultats:
+      - Reste de l'UEMOA, dont la Guinée-Bissau (liasse en portugais)
+    pays: [BJ, BF, ML, NE, GW]
+  - id: T4-2027
+    libelle: T4 2027
+    theme: Couvrir la CEMAC
+    confiance: Basse
+    resultats:
+      - Reste de la CEMAC
+      - Début de la trajectoire ISO 27001
+    pays: [CG, TD, CF]
+  - id: T1-T2-2028
+    libelle: T1-T2 2028
+    theme: Achever
+    confiance: Basse
+    resultats:
+      - Hors zone monétaire, dont la RD Congo (opérations en USD)
+      - Les 17 États couverts
+    pays: [GN, CD, KM]
+
+# Noms des pays (ISO 3166-1 alpha-2), pour les textes générés.
+pays_noms:
+  GQ: Guinée équatoriale
+  CM: Cameroun
+  SN: Sénégal
+  TG: Togo
+  GA: Gabon
+  CI: Côte d'Ivoire
+  BJ: Bénin
+  BF: Burkina Faso
+  ML: Mali
+  NE: Niger
+  GW: Guinée-Bissau
+  CG: Congo
+  TD: Tchad
+  CF: Centrafrique
+  GN: Guinée
+  CD: RD Congo
+  KM: Comores

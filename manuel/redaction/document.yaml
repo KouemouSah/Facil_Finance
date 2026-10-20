@@ -1,0 +1,260 @@
+type: document
+fichier: Manuel-utilisation-Facil-DEF
+theme: theme.yaml
+options:
+  sommaire: true
+  sans_tiret_long: true
+  mots_interdits: ["à confirmer", "à compléter", "TODO"]
+meta:
+  kicker: "Manuel d'utilisation  ·  Extension Claude Desktop"
+  titre_ligne1: "Facil DEF"
+  titre_ligne2: "de la balance à la DSF validée"
+  sous_titre: "Installer l'extension, déposer les fichiers, répondre aux questions, valider et retrouver les livrables"
+  destinataire: "Équipes comptables utilisatrices"
+  projet: "0.13.0"
+  signature: ["Facil AI Solutions Architect", "DEF Version 0.13.0", "Octobre 2026"]
+  date: "Octobre 2026"
+  libelles:
+    porteur: "Éditeur"
+    projet: "Version"
+    destinataire: "Pour"
+    sommaire_titre: "Ce que contient ce manuel"
+    sommaire_accent: "ce manuel"
+sommaire_encadre:
+  icone: info
+  titre: "Comment lire ce manuel."
+  texte: "Les chapitres I à V suivent l'ordre d'un premier usage, de l'installation à la version définitive. Le chapitre VI réunit les demandes à formuler à Claude, le chapitre VII les situations particulières. Dans les captures, le nom du client, ses identifiants et les données personnelles sont masqués par un aplat."
+
+chapitres:
+  - rubrique: "Synthèse"
+    numero: false
+    titre: "Une DSF produite sur votre poste, vérifiée, puis validée par vous"
+    accent: "validée par vous"
+    blocs:
+      - {type: lead, texte: "Facil DEF calcule la Déclaration statistique et fiscale (DSF, « DEF » en espagnol) de Guinée équatoriale au modèle SYSCOHADA révisé, à partir de la balance et du grand livre : automatique d'abord, questions ensuite."}
+      - {type: texte, texte: "Vous déposez vos fichiers dans un dossier de travail. L'extension reconnaît chaque fichier par son contenu, produit une version **projet** complète, puis vous pose en une fois les seules questions qu'aucun fichier ne permet de trancher. Vous y répondez dans un formulaire local ; la version **définitive** n'est produite qu'après votre validation, à votre nom."}
+      - type: points
+        items:
+          - {icone: zap, titre: "Automatique d'abord", texte: "Liasse SYSCOHADA système normal adaptée à vos données, tableaux fiscaux de Guinée équatoriale (TF1 à TF5), rapports PDF, annexe balance, rapport de contrôle et analyse financière."}
+          - {icone: list-checks, titre: "Questions ensuite, une seule fois", texte: "Identité, faits sur l'entreprise, réintégrations fiscales, choix d'interprétation : chaque réponse est réinjectée dans les classeurs et les PDF."}
+          - {icone: shield-check, titre: "Vos données restent sur le poste", texte: "Calculs, fichiers et formulaire restent sur votre ordinateur ; ce que Claude reçoit est pseudonymisé et les montants masqués."}
+      - {type: encadre, icone: badge-check, titre: "Rien n'est validé à votre place.", texte: "Une version projet porte un filigrane « PROJET - NON VALIDÉ ». La version définitive exige que toutes les questions obligatoires aient une réponse et qu'une personne nommée la valide ; le rapport de contrôle trace alors chaque réponse appliquée, son origine, sa date et le valideur.", apres: 0}
+
+  - rubrique: "Installation"
+    titre: "Installer l'extension en cinq minutes, sans rien d'autre à installer"
+    accent: "sans rien d'autre à installer"
+    blocs:
+      - {type: texte, texte: "L'extension est livrée dans un seul fichier, **facil-def.mcpb**. Python et tous les composants, y compris le lecteur des DSF scannées, y sont embarqués : aucun logiciel supplémentaire, aucun droit d'administrateur. Elle fonctionne dans Claude Desktop sous Windows."}
+      - type: etapes
+        libelle: "Les étapes"
+        items:
+          - "Ouvrir les paramètres de Claude Desktop"
+          - "Aller dans Extensions, puis Paramètres avancés"
+          - "Installer une extension : choisir facil-def.mcpb"
+          - "Confirmer l'installation"
+      - {type: h2, texte: "1.1  Ouvrir les paramètres de Claude Desktop"}
+      - {type: texte, texte: "Dans Claude Desktop, cliquez sur votre nom en bas à gauche, puis sur **Paramètres** (raccourci Ctrl + virgule). La fenêtre des paramètres s'ouvre sur l'onglet Général."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c1.png, titre: "Écran d'accueil", legende: "Votre nom, en bas à gauche, ouvre le menu du compte."}
+          - {image: captures/c2.png, titre: "Menu du compte", legende: "« Paramètres » ouvre la fenêtre des réglages."}
+      - {type: h2, texte: "1.2  Ouvrir l'onglet Extensions", saut_page: true}
+      - {type: texte, texte: "Dans la colonne de gauche, rubrique **Cet ordinateur**, choisissez **Extensions**. Si aucune extension n'est encore installée, la page l'indique. Cliquez sur **Paramètres avancés**."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c3.png, titre: "Paramètres, onglet Général", legende: "Rubrique « Cet ordinateur » : Système, Extensions, Développeur."}
+          - {image: captures/c4.png, titre: "Onglet Extensions", legende: "« Paramètres avancés » mène à l'installation d'un fichier .mcpb."}
+      - {type: h2, texte: "1.3  Installer le fichier facil-def.mcpb"}
+      - {type: texte, texte: "Dans la section **Développeur d'extension**, cliquez sur **Installer une extension**, puis sélectionnez le fichier **facil-def.mcpb** reçu. Vous pouvez aussi glisser le fichier directement sur la page Extensions."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c5.png, titre: "Développeur d'extension", legende: "Bouton « Installer une extension »."}
+          - {image: captures/c6.png, titre: "Choix du fichier", legende: "Sélectionnez facil-def.mcpb, puis « Ouvrir »."}
+      - {type: h2, texte: "1.4  Vérifier et confirmer", saut_page: true}
+      - {type: texte, texte: "Claude Desktop présente l'extension **Facil DEF, Guinée équatoriale** et son descriptif. Le bandeau rouge est l'avertissement standard de Claude Desktop pour toute extension installée hors catalogue : installez uniquement un fichier reçu de Facil. Cliquez sur **Installer**, puis confirmez."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c7.png, titre: "Présentation de l'extension", legende: "Descriptif et bouton « Installer »."}
+          - {image: captures/c8.png, titre: "Confirmation", legende: "Cliquez sur « Installer » dans la fenêtre de confirmation."}
+      - {type: h2, texte: "1.5  L'extension est installée et activée"}
+      - {type: texte, texte: "L'extension apparaît comme **Activée**, avec les boutons Configurer et Désinstaller, puis dans la liste « Installé sur votre ordinateur ». Pour une nouvelle version, réinstallez simplement le nouveau fichier .mcpb : vos dossiers de travail et vos réponses sont conservés."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c9.png, titre: "Extension activée", legende: "Interrupteur « Activé » et bouton « Configurer »."}
+          - {image: captures/c11.png, titre: "Liste des extensions", legende: "Facil DEF figure parmi les extensions installées."}
+
+  - rubrique: "Configuration"
+    titre: "Deux réglages, et des valeurs par défaut sûres"
+    accent: "des valeurs par défaut sûres"
+    blocs:
+      - {type: texte, texte: "Le bouton **Configurer** ouvre deux réglages, tous deux facultatifs. Laissés vides, ils donnent un fonctionnement sûr et local."}
+      - type: tableau
+        entetes: ["Réglage", "Par défaut", "Quand le changer"]
+        largeurs: [45, 75, 60]
+        lignes:
+          - ["**Dossier de travail**", "Documents\\Facil-DEF ; si vos Documents sont synchronisés par OneDrive, %USERPROFILE%\\Facil-DEF, qui reste local", "Pour travailler dans un autre dossier local (bouton « Parcourir »)"]
+          - ["**Nom de l'entité en clair pour Claude**", "Désactivé : Claude ne voit que des pseudonymes (ENTITE-A…)", "Activé, le nom de l'entité reste lisible dans la conversation ; tiers, identité et montants restent protégés"]
+      - {type: image, image: captures/c10.png, largeur: 150, legende: "Réglages de l'extension : dossier de travail et nom de l'entité en clair. « Enregistrer » applique les changements."}
+      - {type: encadre, icone: shield-check, titre: "Recommandation.", texte: "Gardez le nom de l'entité désactivé : la conversation reste exploitable avec les pseudonymes, que Claude réutilise tels quels et que le serveur rend à leur valeur réelle sur votre poste.", apres: 0}
+
+  - rubrique: "Préparation"
+    titre: "Une phrase à Claude crée le dossier ; vous y déposez vos fichiers"
+    accent: "vous y déposez vos fichiers"
+    blocs:
+      - {type: h2, texte: "3.1  Demander la DSF à Claude", avant: 0}
+      - {type: texte, texte: "Ouvrez une nouvelle conversation et écrivez simplement, par exemple : **« Prépare la DSF 2025 de [nom de l'entité] »**. Claude utilise l'extension, crée le dossier de travail de l'entité et de l'exercice, et vous indique quoi y déposer."}
+      - {type: image, image: captures/c12.png, largeur: 150, legende: "Première demande : le dossier de travail est créé, la balance est attendue dans le sous-dossier 01_sources."}
+      - {type: h2, texte: "3.2  Le dossier de travail", saut_page: true}
+      - {type: texte, texte: "Le dossier de travail contient un dossier par entité, puis un dossier par exercice. Chaque exercice comporte quatre sous-dossiers et deux fichiers de suivi."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c13.png, titre: "Dossier Facil-DEF", legende: "Un dossier par entité ; le coffre et le journal restent sur le poste."}
+          - {image: captures/c14.png, titre: "Dossier de l'exercice", legende: "01_sources, 02_xls, 03_pdf, 04_questions, LISEZMOI et manifeste."}
+      - type: tableau
+        entetes: ["Élément", "Contenu"]
+        largeurs: [45, 135]
+        lignes:
+          - ["**01_sources**", "Vos fichiers : c'est le seul dossier où vous déposez quelque chose"]
+          - ["**02_xls**", "Classeurs produits : liasse SYSCOHADA, version espagnole, rapport de contrôle, analyse financière"]
+          - ["**03_pdf**", "PDF produits : rapports FR et ES, annexes balance, contrôle, liasse SYSCOHADA, analyse financière"]
+          - ["**04_questions**", "Questions, réponses, historique des versions, raccourci du formulaire"]
+          - ["**manifeste.json**", "Trace de chaque version : empreintes des sources lues, réponses appliquées, livrables, valideur"]
+      - {type: h2, texte: "3.3  Ce qu'il faut déposer dans 01_sources", saut_page: true}
+      - {type: texte, texte: "Déposez vos fichiers tels qu'ils sortent de votre logiciel comptable : l'extension les reconnaît **par leur contenu**, pas par leur nom."}
+      - type: tableau
+        entetes: ["Fichier", "Statut", "Formats", "Ce qu'il apporte"]
+        largeurs: [42, 26, 34, 78]
+        lignes:
+          - ["**Balance** de l'exercice", "obligatoire, ou le grand livre", "xls, xlsx, csv", "Tous les montants de l'exercice ; les soldes d'ouverture donnent le bilan N-1"]
+          - ["**Grand livre**", "recommandé", "xls, xlsx, csv", "TF3 à TF5, impôt payé ; seul, il permet de reconstituer la balance"]
+          - ["**DSF de l'exercice précédent**", "facultative", "xlsx ou PDF scanné", "Comparatifs N-1, compte de résultat N-1, identité de la page de garde"]
+          - ["**Fiche entité**", "facultative", "xlsx, csv, txt", "Raison sociale, NIF, adresse… une fois pour toutes"]
+          - ["**Logo** de l'entité", "facultatif", "png, jpg", "Page de garde et couverture du rapport ; nom de fichier contenant « logo »"]
+      - {type: note, texte: "Une DSF précédente scannée est lue sur votre poste, en arrière-plan : moins de 3 minutes ont suffi pour une DSF de 44 pages lors des essais ; la durée varie selon l'ordinateur. Seuls les montants prouvés par les formules SYSCOHADA sont repris ; les autres vous sont présentés pour vérification."}
+      - {type: encadre, icone: refresh-cw, titre: "Un fichier ajouté après la génération ?", texte: "Le formulaire l'indique par un bandeau « Nouveaux fichiers dans 01_sources » et bloque la validation jusqu'à la régénération : une version ne se valide jamais sur des fichiers qu'elle n'a pas lus.", apres: 0}
+
+  - rubrique: "Formulaire"
+    titre: "Le formulaire local : chaque réponse est enregistrée, étape par étape"
+    accent: "étape par étape"
+    blocs:
+      - {type: texte, texte: "Après la première génération, demandez à Claude d'**ouvrir le formulaire**. Il s'ouvre dans votre navigateur, à une adresse locale (127.0.0.1) protégée par un jeton : noms et montants y sont lisibles en clair, sans passer par la conversation. Un raccourci **formulaire.url** est aussi posé dans 04_questions."}
+      - type: liste_icones
+        items:
+          - {icone: save, titre: "Enregistrer et suivant", texte: "Chaque étape est enregistrée en passant à la suivante ; fermer la page ne perd rien."}
+          - {icone: circle-check, titre: "Barre des étapes", texte: "Une coche verte signale une étape complète ; un clic sur une étape y mène directement."}
+          - {icone: asterisk, titre: "Obligatoire ou facultatif", texte: "L'astérisque rouge marque les questions obligatoires : seules elles conditionnent la validation."}
+          - {icone: timer, titre: "Fermeture automatique", texte: "Après 15 minutes d'inactivité ou 12 heures au plus, avec un préavis d'une minute ; vos réponses restent enregistrées et Claude rouvre le formulaire sur demande."}
+      - {type: h2, texte: "4.1  Sources"}
+      - {type: texte, texte: "Ce qui manque pour calculer ou compléter la DSF. Sans DSF de l'exercice précédent, choisissez **premier exercice** ou **DEF précédente indisponible** ; si vous venez de déposer une DSF scannée, l'étape indique que sa lecture est en cours : régénérez quelques minutes plus tard."}
+      - {type: image, image: captures/c15.png, largeur: 150, legende: "Étape Sources : la DSF précédente scannée est en cours de lecture sur le poste."}
+      - {type: h2, texte: "4.2  Identité de l'entité"}
+      - {type: texte, texte: "Saisie une seule fois, reprise en page de garde, dans les en-têtes et sur la couverture du rapport. Quand une fiche entité, la DSF précédente ou la validation de l'exercice précédent la fournit, elle est **proposée** avec son origine : relisez-la et corrigez-la au besoin. La forme juridique se choisit dans une liste."}
+      - {type: image, image: captures/c16.png, largeur: 150, legende: "Étape Identité : dénomination, adresse et NIF obligatoires (masqués ici)."}
+      - {type: h2, texte: "4.3  Faits sur l'entreprise"}
+      - {type: texte, texte: "Des faits que les fichiers ne disent pas et qui changent l'impôt : création récente, prestations de non-résidents, paiement par l'État. Chaque question cite son article et, quand la balance en contient, les indices trouvés. Répondez **oui** ou **non**."}
+      - {type: image, image: captures/c17.png, largeur: 150, legende: "Étape Faits : chaque réponse modifie le calcul de l'impôt."}
+      - {type: h2, texte: "4.4  Réintégrations fiscales (TF1)"}
+      - {type: texte, texte: "Le moteur fiscal propose des réintégrations à partir de la balance : pénalités, dons, charges non déductibles. Chaque carte donne le montant, le compte, le motif et l'**effet sur l'impôt**. **Accepter** applique la réintégration ; **refuser** l'écarte. Une proposition n'est jamais appliquée sans votre accord."}
+      - {type: image, image: captures/c18.png, largeur: 150, legende: "Étape Réintégrations : l'effet sur l'IS est affiché pour chaque décision."}
+      - {type: h2, texte: "4.5  Choix d'interprétation (facultatif)", saut_page: true}
+      - {type: texte, texte: "Sans réponse, la lecture stricte de la loi s'applique (« par défaut »). Un autre choix est appliqué et son écart chiffré au rapport. C'est ici que se choisit le **modèle de la liasse** : SYSCOHADA système normal par défaut, ou format GE."}
+      - {type: image, image: captures/c19.png, largeur: 150, legende: "Étape Interprétations : base imposable, arrondis, CMF, présentation, modèle de la liasse."}
+      - {type: h2, texte: "4.6  Analyse financière (facultatif)"}
+      - {type: texte, texte: "Pour chaque variation significative entre les deux derniers exercices, le formulaire donne les comptes qui portent l'écart et des points à vérifier. La **cause**, seule l'entreprise la connaît : votre réponse figure au rapport d'analyse, avec sa date."}
+      - {type: image, image: captures/c20.png, largeur: 150, legende: "Étape Analyse : causes des variations, à documenter par l'entreprise."}
+
+  - rubrique: "Validation"
+    titre: "Valider à votre nom, puis retrouver les livrables définitifs"
+    accent: "retrouver les livrables définitifs"
+    blocs:
+      - {type: texte, texte: "L'étape **Validation** récapitule la version, son statut et le nombre de questions obligatoires encore ouvertes. Après vos réponses, cliquez d'abord sur **Régénérer la DEF avec les réponses** et relisez la version projet ; puis saisissez le nom de la personne qui valide et cliquez sur **Valider**. Le bouton reste inactif tant qu'une question obligatoire est ouverte."}
+      - {type: image, image: captures/c21.png, largeur: 150, legende: "Récapitulatif, validation nominative et accès aux dossiers des livrables."}
+      - type: captures
+        colonnes: 2
+        items:
+          - {image: captures/c22.png, titre: "Génération en cours", legende: "La page se met à jour seule à la fin du calcul."}
+          - {image: captures/c23.png, titre: "Version définitive produite", legende: "Statut « definitive », sans filigrane, tracée au manifeste."}
+      - {type: h2, texte: "5.1  Les livrables", saut_page: true}
+      - {type: texte, texte: "Chaque version est numérotée (v1, v2…) et n'écrase jamais la précédente. Les fichiers d'une version projet finissent par « _projet » ; ceux de la version définitive, non."}
+      - {type: image, image: captures/c24.png, largeur: 78, legende: "Dossier 03_pdf : la version projet v1 et la version définitive v2 côte à côte."}
+      - type: tableau
+        entetes: ["Livrable", "Contenu", "Usage"]
+        largeurs: [55, 80, 45]
+        lignes:
+          - ["**DEF_…_SYSCOHADA_FR**", "Liasse au modèle SYSCOHADA système normal, adaptée aux données, avec les tableaux fiscaux GE", "À déposer après relecture et signature"]
+          - ["**DEF_…_ES**", "Version espagnole au format GE", "À déposer selon l'usage"]
+          - ["**…_rapport_FR / _ES**", "Rapport PDF de la DSF", "Lecture, archivage"]
+          - ["**…_annexe-balance_FR / _ES**", "Balance annexée (art. 79.2)", "Pièce jointe"]
+          - ["**…_controle**", "Contrôles, réponses appliquées, valideur", "Interne, jamais déposé"]
+          - ["**…_analyse-financiere**", "Analyse pluriannuelle : états comparés, ratios, variations expliquées", "Interne, jamais déposé"]
+      - {type: encadre, icone: pen-line, titre: "Avant le dépôt.", texte: "La DSF se dépose après relecture et signature de la direction et de l'expert-comptable. Ne modifiez pas directement les classeurs produits : corrigez une réponse, puis régénérez, pour que classeurs et PDF restent identiques.", apres: 0}
+
+  - rubrique: "Conversation"
+    titre: "Ce que vous pouvez demander à Claude, en langage courant"
+    accent: "en langage courant"
+    blocs:
+      - type: tableau
+        entetes: ["Vous écrivez", "Claude"]
+        largeurs: [75, 105]
+        lignes:
+          - ["« Prépare la DSF 2025 de [entité] »", "Crée ou retrouve le dossier de travail, dit quoi déposer, puis génère la version projet"]
+          - ["« C'est déposé, génère »", "Génère une nouvelle version projet et résume les questions ouvertes"]
+          - ["« Ouvre le formulaire de la DSF »", "Ouvre le formulaire local dans votre navigateur"]
+          - ["« Quelles questions restent ouvertes ? »", "Liste les questions obligatoires, groupées, avec leur effet"]
+          - ["« Prépare et valide la DSF 2025 de [entité], validée par [nom] »", "Génère, pose en un seul message les questions restantes, puis valide au nom donné après votre clic de confirmation"]
+          - ["« Liste mes dossiers DSF »", "Entités, exercices, dernière version et statut"]
+      - {type: h2, texte: "6.1  Ce que Claude voit, et ce qu'il ne voit pas"}
+      - {type: texte, texte: "Les calculs, fichiers et réponses restent sur votre poste. Ce que Claude reçoit est pseudonymisé : ENTITE-A, TIERS-001 ou IDENT-002 désignent des noms réels que vous connaissez, et « [montant] » remplace chaque montant. Claude réutilise ces pseudonymes tels quels ; l'extension les rend à leur valeur réelle. Tout ce qui est transmis est journalisé dans **journal_sorties.jsonl**, à la racine du dossier de travail."}
+      - {type: encadre, icone: lock, titre: "La validation reste un geste explicite.", texte: "L'outil de validation n'est jamais autorisé d'avance : Claude Desktop vous demande de confirmer chaque validation, et Claude n'invente jamais une réponse à une question obligatoire.", apres: 0}
+
+  - rubrique: "Situations particulières"
+    titre: "Que faire si… : les situations courantes et leur geste"
+    accent: "leur geste"
+    blocs:
+      - type: tableau
+        entetes: ["Situation", "Ce qui se passe", "Geste"]
+        largeurs: [52, 68, 60]
+        lignes:
+          - ["Bandeau « Nouveaux fichiers dans 01_sources »", "Un fichier a été ajouté, remplacé ou retiré depuis la dernière version", "Cliquer sur « Régénérer maintenant »"]
+          - ["DSF scannée « en cours de lecture »", "La lecture tourne en arrière-plan sur le poste", "Régénérer dans quelques minutes"]
+          - ["Étape « DEF précédente scannée : montants à vérifier »", "Des montants lus n'ont pas pu être prouvés par les formules", "Comparer à la DSF papier, corriger, enregistrer"]
+          - ["DSF précédente au format .xls ancien", "Elle n'est pas utilisée ; la question le dit", "L'enregistrer en .xlsx et la redéposer"]
+          - ["DSF d'un autre exercice que N ou N-1", "Elle est écartée, motif affiché", "Déposer la bonne DSF, ou répondre « indisponible »"]
+          - ["« Formulaire fermé »", "Inactivité de 15 minutes ou durée de 12 heures atteinte", "Demander à Claude de rouvrir le formulaire"]
+          - ["Page « L'enregistrement n'a pas abouti »", "Un fichier était momentanément tenu par un autre programme", "Cliquer sur « Réessayer » ; si l'erreur revient, transmettre 04_questions\\erreurs_formulaire.log"]
+          - ["Bouton « Valider » inactif", "Une question obligatoire est ouverte, ou les sources ont changé", "Répondre (liens « Répondre ») ou régénérer"]
+          - ["Balance « illisible » ou ambiguë", "Seul cas qui suspend le calcul", "Choisir la bonne lecture proposée, ou déposer une autre balance"]
+      - {type: note, texte: "Une question sur une situation absente de ce tableau : décrivez-la à Claude dans la conversation, ou contactez Facil (coordonnées en dernière page)."}
+
+annexes:
+  - rubrique: "Annexe"
+    titre: "Glossaire des termes employés"
+    accent: "termes employés"
+    blocs:
+      - type: tableau
+        entetes: ["Terme", "Sens dans ce manuel"]
+        largeurs: [45, 135]
+        lignes:
+          - ["**DSF / DEF**", "Déclaration statistique et fiscale ; DEF (Declaración Estadística y Fiscal) en espagnol"]
+          - ["**SYSCOHADA révisé**", "Système comptable de l'OHADA ; « système normal » désigne la liasse complète"]
+          - ["**N, N-1**", "Exercice déclaré, exercice précédent"]
+          - ["**TF1 à TF5**", "Tableaux fiscaux de la DSF : résultat fiscal, impôt, IVA, IRPF, tiers"]
+          - ["**Version projet / définitive**", "Version de travail avec filigrane / version validée à un nom, sans filigrane"]
+          - ["**Montant prouvé**", "Montant lu sur une DSF scannée et vérifié par au moins une formule SYSCOHADA"]
+          - ["**Pseudonyme**", "Nom de remplacement (ENTITE-A, TIERS-001…) utilisé dans la conversation à la place d'un nom réel"]
+
+fin:
+  kicker: "Pour aller plus loin"
+  titre: "Une question, un besoin : parlons-en."
+  accent: "parlons-en."
+  texte: "Signalez-nous toute situation que ce manuel ne couvre pas."
+  etapes:
+    - {icone: message-circle, titre: "Demander à Claude", texte: "Dans la conversation de la DSF."}
+    - {icone: file-text, titre: "Joindre la trace", texte: "erreurs_formulaire.log, s'il existe."}
+    - {icone: mail, titre: "Écrire à Facil", texte: "Coordonnées ci-dessous."}

@@ -10,7 +10,7 @@ from pathlib import Path
 import pytest
 
 DEPOT = Path(__file__).resolve().parents[1]
-PLUGIN = DEPOT.parent / "compta-ohada"
+PLUGIN = DEPOT / "plugin" / "compta-ohada"
 sys.path.insert(0, str(DEPOT / "outils"))
 import publier_vers_plugin as pub  # noqa: E402
 

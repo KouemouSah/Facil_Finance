@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>«TITRE-DECK»</title>
+<link rel="stylesheet" href="assets/deck.css">
+<!-- THÈME DE MARQUE (additif) : surcharge la charte via les variables :root, APRÈS deck.css.
+     Dériver du logo/charte puis confirmer. Voir assets/theme.example.css. Laisser vide = thème par défaut. -->
+<style>:root{ /* «PALETTE-MARQUE» — ex. --navy:#123A5E; --green:#0E7C66; --green2:#7FC8B6; --greenbg:#E4F3EF; */ }</style>
+</head>
+<!-- data-deck = titre navbar ; data-sub = sous-titre ; data-logo = image ronde -->
+<body data-deck="«TITRE-DECK»" data-sub="«SOUS-TITRE»" data-logo="«LOGO»">
+
+  <!-- 01 — COUVERTURE -->
+  <section class="slide dark act0" data-title="Couverture" data-icon="i-target">
+    <div class="hero"><div class="heroglow"></div>
+      <div class="cover-top"><img src="«LOGO»" alt=""/><div><div class="a">«TITRE» · «SECTION»</div><div class="b">«CLIENT»</div></div><div class="badge">Document de travail</div></div>
+      <div class="eyebrow">«KICKER»</div>
+      <h1>Un titre fort <em>en deux temps.</em></h1>
+      <div class="sub">Sous-titre d'une à deux lignes qui pose le propos du deck, avec quelques <b>mots clés en gras</b>.</div>
+      <div class="metastrip">
+        <div class="m"><div class="l">Libellé</div><b>valeur</b></div>
+        <div class="m"><div class="l">Libellé</div><b>valeur</b></div>
+        <div class="m"><div class="l">Libellé</div><b>valeur</b></div>
+      </div>
+      <div class="bignum">«N»</div></div>
+    <div class="s-foot"><div class="proj"><b>«TITRE»</b> — «AUTEUR-OU-DÉPARTEMENT» · «CONTACT»</div><div class="conf"><svg><use href="#i-lock"/></svg>«MENTION-CONFIDENTIEL»</div></div>
+  </section>
+
+  <!-- 02 — SLIDE TYPE (cartes denses + insight) -->
+  <section class="slide act1" data-title="Slide type" data-icon="i-layers">
+    <div class="s-head"><img class="hlogo" src="«LOGO»" alt=""/><div class="htxt"><div class="k">SECTION — KICKER</div><div class="t">Titre de la slide</div></div><div class="pg"><b>02</b></div></div>
+    <div class="s-body">
+      <div class="lead">Phrase d'accroche de la slide, <b>idée forte</b> en gras, qui cadre les trois cartes ci-dessous.</div>
+      <div class="cards g3 dense grow">
+        <div class="card c1"><span class="num">01</span><span class="ic"><svg><use href="#i-target"/></svg></span><h3>Carte une</h3><ul class="clean"><li>Point matériel</li><li>Point matériel</li><li>Point matériel</li></ul><div class="metarow"><div class="m"><div class="l">Libellé</div><b>valeur</b></div><div class="m"><div class="l">Libellé</div><b class="acc">accent</b></div></div></div>
+        <div class="card c3"><span class="num">02</span><span class="ic"><svg><use href="#i-bolt"/></svg></span><h3>Carte deux</h3><ul class="clean"><li>Point matériel</li><li>Point matériel</li><li>Point matériel</li></ul><div class="metarow"><div class="m"><div class="l">Libellé</div><b>valeur</b></div><div class="m"><div class="l">Libellé</div><b class="acc">accent</b></div></div></div>
+        <div class="card c2"><span class="num">03</span><span class="ic"><svg><use href="#i-check"/></svg></span><h3>Carte trois</h3><ul class="clean"><li>Point matériel</li><li>Point matériel</li><li>Point matériel</li></ul><div class="metarow"><div class="m"><div class="l">Libellé</div><b>valeur</b></div><div class="m"><div class="l">Libellé</div><b class="acc">accent</b></div></div></div>
+      </div>
+      <div class="insight"><div class="k">Synthèse</div><div class="row"><div class="big">Le message à retenir, en gros.</div><div class="kpis"><div><div class="v">XX</div><div class="l">métrique</div></div><div><div class="v w">YY</div><div class="l">métrique</div></div></div></div></div>
+    </div>
+    <div class="s-foot"><div class="proj"><b>«SECTION»</b></div><div class="conf"><svg><use href="#i-lock"/></svg>«MENTION-CONFIDENTIEL»</div></div>
+  </section>
+
+</body>
+<script src="assets/deck.js"></script>
+</html>

@@ -1,4 +1,69 @@
-﻿.venv/
+# ============================================================================
+# Facil_Finance — ce qui ne va JAMAIS dans le dépôt (public)
+# ============================================================================
+
+# --- Données des clients et données personnelles -----------------------------
+# Les dossiers de travail, balances, DSF réelles et captures non masquées restent sur le poste.
+datas/
+**/Facil-DEF/
+**/donnees-client*/
+*.balance.xlsx
+noms_confidentiels*.txt
+manuel/*.png
+manuel/*.PNG
+manuel/*.jpg
+manuel/redaction/passer_en_dsf.py
+manuel/redaction/reperer_masques.py
+manuel/redaction/flyer.yaml
+manuel/redaction/flyer/*.html
+manuel/redaction/flyer/apercu*.png
+manuel/livrable/**/_controle/
+
+# --- Secrets ------------------------------------------------------------------
+# Clés de signature des packs, clé de la garde de confidentialité : ~/.facil/, jamais ici.
+*.pem
+*.key
+.env
+.env.*
+!.env.exemple
+cle_confidentialite
+
+# --- Produit construit (l'extension ne se publie pas dans le dépôt) ----------
+plugin/compta-ohada/runtime/
+plugin/compta-ohada/dist/
+*.mcpb
+plugin/compta-ohada/serveur/journal*.jsonl
+
+# --- Documentation : construction locale -------------------------------------
+docs/.outils/
+docs/site/
+docs/.doc-projet/a-revoir.jsonl
+_site/
+
+# --- Python ---------------------------------------------------------------------
+.venv/
+venv/
 __pycache__/
+*.py[cod]
 .pytest_cache/
-*.pyc
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+
+# --- Outils et systèmes -----------------------------------------------------------
+# .claude/settings.json est VERSIONNÉ (sessions Claude Code web) ; le reste de .claude/ est local.
+.claude/*
+!.claude/settings.json
+.playwright-mcp/
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp
+*.purge.tmp

@@ -1,0 +1,5 @@
+# Construction du site de documentation (versions éprouvées le 20/10/2026)
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+pymdown-extensions==12.3
+PyYAML==6.0.3

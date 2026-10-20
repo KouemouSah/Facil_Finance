@@ -1,0 +1,143 @@
+# Site de documentation — généré par le plugin doc-projet, puis tenu à jour par lui.
+# Ne pas lancer mkdocs directement : passer par outils/construire_site.py (gardes, calendrier, charte).
+# Les {{…}} sont remplacés à chaque construction depuis doc-projet.yml.
+site_name: "{{PRODUIT}} — Documentation projet"
+site_description: "Documentation projet de {{PRODUIT}}"
+site_author: "{{EDITEUR}}"
+docs_dir: .outils/staging
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: material
+  custom_dir: theme
+  language: fr
+  font: false
+  logo: assets/icon.png
+  favicon: assets/icon.png
+  icon:
+    menu: lucide/menu
+    previous: lucide/arrow-left
+    next: lucide/arrow-right
+    top: lucide/arrow-up
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: lucide/moon
+        name: Passer au thème sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: lucide/sun
+        name: Passer au thème clair
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search:
+      lang: fr
+  - offline
+
+extra:
+  generator: false
+  produit: "{{PRODUIT}}"
+  sous_titre: "{{SOUS_TITRE}}"
+  editeur: "{{EDITEUR}}"
+  version_doc: "{{VERSION_DOC}}"
+  construite_le: "{{DATE}}"
+  annee_construction: "{{ANNEE}}"
+  confidentiel: {{CONFIDENTIEL}}
+  liens_pied: {{LIENS_PIED}}
+
+extra_css:
+  - assets/extra.css
+  - assets/charte.css
+extra_javascript:
+  - assets/mermaid.min.js
+  - assets/extra.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+      permalink_title: Lien vers cette section
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+nav:
+  - Accueil: index.md
+  - Démarrer: demarrer.md
+  - Cadrage:
+      - Termes de référence: tdr.md
+      - Exigences (PRD): prd.md
+      - Registre des risques: registre-risques.md
+      - Glossaire: glossaire.md
+  - Produit livré:
+      - Facil DEF: facil-def.md
+      - Manuels et supports: manuels.md
+  - Architecture:
+      - Vue d'ensemble: architecture.md
+      - Modèle de données cible: modele-donnees.md
+      - Catalogue des modules: catalogue-modules.md
+      - Décisions (ADR):
+          - Toutes les décisions: adr/index.md
+          - "0001 · Registre des ADR": adr/0001-consigner-les-decisions.md
+          - "0002 · Mode serveur": adr/0002-toujours-en-mode-serveur.md
+          - "0003 · Distribution": adr/0003-distribution-autoportante.md
+          - "0004 · Entrée production": adr/0004-erp-entree-par-la-production.md
+          - "0005 · Moteur DEF": adr/0005-reutiliser-le-moteur-def.md
+          - "0006 · Packs pays": adr/0006-packs-pays-declaratifs.md
+          - "0007 · Kaem, IA locale": adr/0007-kaem-ia-locale.md
+          - "0008 · IA sans calcul": adr/0008-ia-ne-calcule-ni-ne-valide.md
+          - "0009 · Pile serveur": adr/0009-pile-serveur.md
+          - "0010 · Identité": adr/0010-identite-selon-edition.md
+          - "0011 · Licence": adr/0011-licence-proprietaire.md
+          - "0012 · Doc as code": adr/0012-documentation-as-code.md
+          - "0013 · Claude Code": adr/0013-developpement-avec-claude-code.md
+          - "0014 · Plugin doc-projet": adr/0014-documentation-par-le-plugin-doc-projet.md
+  - Spécifications:
+      - Format du pack pays: specs/pack-pays.md
+  - Exploitation:
+      - Chaîne de livraison: chaine-livraison.md
+      - Sécurité et confidentialité: securite-confidentialite.md
+  - Plans:
+      - Tous les plans: plans/index.md
+      - Roadmap: plans/roadmap.md
+      - Plan de versions: plans/feuille-de-route.md
+      - Plan de sprints: plans/sprints.md
+      - Plan de Facil DEF: plans/plan-facil-def.md
+      - Couverture pays: plans/couverture-pays.md
+      - Plan de la doc: plans/plan-documentation.md
+  - Sources:
+      - Document projet: sources/projet.md
+      - Analyse critique: sources/analyse-critique-projet-jarvis.md
+      - Stratégie V1-V2: sources/strategie-produit-v1-v2.md

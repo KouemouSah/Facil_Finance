@@ -1,0 +1,53 @@
+{
+  "manifest_version": "0.2",
+  "name": "facil-def",
+  "display_name": "Facil DEF — Guinée équatoriale",
+  "version": "0.13.0",
+  "description": "Produit la DEF (Declaración Estadística y Fiscal) SYSCOHADA révisé depuis la balance et le grand livre : automatique d'abord, questions ensuite.",
+  "long_description": "Déposez la balance, ou le grand livre, ou les deux (et, s'il existe, la DEF de l'exercice précédent) dans votre dossier de travail : l'extension reconnaît les fichiers par leur contenu et génère une version PROJET de la liasse au modèle SYSCOHADA système normal, adaptée à vos données (les notes sans montant ni information sont omises et signalées), avec les tableaux fiscaux de Guinée équatoriale, le rapport PDF, l'annexe balance et le rapport de contrôle ; le format GE reste disponible au choix. Elle pose ensuite, en une fois, les questions nécessaires. Vos réponses sont réinjectées partout ; la version définitive n'est produite qu'après validation explicite. Rien à installer : Python est embarqué. Confidentialité : calculs et fichiers restent sur votre poste ; ce que Claude reçoit est pseudonymisé (noms remplacés, montants masqués, chemins relatifs), contrôlé avant envoi et journalisé localement (Facil-DEF\\journal_sorties.jsonl). Pour voir noms et montants en clair, ouvrez le formulaire local.",
+  "author": {
+    "name": "Facil - AI Solutions Architect - Emac SAH"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "binary",
+    "entry_point": "runtime/python.exe",
+    "mcp_config": {
+      "command": "${__dirname}/runtime/python.exe",
+      "args": ["${__dirname}/serveur/mcp_def.py"],
+      "env": {
+        "FACIL_DEF_RACINE": "${user_config.dossier_travail}",
+        "FACIL_ENTITE_EN_CLAIR": "${user_config.entite_en_clair}"
+      }
+    }
+  },
+  "tools": [
+    {"name": "dossier_travail", "description": "Crée ou retrouve le dossier de travail d'une entité pour un exercice et liste les fichiers déposés."},
+    {"name": "lister_dossiers", "description": "Entités et exercices existants, avec la dernière version et son statut."},
+    {"name": "generer_def", "description": "Génère automatiquement une version PROJET de la DEF, consolide les questions et rend le lot à poser."},
+    {"name": "questions_ouvertes", "description": "Questions à poser à l'utilisateur, groupées, avec leur impact."},
+    {"name": "enregistrer_reponse", "description": "Enregistre une réponse contrôlée ; régénérer ensuite."},
+    {"name": "valider_version", "description": "Produit la version définitive quand aucune question obligatoire n'est ouverte et que les sources n'ont pas changé ; trace réponses et valideur."},
+    {"name": "ouvrir_formulaire", "description": "Ouvre le formulaire web local (127.0.0.1, lien à jeton) pour répondre, régénérer et valider."}
+  ],
+  "user_config": {
+    "dossier_travail": {
+      "type": "directory",
+      "title": "Dossier de travail",
+      "description": "Facultatif. Vide : Documents\\Facil-DEF ; si vos Documents sont synchronisés par OneDrive, %USERPROFILE%\\Facil-DEF (local, jamais envoyé dans le cloud). Sinon, le dossier où seront créés les sous-dossiers par entité et par exercice.",
+      "required": false
+    },
+    "entite_en_clair": {
+      "type": "boolean",
+      "title": "Nom de l'entité en clair pour Claude",
+      "description": "Désactivé (recommandé) : Claude ne voit que des pseudonymes (ENTITE-A…). Activé : le nom de l'entité reste lisible ; tiers, identité et montants restent protégés.",
+      "default": false,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": ["win32"]
+  },
+  "keywords": ["OHADA", "SYSCOHADA", "DEF", "DSF", "Guinée équatoriale", "fiscalité"],
+  "license": "Propriétaire"
+}

@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THÈME DE MARQUE — surcharge ADDITIVE de la charte graphique.
+   À inclure APRÈS <link href="assets/deck.css"> (dans un <style> du deck ou ce
+   fichier). Ne modifie PAS deck.css : redéfinit seulement les variables :root.
+
+   Comment obtenir la palette :
+   - Si une CHARTE GRAPHIQUE existe → utiliser ses couleurs officielles.
+   - Sinon, DÉRIVER du LOGO : Claude analyse l'image du logo et propose la couleur
+     primaire + 1-2 accents ; FAIRE CONFIRMER. Garder un contraste texte suffisant.
+   ========================================================================== */
+:root{
+  /* Primaire foncée : titres, en-têtes, navbar, totaux (souvent la couleur dominante du logo) */
+  --navy:#0F172A;            /* ← couleur primaire de la marque */
+
+  /* Accent primaire : barres, KPI, slides act1 (+ variantes claire/fond) */
+  --green:#4A7C0C; --green2:#9DBE5C; --greenbg:#E8F0D8;   /* ← accent primaire + clair + fond */
+
+  /* Accents secondaire (act2) / tertiaire (act3) */
+  --rust:#C2410C; --rustbg:#FDEDD8;   /* ← secondaire */
+  --teal:#0F766E; --tealbg:#CCFBF1;   /* ← tertiaire */
+
+  /* Fond & surfaces */
+  --cream:#FAF8F3; --card:#FFFFFF; --line:#E2DDD2;
+
+  /* Polices de la charte (garder un fallback système) */
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',"Segoe UI",system-ui,sans-serif;
+}
+/* Note : --accent hérite de --green ; le surcharger suffit à re-teinter tout le deck.
+   Vérifier la lisibilité (texte foncé sur clair) après changement de palette. */

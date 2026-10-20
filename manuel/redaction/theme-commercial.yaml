@@ -1,0 +1,7 @@
+# Surcharge du thème Facil pour la présentation commerciale : seules ces clés changent.
+entreprise:
+  siret: "108 750 407 00018"
+  pays: "Paris, France"
+produit: "Facil DEF"
+entete: "{produit}"
+mention: "Présentation commerciale"

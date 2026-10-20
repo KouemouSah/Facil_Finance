@@ -1,6 +1,6 @@
 """Convertit la Guinée équatoriale (aujourd'hui dans le code du plugin compta-ohada) au format pack.
 
-  convertir_ge.py [--source C:/DSF/compta-ohada]   →  packs/GQ/2025.1/
+  convertir_ge.py [--source plugin/compta-ohada]   →  packs/GQ/2025.1/
 
 Recette REJOUABLE. Preuve d'équivalence : tests/test_pack_ge.py vérifie que les paramètres relus depuis
 le pack résolu redonnent, clé par clé, le fichier d'origine — et que le calcul fiscal (TF1/TF2) sur le
@@ -21,7 +21,7 @@ GQ = DEPOT / "packs" / "GQ" / "2025.1"
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--source", default=str(DEPOT.parent / "compta-ohada"))
+    p.add_argument("--source", default=str(DEPOT / "plugin" / "compta-ohada"))
     src = Path(p.parse_args().source)
     origine = json.loads((src / "lib" / "parametres_fiscaux_ge.json").read_text(encoding="utf-8"))
     meta = origine["_meta"]

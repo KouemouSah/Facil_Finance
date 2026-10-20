@@ -1,0 +1,19 @@
+{
+ "_origine": "Correspondance ÉCRITE À LA MAIN « ligne du modèle SYSCOHADA système normal -> comptes », pour les lignes que le format GE ne porte pas (notes propres au SN). Syntaxe du format GE : « POSTE comptes » (ex. « BQ 501 », « CL 1418+148 »). Numéros de comptes : plan SYSCOHADA révisé. Prime sur correspondance-sn.json. Une ligne dont le compte n'est pas CERTAIN n'est pas écrite ici : le contrôle note / bilan signale alors tout montant non ventilé.",
+ "_non_ecrites": {
+  "note 5 ligne 25": "Versements restant à effectuer sur titres non libérés : compte à confirmer (471x / 472x selon les plans d'entreprise)",
+  "note 8 ligne 18": "Comptes de liaison des sociétés en participation (188) : sens de présentation à confirmer",
+  "note 18 ligne 12": "Personnel, avances et acomptes (421) : créance présentée parmi les dettes sociales — à confirmer",
+  "note 15b": "Autres fonds propres : aucun poste du bilan ne les porte dans la table comptes -> postes"
+ },
+ "feuilles": {
+  "note 5": {"10": "BA 485", "11": "BA 488", "13": "BA 498", "23": "DH 481", "24": "DH 482", "26": "DH 484"},
+  "note 9": {"9": "BQ 501", "10": "BQ 502", "11": "BQ 503", "12": "BQ 504", "13": "BQ 505", "14": "BQ 506", "15": "BQ 508",
+             "17": "BQ 59"},
+  "note 10": {"9": "BR 511", "10": "BR 512", "11": "BR 513", "12": "BR 514", "13": "BR 515", "14": "BR 518", "16": "BR 591"},
+  "note 15a": {"9": "CL 1411", "10": "CL 1412", "11": "CL 1413", "12": "CL 1414", "13": "CL 1415", "14": "CL 1416",
+               "15": "CL 1417", "16": "CL 1418+148", "19": "CM 151", "20": "CM 152", "21": "CM 154", "22": "CM 155",
+               "23": "CM 156", "24": "CM 157", "25": "CM 153+158"},
+  "note 19": {"10": "DM 461", "11": "DM 462", "13": "DM 466", "14": "DM 463+465"}
+ }
+}

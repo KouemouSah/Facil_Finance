@@ -1,0 +1,261 @@
+captures:
+- source: ../1.PNG
+  sortie: c1.png
+- source: ../2.PNG
+  sortie: c2.png
+  masques:
+  - - 10
+    - 627
+    - 391
+    - 663
+- source: ../3.PNG
+  sortie: c3.png
+- source: ../4.PNG
+  sortie: c4.png
+- source: ../5.PNG
+  sortie: c5.png
+- source: ../6.PNG
+  sortie: c6.png
+- source: ../7.PNG
+  sortie: c7.png
+- source: ../8.PNG
+  sortie: c8.png
+- source: ../9.PNG
+  sortie: c9.png
+- source: ../10.PNG
+  sortie: c10.png
+- source: ../11.PNG
+  sortie: c11.png
+- source: ../12.PNG
+  sortie: c12.png
+  recadrage:
+  - 0
+  - 0
+  - 1892
+  - 700
+  masques:
+  - - 673
+    - 8
+    - 821
+    - 45
+  - - 1582
+    - 122
+    - 1724
+    - 159
+  - - 244
+    - 295
+    - 365
+    - 331
+  - - 754
+    - 317
+    - 882
+    - 355
+- source: ../13.PNG
+  sortie: c13.png
+  masques:
+  - - 634
+    - 1
+    - 783
+    - 37
+  - - 385
+    - 538
+    - 482
+    - 575
+  - - 168
+    - 637
+    - 241
+    - 665
+  - - 168
+    - 671
+    - 316
+    - 702
+  - - 169
+    - 709
+    - 288
+    - 737
+  - - 165
+    - 742
+    - 309
+    - 773
+  - - 600
+    - 34
+    - 1407
+    - 66
+- source: ../14.PNG
+  sortie: c14.png
+  masques:
+  - - 659
+    - 7
+    - 817
+    - 44
+  - - 742
+    - 49
+    - 891
+    - 76
+  - - 416
+    - 454
+    - 552
+    - 485
+  - - 182
+    - 642
+    - 256
+    - 674
+  - - 182
+    - 676
+    - 331
+    - 711
+  - - 182
+    - 714
+    - 303
+    - 745
+  - - 181
+    - 748
+    - 322
+    - 780
+  - - 615
+    - 44
+    - 1660
+    - 76
+- source: ../15.PNG
+  sortie: c15.png
+  recadrage:
+  - 0
+  - 60
+  - 1909
+  - 954
+  masques:
+  - - 577
+    - 18
+    - 991
+    - 49
+  - - 673
+    - 18
+    - 991
+    - 49
+  - - 671
+    - 158
+    - 779
+    - 193
+  - - 281
+    - 456
+    - 406
+    - 492
+  - - 215
+    - 456
+    - 510
+    - 492
+- source: ../16.PNG
+  sortie: c16.png
+  recadrage:
+  - 0
+  - 58
+  - 1906
+  - 948
+  masques:
+  - - 720
+    - 133
+    - 808
+    - 164
+  - - 312
+    - 478
+    - 417
+    - 507
+  - - 758
+    - 478
+    - 1042
+    - 506
+  - - 1204
+    - 476
+    - 1296
+    - 508
+- source: ../17.PNG
+  sortie: c17.png
+  recadrage:
+  - 0
+  - 56
+  - 1908
+  - 944
+  masques:
+  - - 719
+    - 130
+    - 807
+    - 160
+- source: ../18.PNG
+  sortie: c18.png
+  recadrage:
+  - 0
+  - 66
+  - 1893
+  - 956
+  masques:
+  - - 714
+    - 140
+    - 802
+    - 171
+- source: ../19.PNG
+  sortie: c19.png
+  recadrage:
+  - 0
+  - 56
+  - 1659
+  - 950
+  masques:
+  - - 583
+    - 125
+    - 671
+    - 156
+- source: ../20.PNG
+  sortie: c20.png
+  masques:
+  - - 537
+    - 79
+    - 625
+    - 108
+  - - 342
+    - 483
+    - 478
+    - 513
+  - - 825
+    - 661
+    - 972
+    - 691
+- source: ../21.PNG
+  sortie: c21.png
+  masques:
+  - - 726
+    - 76
+    - 814
+    - 108
+- source: ../22.PNG
+  sortie: c22.png
+  masques:
+  - - 718
+    - 79
+    - 805
+    - 105
+- source: ../23.PNG
+  sortie: c23.png
+  masques:
+  - - 708
+    - 76
+    - 795
+    - 108
+- source: ../24.PNG
+  sortie: c24.png
+  masques:
+  - - 169
+    - 229
+    - 323
+    - 259
+  - - 65
+    - 454
+    - 140
+    - 485
+  - - 67
+    - 490
+    - 188
+    - 522
+  - - 66
+    - 526
+    - 208
+    - 556

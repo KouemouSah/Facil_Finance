@@ -1,0 +1,14 @@
+{
+  "name": "facil",
+  "owner": {
+    "name": "Facil - AI Solutions Architect - Emac SAH"
+  },
+  "description": "Plugins Facil pour la comptabilité OHADA / SYSCOHADA révisé et la DEF de Guinée équatoriale.",
+  "plugins": [
+    {
+      "name": "compta-ohada",
+      "source": "./",
+      "description": "DEF/DSF de Guinée équatoriale et comptabilité SYSCOHADA révisé : dossier de travail local, génération automatique, questions guidées, rapports FR/ES."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Surcharge du thème Facil, présentation commerciale en ESPAGNOL : seules ces clés changent.
+entreprise:
+  siret: "108 750 407 00018"
+  pays: "París, Francia"
+produit: "Facil DEF"
+entete: "{produit}"
+mention: "Presentación comercial"

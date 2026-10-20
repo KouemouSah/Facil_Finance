@@ -1,0 +1,36 @@
+{#-
+  Surcharge de partials/nav.html (Material 9.x) : le bloc de marque du produit EST le bouton
+  qui replie / déplie la barre latérale (pas d'icône de repli à part). Le reste est identique
+  au gabarit d'origine.
+-#}
+{% import "partials/nav-item.html" as item with context %}
+{% set class = "md-nav md-nav--primary" %}
+{% if "navigation.tabs" in features %}
+  {% set class = class ~ " md-nav--lifted" %}
+{% endif %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <div class="facil-marque">
+    <button type="button" class="facil-marque__bascule" aria-expanded="true" aria-controls="facil-nav-liste"
+            aria-label="{{ config.extra.produit }} — replier le menu" data-produit="{{ config.extra.produit }}" title="Replier le menu">
+      <img class="facil-marque__logo" src="{{ 'assets/logo.png' | url }}" alt="" width="392" height="165">
+      <img class="facil-marque__icone" src="{{ 'assets/icon.png' | url }}" alt="" width="40" height="40">
+      <span class="facil-marque__produit">{{ config.extra.sous_titre }}</span>
+      <span class="facil-marque__version">Documentation v{{ config.extra.version_doc }}</span>
+    </button>
+  </div>
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.extra.produit }}
+  </label>
+  <ul class="md-nav__list" id="facil-nav-liste" data-md-scrollfix>
+    {% for nav_item in nav.items %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+</nav>

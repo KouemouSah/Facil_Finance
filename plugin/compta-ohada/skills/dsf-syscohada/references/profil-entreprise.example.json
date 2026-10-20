@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "role": "Profil d'ENTREPRISE, réutilisé d'un exercice à l'autre : interprétations retenues là où la loi est ambiguë ou la pratique diverge, et faits sur l'entreprise. Lu par agreger_balance_dsf.py, calcul_is_ge.py et monter_dsf.py (--profil).",
+    "trois_niveaux": "1) la LOI (taux, délais) vit dans parametres_fiscaux_ge.json et ne se modifie pas ici ; 2) les INTERPRÉTATIONS se choisissent ici (défaut = lecture stricte), et tout écart est chiffré dans les avertissements ; 3) les FAITS se déclarent ici (null = inconnu -> question d'entrée).",
+    "regle": "Chaque interprétation qui s'écarte du défaut doit avoir une justification : elle sera relue par l'auditeur ou le contrôleur, parfois des années plus tard."
+  },
+  "interpretations": {
+    "arrondi_base_is": true,
+    "arrondi_is_franc": true,
+    "base_cmf": "ca",
+    "compensation_tresorerie": false
+  },
+  "faits": {
+    "nouvelle_societe": null,
+    "paiements_non_residents": null,
+    "marches_publics": null
+  },
+  "justifications": {}
+}

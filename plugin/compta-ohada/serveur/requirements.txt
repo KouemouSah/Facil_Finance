@@ -1,0 +1,15 @@
+openpyxl>=3.1,<4
+xlrd>=2.0,<3
+pillow>=10
+pymupdf>=1.24
+mcp>=1.10,<2
+# lecture LOCALE des DEF scannées (ocr_def.py) : OCR RapidOCR sur onnxruntime, rien ne quitte le poste. Le paquet
+# rapidocr_onnxruntime lui-même est dans requirements-ocr.txt (installé à part, voir tools/construire_runtime.py)
+onnxruntime>=1.20,<2
+opencv-python>=4.8
+numpy>=2,<3
+shapely>=2,<3
+pyclipper>=1.3,<2
+PyYAML>=6,<7
+six>=1.16,<2
+tqdm>=4,<5

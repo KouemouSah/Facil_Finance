@@ -1,0 +1,56 @@
+# Paramètres du projet pour le plugin doc-projet. Modifiables à la main ;
+# la construction du site les relit à chaque fois (charte, pied de page, accueil).
+produit: Facil Finance
+sous_titre: Finance
+editeur: Facil - AI Solutions Architect - Emac SAH
+resume: Plateforme de production financière SYSCOHADA révisé pour les 17 États de
+  l'OHADA.
+langue: fr
+version_doc: '0.1'
+confidentiel: false
+logo: assets/logo.png
+icone: assets/icon.png
+cree_le: '2026-10-15'
+phase: 6
+phases:
+  1: fait
+  2: fait
+  3: fait
+  4: fait
+  5: fait
+  6: en_cours
+couleurs:
+  decor: '#498e03'
+  principale: '#448403'
+  claire: '#9afb37'
+  nuit: '#2e5a02'
+  voile: '#f0f7e9'
+  pale: '#cce3b5'
+  forte: '#a9d47d'
+  legere: '#e6f1da'
+  encre: '#1f3c01'
+  zebre: '#f7faf5'
+  panneau: '#f6f8f4'
+  bordure: '#e3e7df'
+  texte_doux: '#66705c'
+  fond_sombre: '#12160d'
+  encre_claire: '#ebf3e2'
+  voile_sombre: '#29351d'
+  zebre_sombre: '#1a1f14'
+  panneau_sombre: '#171c12'
+  bordure_sombre: '#30362b'
+  texte_doux_sombre: '#adb6a5'
+confidentialite:
+  # Liste locale, HORS dépôt (C:\DSF\documentation\...). En CI, elle n'existe pas : la garde est déléguée à
+  # outils/garde_confidentialite.py (empreintes HMAC) par DOC_CONFIDENTIALITE_DELEGUEE.
+  liste: ../../documentation/analyse/reference/noms_confidentiels.txt
+  obligatoire: true
+liens_pied:
+- titre: Accueil
+  page: index.md
+- titre: Termes de référence
+  page: tdr.md
+- titre: Plan de documentation
+  page: plans/plan-documentation.md
+- titre: Glossaire
+  page: glossaire.md

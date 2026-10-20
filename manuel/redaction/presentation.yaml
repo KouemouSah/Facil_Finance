@@ -1,0 +1,84 @@
+type: presentation
+fichier: Presentation-commerciale-Facil-DEF
+theme: theme-commercial.yaml
+options:
+  sans_tiret_long: true
+  mots_interdits: ["à confirmer", "à compléter"]   # noms de clients : garde du dépôt (outils/garde_confidentialite.py), jamais en clair ici
+meta:
+  kicker: "Facil DEF  ·  Guinée équatoriale"
+  titre_ligne1: "Votre DSF SYSCOHADA,"
+  titre_ligne2: "prête à valider"
+  sous_titre: "De la balance à la déclaration validée, sur votre poste, sans ressaisie"
+  projet: "0.13.0"
+  date: "Octobre 2026"
+  libelles: {projet: "Version"}
+
+diapositives:
+  - mise_en_page: couverture
+    notes: "Facil DEF produit la Déclaration statistique et fiscale (DSF) de Guinée équatoriale au modèle SYSCOHADA révisé, à partir de la balance et du grand livre. Le message : la DSF est calculée automatiquement, l'expert ne fait que décider et valider."
+
+  - mise_en_page: deux_colonnes
+    entete: "Le constat"
+    rubrique: "Constat et réponse"
+    titre: "La DSF se ressaisit chaque année ; Facil DEF la calcule"
+    accent: "Facil DEF la calcule"
+    gauche_titre: "Aujourd'hui"
+    droite_titre: "Avec Facil DEF"
+    lignes:
+      - ["Les montants de la balance sont recopiés dans des dizaines de feuilles", "Tous les états, notes et tableaux fiscaux sont **calculés** depuis la balance"]
+      - ["Les comparatifs N-1 se reprennent à la main, parfois depuis un papier scanné", "La DSF précédente, même **scannée**, est lue sur le poste et prouvée par les formules"]
+      - ["Les choix fiscaux se décident sans trace écrite", "Chaque réintégration montre son **effet sur l'impôt** ; chaque réponse est tracée"]
+      - ["Les écarts se découvrent au moment du dépôt", "Un **rapport de contrôle** et une **analyse pluriannuelle** sont livrés à chaque version"]
+    notes: "Insister sur la ressaisie et sur la trace : la valeur n'est pas seulement le gain de temps, c'est une DSF dont chaque chiffre se justifie."
+
+  - mise_en_page: captures
+    entete: "Le produit"
+    rubrique: "Comment ça marche"
+    titre: "Une phrase à Claude, un formulaire guidé, une DSF validée"
+    accent: "une DSF validée"
+    items:
+      - {image: captures/c12.png, titre: "Demander", legende: "« Prépare la DSF 2025 de… » : le dossier se crée"}
+      - {image: captures/c18.png, titre: "Décider", legende: "Réintégrations proposées, avec leur effet sur l'IS"}
+      - {image: captures/c20.png, titre: "Expliquer", legende: "Variations expliquées par les comptes"}
+      - {image: captures/c23.png, titre: "Valider", legende: "Version définitive, sans filigrane, à votre nom"}
+    note: "Captures du produit, données client masquées."
+    notes: "Dérouler le parcours : on dépose la balance, Claude génère la version projet, le formulaire pose seulement les questions que les fichiers ne tranchent pas, puis la validation nominative produit la version définitive."
+
+  - mise_en_page: cartes
+    entete: "Les garanties"
+    rubrique: "Confiance"
+    titre: "Des chiffres justifiés, des données qui restent chez vous"
+    accent: "qui restent chez vous"
+    items:
+      - {icone: shield-check, titre: "Données sur le poste", texte: "Calculs, fichiers et formulaire restent sur l'ordinateur ; Claude ne reçoit que des pseudonymes, montants masqués."}
+      - {icone: badge-check, titre: "Rien de validé à votre place", texte: "La version définitive exige toutes les réponses obligatoires et une validation nominative."}
+      - {icone: scan-line, titre: "Scans lus et prouvés", texte: "Un montant lu sur une DSF scannée n'est repris que s'il vérifie les formules SYSCOHADA."}
+      - {icone: file-search, titre: "Tout est tracé", texte: "Rapport de contrôle : réponses appliquées, origine, date et valideur, pour chaque version."}
+    bande: {icone: monitor-check, titre: "Installé en cinq minutes", texte: "Un seul fichier pour Claude Desktop sous Windows, tout est embarqué : rien d'autre à installer."}
+    notes: "Ces garanties répondent aux objections habituelles : confidentialité, responsabilité de la validation, fiabilité des reprises de l'année précédente."
+
+  - mise_en_page: cartes
+    entete: "Fiche produit"
+    rubrique: "Fiche produit"
+    titre: "Facil DEF en un coup d'œil"
+    accent: "en un coup d'œil"
+    items:
+      - {icone: users, titre: "Pour qui", texte: "Cabinets d'expertise comptable et services comptables d'entreprises en Guinée équatoriale."}
+      - {icone: file-input, titre: "Vous déposez", texte: "Balance et grand livre ; en option la DSF précédente, Excel ou scannée, et le logo."}
+      - {icone: files, titre: "Vous recevez", texte: "Liasse SYSCOHADA, TF1 à TF5, version espagnole, rapports PDF, contrôle et analyse financière (17 ratios)."}
+      - {icone: laptop, titre: "Prérequis", texte: "Windows et Claude Desktop ; rien d'autre à installer. Manuel illustré fourni."}
+    bande: {icone: calendar-check, titre: "Démonstration sur vos propres fichiers", texte: "Apportez une balance : la version projet se génère devant vous."}
+    notes: "Fiche à laisser après le rendez-vous : elle se lit seule. Les conditions commerciales se présentent à part, selon le nombre de dossiers."
+
+  - mise_en_page: fin
+    kicker: "Prochaine étape"
+    ligne1: "Voyez votre DSF"
+    ligne2: "se construire."
+    texte: "Une démonstration sur une balance de votre choix, sur votre poste."
+    cta: {icone: calendar-check, kicker: "Demander une démonstration", titre: "sah@emacsah.com"}
+    raisons_titre: "Pourquoi Facil DEF"
+    raisons:
+      - {titre: "Automatique d'abord", texte: "La DSF complète est calculée avant la première question."}
+      - {titre: "Questions ensuite", texte: "Seules celles que vos fichiers ne tranchent pas, une seule fois."}
+      - {titre: "Validée par vous", texte: "Chaque réponse tracée, la version définitive à votre nom."}
+    notes: "Conclure sur l'appel à l'action : proposer une date de démonstration sur les fichiers du prospect."

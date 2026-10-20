@@ -17,7 +17,7 @@ import pytest
 from facil_moteur import adaptateurs, packs
 
 DEPOT = Path(__file__).resolve().parents[1]
-PLUGIN = DEPOT.parent / "compta-ohada"
+PLUGIN = DEPOT / "plugin" / "compta-ohada"
 pytestmark = pytest.mark.skipif(not PLUGIN.exists(), reason="plugin compta-ohada (référence) absent de ce poste")
 
 

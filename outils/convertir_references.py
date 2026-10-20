@@ -1,6 +1,6 @@
 """Construit les couches communes des packs depuis les références du moteur actuel (plugin compta-ohada).
 
-  convertir_references.py [--source C:/DSF/compta-ohada]
+  convertir_references.py [--source plugin/compta-ohada]
 
 Produit :
   packs/ohada/2017.1/  règles « compte → poste », postes, correspondances du formulaire SN, gabarit SN,
@@ -96,7 +96,7 @@ SOURCES_OHADA = """# Sources — couche OHADA 2017.1
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--source", default=str(DEPOT.parent / "compta-ohada"))
+    p.add_argument("--source", default=str(DEPOT / "plugin" / "compta-ohada"))
     a = p.parse_args()
     src = Path(a.source)
     refs = src / "skills" / "dsf-syscohada" / "references"

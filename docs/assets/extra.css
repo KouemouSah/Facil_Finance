@@ -1,0 +1,428 @@
+/* ==========================================================================
+   Facil Finance — habillage de la documentation (thème Material surchargé)
+   Valeurs PAR DÉFAUT (charte Facil). Chaque projet les remplace par assets/charte.css, générée depuis
+   doc-projet.yml (couleurs calculées depuis le logo par le plugin doc-projet, contrastes vérifiés).
+   Couleurs Facil relevées sur l'icône : #498E03 (remplissage), #397004 (anneau).
+   Contrastes calculés (WCAG 2.1, rapport de luminance relative) :
+     #397004 sur blanc ............ 6,0:1  → texte courant, liens, élément actif (AA)
+     #498E03 sur blanc ............ 4,1:1  → décor et grands chiffres seulement (AA grand texte)
+     #7CC242 sur #161a14 .......... 8,9:1  → liens et accents du thème sombre (AA)
+     #5f6b5a sur #f6f8f4 .......... 5,2:1  → libellés secondaires de la barre latérale (AA)
+   Icônes : Lucide, vectorielles et monochromes (theme/.icons/lucide), jamais d'émoji.
+   ========================================================================== */
+
+:root {
+  --facil-vert: #498E03;
+  --facil-vert-fonce: #397004;
+  --facil-vert-nuit: #2b5503;
+  --facil-vert-clair: #7CC242;
+  --facil-vert-voile: #eef6e6;
+  --facil-vert-pale: #c6e3a4;
+  --facil-encre: #1d3502;
+  --facil-zebre: #f4f8f0;
+  --facil-fond-sombre: #12160f;
+  --facil-encre-claire: #e6f2d9;
+  --facil-ambre: #b7791f;
+  --facil-rayon: 12px;
+  --facil-rayon-petit: 8px;
+  --facil-ombre: 0 1px 2px rgba(16, 24, 12, .06), 0 4px 16px rgba(16, 24, 12, .06);
+  --facil-ombre-forte: 0 2px 4px rgba(16, 24, 12, .08), 0 12px 32px rgba(16, 24, 12, .12);
+  --facil-panneau: #f6f8f4;
+  --facil-bordure: #e3e8df;
+  --facil-texte-doux: #5f6b5a;
+  --facil-largeur-nav: 15rem;
+  --facil-largeur-rail: 4.4rem;
+  /* Polices système : aucune police téléchargée (site confidentiel, hors ligne). */
+  --md-text-font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --md-code-font-family: "Cascadia Mono", Consolas, "DejaVu Sans Mono", monospace;
+}
+
+[data-md-color-scheme="slate"] {
+  --facil-panneau: #1b2018;
+  --facil-bordure: #2e3629;
+  --facil-texte-doux: #a9b5a3;
+  --facil-vert-voile: #233019;
+  --facil-zebre: #1a2116;
+  --md-default-bg-color: var(--facil-fond-sombre);
+  --facil-ombre: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 16px rgba(0, 0, 0, .25);
+  --facil-ombre-forte: 0 2px 4px rgba(0, 0, 0, .5), 0 12px 32px rgba(0, 0, 0, .4);
+}
+
+/* --- Couleurs du thème -------------------------------------------------------------- */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--facil-vert-fonce);
+  --md-primary-fg-color--light: var(--facil-vert);
+  --md-primary-fg-color--dark: var(--facil-vert-nuit);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--facil-vert-fonce);
+  --md-accent-fg-color--transparent: #3970041a;
+}
+[data-md-color-scheme="default"] { --md-typeset-a-color: var(--facil-vert-fonce); }
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: var(--facil-vert-clair);
+  --md-accent-fg-color: var(--facil-vert-clair);
+}
+
+/* Icônes Lucide : tracé, pas de remplissage (Material remplit ses propres icônes). */
+svg.lucide, .md-icon svg.lucide, .md-nav__icon svg.lucide, .md-header__button svg.lucide { fill: none !important; stroke: currentColor; }
+.twemoji svg.lucide { fill: none !important; }
+
+/* --- Typographie adaptative ------------------------------------------------------------ */
+.md-typeset { font-size: clamp(.74rem, .70rem + .18vw, .84rem); line-height: 1.7; }
+.md-typeset h1 { font-weight: 800; letter-spacing: -.02em; color: var(--md-default-fg-color); font-size: clamp(1.6rem, 1.3rem + 1vw, 2.1rem); margin-bottom: .6em; }
+.md-typeset h2 { font-weight: 700; letter-spacing: -.01em; padding-bottom: .3em; border-bottom: 1px solid var(--facil-bordure); }
+.md-typeset h3 { font-weight: 650; }
+
+/* Pleine largeur : seule la prose reste bornée pour la lecture. */
+.md-grid { max-width: 100rem; }
+/* Le contenu prend toute la largeur ; seule la prose est bornée (≈ 150 caractères), au-delà la lecture se perd. */
+.md-typeset > p, .md-typeset > ul, .md-typeset > ol, .md-typeset > dl { max-width: 75rem; }
+
+/* --- En-tête : barre fine et claire, filet dégradé aux couleurs Facil ------------------- */
+.md-header {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: none;
+}
+.md-header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: linear-gradient(90deg, var(--facil-vert-nuit), var(--facil-vert) 45%, var(--facil-vert-clair) 75%, var(--facil-vert-pale));
+}
+.md-header__title { font-weight: 600; }
+.md-header__button { color: var(--md-default-fg-color--light); }
+.md-header__button:hover { color: var(--md-accent-fg-color); }
+.md-search__form { background-color: var(--facil-panneau); border: 1px solid var(--facil-bordure); border-radius: 999px; }
+.md-search__form:hover { background-color: var(--facil-panneau); border-color: var(--md-accent-fg-color); }
+.md-search__input, .md-search__input::placeholder { color: var(--md-default-fg-color--light); }
+.md-search__icon[for="__search"] { color: var(--md-default-fg-color--light); }
+.md-search__input { padding-left: 2.6rem; }
+@media screen and (min-width: 76.25em) {
+  /* La marque est dans la barre latérale : l'en-tête n'affiche que le titre de la page. */
+  .md-header__button.md-logo { display: none; }
+  .md-header__title { margin-left: .6rem; }
+}
+
+/* --- Barre latérale ---------------------------------------------------------------------- */
+@media screen and (min-width: 76.25em) {
+  /* Collée sous l'en-tête ; sa zone de défilement (pleine hauteur) porte le fond et le trait fin. */
+  .md-main__inner { margin-top: 0; }
+  .md-content__inner { padding-top: 1.4rem; }
+  /* Largeur = libellé le plus long du menu (libellés sur une ligne). */
+  .md-sidebar--primary { width: max-content; min-width: 0; max-width: 17rem; padding-top: 0; }
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    margin: 0; background: var(--facil-panneau); border-right: 1px solid var(--facil-bordure);
+    scrollbar-width: none;            /* barre de défilement invisible (Firefox) */
+    -ms-overflow-style: none;
+  }
+  .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar { display: none; }  /* Chrome, Edge */
+  .md-sidebar--primary .md-sidebar__inner, .md-sidebar--primary .md-nav--primary { background: transparent; }
+  .md-nav--primary .md-nav__link { white-space: nowrap; }
+  .md-sidebar--secondary { padding-top: 1.4rem; }
+  .md-sidebar--secondary .md-sidebar__scrollwrap { scrollbar-width: none; }
+  .md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar { display: none; }
+  .md-nav--primary > .md-nav__title { display: none; }
+}
+
+/* Bloc de marque : logo Facil et « FINANCE » dessous. Le bloc entier replie et déplie le menu. */
+.facil-marque { position: sticky; top: 0; z-index: 2; background: var(--facil-panneau); padding: 1.1rem .6rem .8rem; border-bottom: 1px solid var(--facil-bordure); margin-bottom: .6rem; }
+.facil-marque__bascule {
+  display: flex; flex-direction: column; align-items: center; gap: .3rem; width: 100%;
+  padding: .4rem .3rem; border-radius: var(--facil-rayon-petit); cursor: pointer; color: inherit;
+}
+.facil-marque__bascule:hover { background: var(--md-accent-fg-color--transparent); }
+.facil-marque__bascule:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.facil-marque__logo { width: 6rem; height: auto; display: block; }
+[data-md-color-scheme="slate"] .facil-marque__logo { background: #ffffff; border-radius: 6px; padding: .2rem .4rem; }
+.facil-marque__icone { display: none; width: 2rem; height: 2rem; }
+.facil-marque__produit { font-size: .6rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--facil-vert-fonce); padding-left: .3em; }
+[data-md-color-scheme="slate"] .facil-marque__produit { color: var(--facil-vert-clair); }
+@media screen and (max-width: 76.234375em) {
+  /* Mobile et tablette : Material affiche son tiroir avec son propre titre. */
+  .facil-marque { display: none; }
+}
+
+/* Intitulés de section : petites capitales discrètes. */
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--facil-texte-doux); margin-top: 1rem;
+}
+.md-nav__link { border-radius: var(--facil-rayon-petit); padding: .35rem .6rem; margin: .1rem .5rem .1rem 0; transition: background-color .15s, color .15s; }
+.md-nav__item .md-nav__link:hover { background: var(--md-accent-fg-color--transparent); }
+/* Élément actif — menu ET table des matières : une seule couleur de fond, sans filet. */
+.md-nav--primary .md-nav__link--active,
+.md-nav--secondary .md-nav__link--active {
+  background: var(--facil-vert-voile); color: var(--facil-vert-fonce); font-weight: 650; box-shadow: none;
+}
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active { color: var(--facil-vert-clair); }
+.md-nav--secondary .md-nav__link { margin-right: 0; }
+.md-nav--secondary > .md-nav__title { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--facil-texte-doux); background: transparent; box-shadow: none; }
+
+.md-nav__link .md-icon svg, .md-nav__link > .twemoji svg, .md-nav__link svg.lucide { width: 1rem; height: 1rem; }
+
+/* Barre repliée : un rail, l'icône Facil et « FINANCE » dessous ; un clic sur ce bloc déplie. */
+@media screen and (min-width: 76.25em) {
+  .facil-nav-repliee .md-sidebar--primary { width: var(--facil-largeur-rail); }
+  .facil-nav-repliee .md-nav--primary > .md-nav__list,
+  .facil-nav-repliee .facil-marque__version { display: none; }
+  .facil-nav-repliee .facil-marque { padding: .9rem .2rem; border-bottom: 0; }
+  .facil-nav-repliee .facil-marque__logo { display: none; }
+  .facil-nav-repliee .facil-marque__icone { display: block; }
+  .facil-nav-repliee .facil-marque__produit { font-size: .52rem; letter-spacing: .16em; padding-left: .16em; }
+}
+
+/* --- Accueil : bannière et cartes ------------------------------------------------------- */
+.facil-banniere {
+  position: relative; overflow: hidden;
+  padding: clamp(1.4rem, 1rem + 2vw, 2.6rem); margin: 0 0 1.6rem;
+  border-radius: calc(var(--facil-rayon) * 1.5);
+  background:
+    radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--facil-vert-clair) 22%, transparent), transparent 32%),
+    radial-gradient(circle at 6% 110%, color-mix(in srgb, var(--facil-vert-fonce) 14%, transparent), transparent 35%),
+    linear-gradient(135deg, var(--facil-panneau), var(--md-default-bg-color));
+  border: 1px solid var(--facil-bordure);
+}
+.facil-badge {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .3rem .8rem; border-radius: 999px; font-size: .68rem; font-weight: 700;
+  background: var(--facil-vert-fonce); color: #ffffff;
+}
+.facil-badge svg { width: .9rem; height: .9rem; }
+.md-typeset .facil-banniere h1 { margin: .8rem 0 .5rem; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.15rem); line-height: 1.15; max-width: 22ch; }
+.facil-banniere__chapo { font-size: 1.05em; color: var(--facil-texte-doux); max-width: 46rem; margin: 0; }
+
+.facil-chiffres { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: .8rem; margin: 0 0 1.8rem; }
+.facil-chiffre {
+  display: flex; flex-direction: column; gap: .2rem; padding: 1rem 1.1rem;
+  border: 1px solid var(--facil-bordure); border-radius: var(--facil-rayon); background: var(--md-default-bg-color);
+  box-shadow: var(--facil-ombre);
+}
+.facil-chiffre__icone { color: var(--facil-vert-fonce); }
+[data-md-color-scheme="slate"] .facil-chiffre__icone { color: var(--facil-vert-clair); }
+.facil-chiffre__icone svg { width: 1.2rem; height: 1.2rem; }
+.facil-chiffre__valeur { font-size: 1.9rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: var(--md-default-fg-color); }
+.facil-chiffre__libelle { font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--facil-texte-doux); }
+
+.facil-cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 0 0 2rem; }
+.md-typeset a.facil-carte, .facil-carte {
+  position: relative; display: flex; flex-direction: column; gap: .5rem;
+  padding: 1.3rem 1.3rem 1.1rem; border: 1px solid var(--facil-bordure); border-radius: var(--facil-rayon);
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color); text-decoration: none;
+  box-shadow: var(--facil-ombre); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  overflow: hidden;
+}
+.facil-carte::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--facil-accent, var(--facil-vert)); }
+.md-typeset a.facil-carte:hover, .md-typeset a.facil-carte:focus-visible { transform: translateY(-2px); box-shadow: var(--facil-ombre-forte); border-color: var(--facil-accent, var(--facil-vert)); }
+.md-typeset a.facil-carte:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.facil-carte__icone { width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: 10px; background: var(--facil-vert-voile); color: var(--facil-vert-fonce); }
+[data-md-color-scheme="slate"] .facil-carte__icone { color: var(--facil-vert-clair); }
+.facil-carte__icone svg { width: 1.3rem; height: 1.3rem; }
+.facil-carte__titre { font-size: 1.05rem; font-weight: 750; margin: .2rem 0 0; }
+.facil-carte__texte { color: var(--facil-texte-doux); margin: 0; flex: 1; }
+.facil-carte__action { font-weight: 700; color: var(--md-typeset-a-color); display: inline-flex; align-items: center; gap: .3rem; }
+.facil-carte__action svg { width: .95rem; height: .95rem; transition: transform .15s; }
+.md-typeset a.facil-carte:hover .facil-carte__action svg { transform: translateX(3px); }
+.facil-carte--ambre { --facil-accent: var(--facil-ambre); }
+.facil-carte--nuit { --facil-accent: var(--facil-vert-nuit); }
+.facil-carte--clair { --facil-accent: var(--facil-vert-clair); }
+
+/* --- Éléments de contenu ------------------------------------------------------------------ */
+.md-typeset table:not([class]) { border-radius: var(--facil-rayon); border: 1px solid var(--facil-bordure); overflow: hidden; box-shadow: none; font-size: .78rem; }
+.md-typeset table:not([class]) th { background: var(--facil-panneau); font-weight: 700; }
+.md-typeset__table { max-width: 100%; overflow-x: auto; }
+.md-typeset .admonition, .md-typeset details { border-radius: var(--facil-rayon); border-width: 1px; box-shadow: none; }
+.md-typeset code { border-radius: 6px; }
+.md-typeset pre > code { border-radius: var(--facil-rayon-petit); }
+
+/* Statut des documents. */
+.statut { display: inline-block; padding: .12rem .6rem; border-radius: 999px; font-size: .72em; font-weight: 700; border: 1px solid currentColor; }
+.statut--valide { color: var(--facil-vert-fonce); }
+[data-md-color-scheme="slate"] .statut--valide { color: var(--facil-vert-clair); }
+.statut--brouillon { color: #8a5300; }
+[data-md-color-scheme="slate"] .statut--brouillon { color: #f0b45a; }
+
+/* --- Diagrammes : cadre, et ouverture en grand ------------------------------------------- */
+:root > * {
+  --md-mermaid-node-bg-color: var(--facil-vert-voile);
+  --md-mermaid-node-fg-color: var(--facil-encre);
+  --md-mermaid-edge-color: var(--facil-vert-fonce);
+  --md-mermaid-label-bg-color: #ffffff;
+  --md-mermaid-label-fg-color: var(--facil-encre);
+}
+[data-md-color-scheme="slate"] {
+  --md-mermaid-node-bg-color: var(--facil-vert-voile);
+  --md-mermaid-node-fg-color: var(--facil-encre-claire);
+  --md-mermaid-edge-color: var(--facil-vert-clair);
+  --md-mermaid-label-bg-color: var(--facil-fond-sombre);
+  --md-mermaid-label-fg-color: var(--facil-encre-claire);
+}
+.md-typeset figure.diagramme {
+  display: block; width: 100%; margin: 1.2rem 0; padding: 1rem 1rem .4rem; max-width: 100%; box-sizing: border-box;
+  border: 1px solid var(--facil-bordure); border-radius: var(--facil-rayon); background: var(--md-default-bg-color);
+  cursor: zoom-in; transition: border-color .15s, box-shadow .15s;
+}
+.md-typeset figure.diagramme:hover { border-color: var(--md-accent-fg-color); box-shadow: var(--facil-ombre); }
+.md-typeset figure.diagramme .mermaid { text-align: center; margin: 0; }
+.md-typeset .diagramme__legende { display: flex; justify-content: flex-end; margin: .4rem 0 0; }
+.diagramme__agrandir {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 2.2rem; padding: 0 .8rem;
+  border: 1px solid var(--facil-bordure); border-radius: 999px; font-size: .7rem; font-weight: 600;
+  color: var(--facil-texte-doux); cursor: pointer; background: var(--facil-panneau);
+}
+.diagramme__agrandir::before {
+  content: ""; width: .9rem; height: .9rem; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H5a2 2 0 0 0-2 2v3'/%3E%3Cpath d='M21 8V5a2 2 0 0 0-2-2h-3'/%3E%3Cpath d='M3 16v3a2 2 0 0 0 2 2h3'/%3E%3Cpath d='M16 21h3a2 2 0 0 0 2-2v-3'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H5a2 2 0 0 0-2 2v3'/%3E%3Cpath d='M21 8V5a2 2 0 0 0-2-2h-3'/%3E%3Cpath d='M3 16v3a2 2 0 0 0 2 2h3'/%3E%3Cpath d='M16 21h3a2 2 0 0 0 2-2v-3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.diagramme__agrandir:hover, .md-typeset figure.diagramme:hover .diagramme__agrandir { color: var(--md-accent-fg-color); border-color: var(--md-accent-fg-color); }
+.diagramme__agrandir:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+
+.diagramme-plein {
+  width: min(96vw, 1800px); height: 92vh; max-width: none; max-height: none; padding: 0;
+  border: 1px solid var(--facil-bordure); border-radius: calc(var(--facil-rayon) * 1.3);
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color); box-shadow: var(--facil-ombre-forte);
+  display: none; flex-direction: column;
+}
+.diagramme-plein[open] { display: flex; }
+.diagramme-plein::backdrop { background: rgba(10, 16, 8, .62); backdrop-filter: blur(3px); }
+.diagramme-plein__barre { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem .8rem .6rem 1.2rem; border-bottom: 1px solid var(--facil-bordure); }
+.diagramme-plein__titre { font-weight: 700; font-size: .85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.diagramme-plein__outils { display: flex; align-items: center; gap: .3rem; }
+.diagramme-plein__outils button {
+  min-width: 2.75rem; height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+  border-radius: var(--facil-rayon-petit); border: 1px solid var(--facil-bordure); background: var(--facil-panneau);
+  color: var(--md-default-fg-color); cursor: pointer; font: inherit; font-size: .75rem; font-weight: 600; padding: 0 .6rem;
+}
+.diagramme-plein__outils button:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.diagramme-plein__outils button:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 1px; }
+.diagramme-plein__fermer { margin-left: .5rem; }
+.diagramme-plein__niveau { min-width: 3.4rem; text-align: center; font-variant-numeric: tabular-nums; font-size: .75rem; color: var(--facil-texte-doux); }
+.diagramme-plein__corps { flex: 1; overflow: auto; padding: 1.2rem; text-align: center; }
+.diagramme-plein__corps:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: -4px; }
+.diagramme-plein__corps svg { display: inline-block; }
+.diagramme-plein__attente { color: var(--facil-texte-doux); margin-top: 3rem; }
+.facil-dialogue-ouvert { overflow: hidden; }
+
+/* --- Pied de page ------------------------------------------------------------------------ */
+.md-footer { background: var(--facil-panneau); color: var(--md-default-fg-color); border-top: 1px solid var(--facil-bordure); }
+.md-footer__link { color: var(--md-default-fg-color); }
+.md-footer__direction { color: var(--facil-texte-doux); }
+.md-footer-meta { background: transparent; border-top: 1px solid var(--facil-bordure); }
+.md-footer-meta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.5rem; padding: .9rem .8rem; }
+.facil-pied { margin: 0; padding: 0; color: var(--facil-texte-doux); font-size: .68rem; }
+.facil-pied__marque { display: flex; align-items: center; gap: .55rem; color: var(--md-default-fg-color); font-weight: 600; }
+.facil-pied__icone { width: 1.15rem; height: 1.15rem; }
+.facil-pied__meta { margin-top: .2rem; padding-left: 1.7rem; }
+.facil-pied__liens { display: flex; flex-wrap: wrap; gap: .2rem .4rem; font-size: .7rem; }
+/* Material colore les liens du pied en blanc (html .md-footer-meta.md-typeset a) : on surpasse sa spécificité. */
+html .md-footer-meta.md-typeset .facil-pied__liens a { color: var(--facil-texte-doux); padding: .55rem .5rem; border-radius: var(--facil-rayon-petit); }
+html .md-footer-meta.md-typeset .facil-pied__liens a:hover,
+html .md-footer-meta.md-typeset .facil-pied__liens a:focus-visible { color: var(--md-accent-fg-color); background: var(--md-accent-fg-color--transparent); }
+html .md-footer-meta.md-typeset .facil-pied { color: var(--facil-texte-doux); }
+
+/* Respect de la préférence « réduire les animations ». */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* --- Disposition : la barre latérale occupe toute sa colonne, du haut en bas ---------------- */
+/* L'en-tête, le contenu et le pied de page commencent à droite de la barre (largeur mesurée par
+   extra.js dans --facil-largeur-barre ; valeurs de repli ci-dessous avant la mesure). */
+:root { --facil-largeur-barre: 15rem; }
+.facil-nav-repliee { --facil-largeur-barre: var(--facil-largeur-rail); }
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    position: fixed !important; top: 0 !important; left: 0; bottom: 0;
+    height: 100vh !important; z-index: 4; align-self: auto;
+  }
+  .md-sidebar--primary .md-sidebar__scrollwrap { height: 100vh !important; max-height: none; }
+  .md-header { margin-left: var(--facil-largeur-barre); width: auto; }
+  .md-container { margin-left: var(--facil-largeur-barre); }
+  .md-main__inner.md-grid, .md-footer .md-grid, .md-footer-meta .md-grid { max-width: none; }
+  .md-content { max-width: none; }
+  .md-content__inner { margin-left: 1.6rem; margin-right: 1.6rem; }
+  /* La table des matières de la page active, intégrée au menu, ne fixe pas la largeur de la barre :
+     ses titres longs se replient sur plusieurs lignes. */
+  .md-nav--primary .md-nav--secondary { width: 0; min-width: 100%; }
+  .md-nav--primary .md-nav--secondary .md-nav__link { white-space: normal; font-size: .64rem; padding-top: .25rem; padding-bottom: .25rem; }
+  .md-nav--primary .md-nav--secondary > .md-nav__title { display: none; }
+}
+
+/* En-tête : le chemin de la page (section › page), toujours visible. */
+.md-header__title .md-header__topic:first-child { display: none; }
+.md-header__title .md-header__topic + .md-header__topic {
+  opacity: 1 !important; transform: none !important; pointer-events: auto; position: static;
+}
+.facil-chemin { color: var(--facil-texte-doux); font-weight: 500; }
+.facil-chemin__sep { margin: 0 .45rem; color: var(--facil-bordure); }
+
+/* Version de la documentation, sous « FINANCE ». */
+.facil-marque__version { font-size: .56rem; color: var(--facil-texte-doux); letter-spacing: .02em; }
+
+/* Tableaux : lignes alternées pour suivre une ligne d'un bout à l'autre. */
+.md-typeset table:not([class]) tbody tr:nth-child(even) { background-color: var(--facil-zebre); }
+/* Pas d'effet de survol : testé le 15/10, il donnait à une ligne blanche la teinte de l'alternance
+   (deux lignes vertes d'affilée) et ne changeait presque rien sur une ligne teintée. Les lignes de la
+   documentation ne sont pas cliquables : un survol y promettrait une action qui n'existe pas. */
+/* --- Schémas illustrés : étapes avec icônes ---------------------------------------------- */
+.facil-etapes { display: flex; align-items: stretch; gap: .6rem; margin: 1rem 0 1.4rem; flex-wrap: wrap; }
+.md-typeset .facil-etape, .facil-etape {
+  flex: 1 1 11rem; display: flex; flex-direction: column; gap: .35rem; padding: 1rem 1.1rem;
+  border: 1px solid var(--facil-bordure); border-radius: var(--facil-rayon); background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color); text-decoration: none; box-shadow: var(--facil-ombre);
+}
+.md-typeset a.facil-etape:hover, .md-typeset a.facil-etape:focus-visible { border-color: var(--md-accent-fg-color); box-shadow: var(--facil-ombre-forte); }
+.md-typeset a.facil-etape:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.facil-etape__icone { width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border-radius: 10px; background: var(--facil-vert-voile); color: var(--facil-vert-fonce); }
+[data-md-color-scheme="slate"] .facil-etape__icone { color: var(--facil-vert-clair); }
+.facil-etape__icone svg { width: 1.2rem; height: 1.2rem; }
+.facil-etape__titre { font-weight: 750; font-size: .95rem; }
+.facil-etape__texte { color: var(--facil-texte-doux); font-size: .78rem; line-height: 1.5; flex: 1; }
+.facil-etape__meta { font-size: .66rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--md-typeset-a-color); }
+.facil-etape__fleche { align-self: center; color: var(--facil-vert); flex: 0 0 auto; }
+.facil-etape__fleche svg { width: 1.3rem; height: 1.3rem; }
+.facil-etape__num { font-size: .62rem; font-weight: 800; color: var(--facil-texte-doux); letter-spacing: .08em; }
+@media screen and (max-width: 44.984375em) {
+  .facil-etapes { flex-direction: column; }
+  .facil-etape__fleche { transform: rotate(90deg); }
+}
+/* Variante compacte (processus en 6 à 8 étapes, ex. journée type) : grille régulière, cartes de même
+   largeur ; les flèches sont dessinées dans l'espace entre les cartes. */
+.facil-etapes--compactes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 6.2rem), 1fr)); gap: 1.1rem; }
+.facil-etapes--compactes > .facil-etape__fleche { display: none; }
+.facil-etapes--compactes .facil-etape { position: relative; padding: .8rem .8rem; }
+.facil-etapes--compactes .facil-etape:not(:last-child)::after {
+  content: ""; position: absolute; right: -1rem; top: 50%; width: .9rem; height: .9rem; transform: translateY(-50%);
+  background: var(--facil-vert);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.facil-etapes--compactes .facil-etape__titre { font-size: .8rem; }
+.facil-etapes--compactes .facil-etape__texte { font-size: .7rem; }
+
+/* --- Colonnes de comparaison avec icônes ------------------------------------------------- */
+.facil-colonnes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.facil-colonne {
+  position: relative; padding: 1.2rem 1.2rem .6rem; border: 1px solid var(--facil-bordure); border-radius: var(--facil-rayon);
+  background: var(--md-default-bg-color); box-shadow: var(--facil-ombre); overflow: hidden;
+}
+.facil-colonne::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--facil-accent, var(--facil-vert)); }
+.facil-colonne--plus { --facil-accent: var(--facil-vert); }
+.facil-colonne--moins { --facil-accent: var(--facil-ambre); }
+.facil-colonne--neutre { --facil-accent: var(--facil-texte-doux); }
+.facil-colonne__icone { width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border-radius: 10px; background: var(--facil-vert-voile); color: var(--facil-accent); }
+.facil-colonne--plus .facil-colonne__icone { color: var(--facil-vert-fonce); }
+.facil-colonne--moins .facil-colonne__icone { background: #fbf1e1; color: #8a5300; }
+[data-md-color-scheme="slate"] .facil-colonne--moins .facil-colonne__icone { background: #33281a; color: #f0b45a; }
+[data-md-color-scheme="slate"] .facil-colonne--plus .facil-colonne__icone { color: var(--facil-vert-clair); }
+.facil-colonne__icone svg { width: 1.2rem; height: 1.2rem; }
+.facil-colonne__titre { display: block; font-weight: 750; font-size: 1rem; margin: .6rem 0 .2rem; }
+.md-typeset .facil-colonne ul { list-style: none; margin: .4rem 0 0; padding: 0; }
+/* Icône posée en marge (pas de flex : un mot en gras éclaterait la ligne en morceaux). */
+.md-typeset .facil-colonne li { position: relative; display: block; margin: 0 0 .7rem; padding: 0 0 0 1.6rem; line-height: 1.5; }
+.md-typeset .facil-colonne li > .twemoji { position: absolute; left: 0; top: .2rem; color: var(--facil-texte-doux); }
+.md-typeset .facil-colonne li .twemoji svg { width: 1rem; height: 1rem; }

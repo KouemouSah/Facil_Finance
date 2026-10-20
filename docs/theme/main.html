@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {#- Rétablit l'état replié de la barre latérale AVANT l'affichage (pas de saut visuel).
+      Stockage local : simple confort, la page fonctionne sans. -#}
+  <script>
+    try {
+      if (localStorage.getItem("facil.nav.repliee") === "1") {
+        document.documentElement.classList.add("facil-nav-repliee");
+      }
+    } catch (e) {}
+  </script>
+{% endblock %}

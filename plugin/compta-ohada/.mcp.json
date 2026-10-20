@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "facil-def": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/runtime/python.exe",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/serveur/mcp_def.py"]
+    }
+  }
+}

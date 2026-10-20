@@ -1,0 +1,17 @@
+{
+  "description": "Facil DEF : Claude ne lit ni n'écrit le dossier de travail Facil-DEF par ses outils généraux ; les données comptables ne passent que par le serveur MCP facil-def (sorties pseudonymisées).",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Bash|PowerShell|NotebookRead|NotebookEdit|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/runtime/python.exe\" \"${CLAUDE_PLUGIN_ROOT}/serveur/garde_lecture.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

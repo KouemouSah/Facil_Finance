@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "role": "Profil de montage DSF PROPRE À L'UTILISATEUR — mémorise ses documents habituels, leur rôle confirmé, et sa méthode de montage, pour que le plugin s'adapte et réutilise.",
+    "AVERTISSEMENT": "EXEMPLE. À construire avec l'utilisateur : les rôles sont proposés par classer_documents.py puis CONFIRMÉS. N'écrase jamais le prédéfini (mapping, référentiels) : le complète."
+  },
+  "entreprise": "ANONYMISER",
+  "modele_dsf": "ma_liasse_DSF.xlsx",
+  "documents": [
+    {"fichier": "balance_apres_inventaire.xlsx", "role": "balance", "confirme": true,
+     "colonnes": {"compte": "N° Compte", "debit": "Débit", "credit": "Crédit"}},
+    {"fichier": "fichier_immobilisations.xlsx", "role": "registre_immobilisations", "confirme": true,
+     "colonnes": {"valeur_origine": "Valeur brute", "date_service": "Date d'entrée", "duree": "Durée"}},
+    {"fichier": "grand_livre_tiers.xlsx", "role": "detail_tiers", "confirme": true}
+  ],
+  "methode_montage": [
+    "1. Je pars de la balance après inventaire N et N-1.",
+    "2. Je remplis d'abord les Notes 21/22 (produits/achats), puis les Notes de bilan.",
+    "3. La Note 3 vient de mon fichier immobilisations (onglet 'Récap').",
+    "4. Je saisis les tiers dans les Notes 7 et 17 depuis le grand livre auxiliaire.",
+    "5. Je complète R1-R3 et les effectifs à la main."
+  ],
+  "cell_map": "ma_liasse_DSF.cell-map.json",
+  "extra_comptable_attendu": ["raison_sociale", "nif", "effectif_total", "engagements", "sûretes"],
+  "retraitements_attendus": ["reclassement_emprunts_court_long", "passage_resultat_fiscal"]
+}

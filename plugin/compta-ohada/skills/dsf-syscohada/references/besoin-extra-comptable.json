@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "role": "LE BESOIN (cible normalisée) : ce que la DSF exige comme données extra-comptables et retraitements, indépendamment du format des documents de l'utilisateur.",
+    "principe": "Ne PAS demander à l'utilisateur de remplir ce schéma à la main. Le REMPLIR en LISANT ses documents (outils d'extraction pour le tabulaire ; lecture par Claude pour le non structuré) puis en FORMALISANT vers ces clés. Toujours CONFIRMER.",
+    "types": {
+      "identite": "clé-valeur, lisible (souvent 'Informations générales') -> extraire_donnees.py",
+      "tabulaire": "tableau (effectifs, échéancier, ventilation) -> extraire_donnees.py / résolveur de colonnes",
+      "document": "non structuré (contrats, engagements) -> lecture par Claude + confirmation, PAS un parseur figé",
+      "jugement": "décision comptable/fiscale -> FOURNI par l'humain, jamais deviné"
+    }
+  },
+  "besoins": [
+    {"cle": "raison_sociale", "section": "PAGE DE GARDE", "type": "identite"},
+    {"cle": "nif", "section": "PAGE DE GARDE / R1", "type": "identite"},
+    {"cle": "forme_juridique", "section": "INFORMATIONS GENERALES", "type": "identite"},
+    {"cle": "regime_fiscal", "section": "INFORMATIONS GENERALES", "type": "identite"},
+    {"cle": "exercice_clos", "section": "PAGE DE GARDE", "type": "identite"},
+    {"cle": "effectif_total", "section": "Fiche R / notes sociales", "type": "tabulaire", "source_probable": "export RH / paie"},
+    {"cle": "effectif_cadres", "section": "notes sociales", "type": "tabulaire", "source_probable": "export RH"},
+    {"cle": "masse_salariale", "section": "notes sociales", "type": "tabulaire", "source_probable": "paie"},
+    {"cle": "ventilation_ca_activite", "section": "notes statistiques commerciales", "type": "tabulaire"},
+    {"cle": "echeancier_creances", "section": "Note (échéances créances/dettes)", "type": "tabulaire", "source_probable": "auxiliaire tiers"},
+    {"cle": "echeancier_dettes", "section": "Note (échéances créances/dettes)", "type": "tabulaire", "source_probable": "auxiliaire tiers"},
+    {"cle": "engagements_donnes", "section": "Note 1 / engagements hors bilan", "type": "document", "source_probable": "contrats, cautions"},
+    {"cle": "engagements_recus", "section": "Note engagements", "type": "document"},
+    {"cle": "suretes_reelles", "section": "Note 1 (dettes garanties)", "type": "document", "source_probable": "actes hypothèque/nantissement"},
+    {"cle": "reclassement_court_long", "section": "Bilan (part < 1 an / > 1 an)", "type": "jugement"},
+    {"cle": "passage_resultat_fiscal", "section": "CF1/CF2 (réintégrations/déductions)", "type": "jugement", "source_probable": "détermination du résultat fiscal"}
+  ]
+}
