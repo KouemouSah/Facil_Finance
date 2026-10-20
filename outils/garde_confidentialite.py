@@ -45,7 +45,7 @@ TEXTE = {".py", ".md", ".json", ".yaml", ".yml", ".txt", ".csv", ".html", ".css"
          ".ini", ".cmd", ".sh", ".ps1", ".mmd", ".svg", ".xml", ".jsonl"}
 BUREAUTIQUE = {".xlsx", ".docx", ".pptx"}
 # Bibliothèques tierces minifiées : leurs exemples (courriels, numéros) ne sont pas des données.
-IGNORES = re.compile(r"(^|/)(mermaid\.min\.js|.*\.min\.js|search_index\.json)$")
+IGNORES = re.compile(r"(^|/)(mermaid\.min\.js|.*\.min\.js|search_index\.json)$|(^|/)assets/javascripts/")
 
 
 def normaliser(t: str) -> list[str]:

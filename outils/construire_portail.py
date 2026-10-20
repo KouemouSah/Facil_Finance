@@ -193,7 +193,7 @@ footer .cadre {{ display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
 <body>
 <header class="bandeau">
   <div class="cadre">
-    <img src="documentation/assets/logo.png" alt="Facil">
+    <img src="documentation/assets/logo-blanc.png" alt="Facil">
     <h1>Facil Finance</h1>
     <p>{e(cfg.get('resume', ''))} De la balance à la liasse fiscale validée, calculée sur le poste ou le serveur du client, avec une trace de chaque chiffre.</p>
     <span class="etiquette">SYSCOHADA révisé · 17 États de l'OHADA · V1 le 30/11/2026</span>
