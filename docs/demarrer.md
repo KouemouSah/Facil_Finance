@@ -47,11 +47,11 @@ Dépendances supplémentaires du plugin et de la documentation :
 
 ```bash
 pip install -r plugin/compta-ohada/serveur/requirements.txt
-pip install --no-deps rapidocr_onnxruntime==1.4.4      # OCR : version figée, installée sans dépendances
+pip install --no-deps --ignore-requires-python rapidocr_onnxruntime==1.4.4      # OCR : version figée, installée sans dépendances
 pip install -r docs/requirements.txt
 ```
 
-!!! warning "Pourquoi `--no-deps` pour l'OCR"
+!!! warning "Pourquoi `--no-deps --ignore-requires-python` pour l'OCR"
     `rapidocr_onnxruntime` 1.4.4 déclare « Python < 3.13 » alors qu'il est en Python pur et que ses dépendances ont des roues pour 3.13. La version est figée : c'est celle avec laquelle la lecture des DSF scannées a été mise au point et prouvée.
 
 ### La clé de la garde de confidentialité

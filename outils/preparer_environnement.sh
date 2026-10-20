@@ -11,7 +11,7 @@ PY=.venv/bin/python
 $PY -m pip install --quiet --upgrade pip
 $PY -m pip install --quiet -r requirements-dev.txt
 $PY -m pip install --quiet -r plugin/compta-ohada/serveur/requirements.txt
-$PY -m pip install --quiet --no-deps rapidocr_onnxruntime==1.4.4
+$PY -m pip install --quiet --no-deps --ignore-requires-python rapidocr_onnxruntime==1.4.4
 $PY -m pip install --quiet -r docs/requirements.txt
 
 # L'environnement virtuel devient le Python des commandes suivantes de la session.

@@ -5,6 +5,10 @@
 *.ps1 text eol=crlf
 *.sh  text eol=lf
 
+# Packs pays SIGNÉS : leur signature porte sur les octets exacts (sha256 de chaque fichier). Aucune conversion de
+# fin de ligne, sur aucune plateforme, sinon la vérification échoue en CI.
+packs/** -text
+
 # Binaires : jamais de conversion, jamais de diff texte.
 *.xlsx binary
 *.xls  binary
@@ -19,4 +23,3 @@
 
 # Bibliothèques tierces et sorties générées : hors statistiques de langage.
 docs/assets/mermaid.min.js linguist-vendored
-packs/**/*.json linguist-generated=false

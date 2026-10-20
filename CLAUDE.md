@@ -30,7 +30,7 @@ Vocabulaire : en français on écrit **DSF** (Déclaration statistique et fiscal
 python -m venv .venv && . .venv/bin/activate        # Windows : .venv\Scripts\activate
 pip install -r requirements-dev.txt
 pip install -r plugin/compta-ohada/serveur/requirements.txt          # gardes du plugin
-pip install --no-deps rapidocr_onnxruntime==1.4.4                    # OCR (version figée)
+pip install --no-deps --ignore-requires-python rapidocr_onnxruntime==1.4.4                    # OCR (version figée)
 pip install -r docs/requirements.txt                                  # documentation
 
 python outils/verifier_tout.py                     # packs + tests + parité noyau ↔ plugin

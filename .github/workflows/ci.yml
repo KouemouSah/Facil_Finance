@@ -93,7 +93,7 @@ jobs:
       - name: Dépendances (OCR à version figée, installé sans dépendances comme le runtime embarqué)
         run: |
           pip install -r plugin/compta-ohada/serveur/requirements.txt
-          pip install --no-deps rapidocr_onnxruntime==1.4.4
+          pip install --no-deps --ignore-requires-python rapidocr_onnxruntime==1.4.4
       - name: Bibliothèques système d'OpenCV
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libgl1 libglib2.0-0

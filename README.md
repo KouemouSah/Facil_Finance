@@ -331,7 +331,7 @@ python outils/facil_pack.py resoudre CM 2025-12-31 --atelier
 
 # Facil DEF (plugin)
 pip install -r plugin/compta-ohada/serveur/requirements.txt
-pip install --no-deps rapidocr_onnxruntime==1.4.4     # OCR, version figée
+pip install --no-deps --ignore-requires-python rapidocr_onnxruntime==1.4.4     # OCR, version figée
 python plugin/compta-ohada/tools/gardes_ci.py
 
 # Documentation
