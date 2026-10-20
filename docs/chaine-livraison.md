@@ -31,7 +31,7 @@ flowchart LR
 | `ci.yml` · Confidentialité | `garde_confidentialite.py --exiger-cle`, `purger_classeur.py --verifier`, gitleaks | un nom confidentiel, un courriel, un IBAN, un téléphone hors liste blanche ; un classeur non purgé ; un secret ; **la clé absente** sur une branche du dépôt |
 | `ci.yml` · Lint | `ruff check` (syntaxe, noms indéfinis), `maj_readme.py --check` | une erreur de syntaxe ; un README divergent du calendrier |
 | `ci.yml` · Moteur | `verifier_tout.py` sur Ubuntu et Windows | un pack invalide ou mal signé ; un test rouge ; le noyau du plugin différent de la source |
-| `ci.yml` · Facil DEF | `tools/gardes_ci.py` sur Windows et Ubuntu | une garde rouge ; une garde qui dépasse son délai (gel) |
+| `ci.yml` · Facil DEF | `tools/gardes_ci.py` sur Windows (22 gardes) et Ubuntu (19 : trois éprouvent un comportement propre à Windows et y sont **déclarées**, motif imprimé, ticket #39) | une garde rouge ; une garde qui dépasse son délai (gel) |
 | `documentation.yml` | `construire_site.py`, `construire_portail.py`, garde sur le site construit, publication | lien cassé (mode strict) ; page hors menu ; ressource chargée depuis Internet ; donnée confidentielle |
 | `securite.yml` | CodeQL Python et JavaScript, chaque lundi | alerte de sécurité nouvelle (onglet *Security*) |
 | Dependabot | Actions et dépendances Python, chaque semaine | — (propose des demandes de fusion) |

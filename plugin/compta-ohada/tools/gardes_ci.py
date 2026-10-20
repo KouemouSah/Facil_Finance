@@ -16,6 +16,14 @@ sys.stdout.reconfigure(encoding="utf-8")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DELAI = int(os.environ.get("FACIL_DELAI_GARDE", "2700"))
 
+# Gardes qui éprouvent un comportement PROPRE À WINDOWS (plateforme de l'extension). Hors Windows, elles sont
+# déclarées, motif imprimé, et non comptées en échec. Ticket : KouemouSah/Facil_Finance#39.
+SEULEMENT_WINDOWS = {
+    "test_racine.py": "dossier par défaut et variables %VAR% de Windows ; sous Linux, serveur et garde de lecture divergent (#39)",
+    "test_confidentialite.py": "chemin détourné par la casse : Windows ignore la casse des chemins, Linux non (#39)",
+    "test_formulaire_parcours.py": "simulation d'un fichier tenu par un autre programme, propre à Windows (#39)",
+}
+
 
 def main():
     motif = sys.argv[1] if len(sys.argv) > 1 else ""
@@ -25,7 +33,12 @@ def main():
     echecs, debut_total = [], time.time()
     tests = sorted(t for t in os.listdir(os.path.join(ROOT, "tests"))
                    if t.startswith("test_") and t.endswith(".py") and motif in t)
+    declarees = []
     for t in tests:
+        if os.name != "nt" and t in SEULEMENT_WINDOWS:
+            declarees.append(t)
+            print(f"  {t:32s} WINDOWS SEULEMENT : {SEULEMENT_WINDOWS[t]}", flush=True)
+            continue
         debut = time.time()
         try:
             cp = subprocess.run([sys.executable, os.path.join(ROOT, "tests", t)], capture_output=True, text=True,
@@ -39,7 +52,9 @@ def main():
         if code:
             echecs.append(t)
             print("\n".join("      | " + l for l in (sortie + "\n" + erreur).strip().splitlines()[-25:]), flush=True)
-    print(f"\n{len(tests) - len(echecs)}/{len(tests)} gardes conformes en {time.time() - debut_total:.0f} s"
+    jouees = len(tests) - len(declarees)
+    print(f"\n{jouees - len(echecs)}/{jouees} gardes conformes en {time.time() - debut_total:.0f} s"
+          + (f" ; {len(declarees)} déclarée(s) Windows seulement" if declarees else "")
           + (f" ; en échec : {', '.join(echecs)}" if echecs else ""))
     return 1 if echecs else 0
 
