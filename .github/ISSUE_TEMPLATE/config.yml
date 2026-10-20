@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Signaler une vulnérabilité (en privé)
+    url: https://github.com/KouemouSah/Facil_Finance/security/advisories/new
+    about: Une faille ne se signale jamais dans un ticket public.
+  - name: Documentation du projet
+    url: https://kouemousah.github.io/Facil_Finance/documentation/
+    about: Architecture, décisions (ADR), plans de sprint, format des packs pays.

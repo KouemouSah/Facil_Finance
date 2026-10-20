@@ -1,0 +1,49 @@
+name: Anomalie
+description: Un comportement faux, un calcul inexact, un plantage
+title: "[Anomalie] "
+labels: ["type:anomalie"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠ **Aucune donnée réelle de client** : ni balance, ni liasse, ni nom, ni identifiant fiscal, ni capture non masquée. Reproduisez sur un exemple fabriqué. Une faille de sécurité se signale en privé (voir SECURITY.md).
+  - type: dropdown
+    id: gravite
+    attributes:
+      label: Gravité
+      options: ["Critique (montant faux dans une liasse, donnée exposée)", "Élevée (blocage sans contournement)", "Moyenne (contournement possible)", "Faible (gêne)"]
+    validations: {required: true}
+  - type: dropdown
+    id: composant
+    attributes:
+      label: Composant
+      options: [Moteur, Pack pays, "Facil DEF (extension Claude Desktop)", "Lecture OCR des DSF scannées", Analyse financière, Formulaire local, Documentation, CI]
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "0.13.0, ou le commit"
+    validations: {required: true}
+  - type: textarea
+    id: etapes
+    attributes:
+      label: Étapes pour reproduire
+      value: |
+        1.
+    validations: {required: true}
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Résultat attendu (avec la règle ou l'article qui le fonde)
+    validations: {required: true}
+  - type: textarea
+    id: obtenu
+    attributes:
+      label: Résultat obtenu
+    validations: {required: true}
+  - type: textarea
+    id: journal
+    attributes:
+      label: Journal (expurgé)
+      render: text

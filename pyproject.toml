@@ -1,0 +1,20 @@
+# Configuration des outils du dépôt (le code n'est pas un paquet installable : il se lance depuis le dépôt).
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+extend-exclude = [
+  "plugin/compta-ohada/runtime",
+  "plugin/compta-ohada/dist",
+  "docs/.outils",
+  "docs/site",
+  "_site",
+]
+
+[tool.ruff.lint]
+# Plancher bloquant : erreurs de syntaxe, noms indéfinis, comparaisons fautives. Le style se resserre par étapes
+# (chaque règle ajoutée doit être verte sur tout le dépôt le jour où elle entre).
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

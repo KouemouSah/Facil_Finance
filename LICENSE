@@ -1,0 +1,34 @@
+Facil Finance — Licence propriétaire / Proprietary License
+
+Copyright (c) 2026 Emac SAH (Facil - AI Solutions Architect), SIRET 108 750 407 00018, Paris, France.
+Tous droits réservés. All rights reserved.
+
+FRANÇAIS
+
+1. Ce dépôt est rendu PUBLIC pour la transparence et l'évaluation. Sa visibilité ne vaut pas licence libre.
+2. Il est permis de consulter le code source, la documentation et les packs pays, et d'en faire des copies
+   techniques nécessaires à cette consultation.
+3. Toute autre utilisation est interdite sans contrat de licence écrit d'Emac SAH : exécution en production,
+   reproduction, modification, distribution, sous-licence, vente, intégration dans un autre produit, et
+   constitution d'un produit concurrent, y compris à partir des packs pays (gabarits, correspondances,
+   paramètres fiscaux), qui sont des bases de données protégées.
+4. Les composants tiers restent régis par leur propre licence ; leur inventaire est tenu dans la documentation
+   (registre des licences). Aucun composant sous AGPL, SSPL ou RSAL n'est accepté.
+5. Le logiciel est fourni « en l'état », sans garantie. Une liasse fiscale produite par le logiciel engage la
+   personne qui la valide et la dépose, jamais l'éditeur.
+6. Pour une licence d'utilisation, un partenariat ou un entiercement : sah@emacsah.com.
+
+ENGLISH
+
+1. This repository is PUBLIC for transparency and evaluation. Public visibility does not grant an open-source license.
+2. You may read the source code, documentation and country packs, and make the technical copies this requires.
+3. Any other use requires a written license agreement from Emac SAH: running in production, reproduction,
+   modification, distribution, sublicensing, sale, integration into another product, or building a competing
+   product, including from the country packs (templates, mappings, tax parameters), which are protected databases.
+4. Third-party components remain under their own licenses (license register in the documentation).
+   No AGPL, SSPL or RSAL component is accepted.
+5. The software is provided "as is", without warranty. A tax return produced with the software is the
+   responsibility of the person who validates and files it, never of the publisher.
+6. Licensing, partnership or escrow: sah@emacsah.com.
+
+Décision : docs/adr/0011-licence-proprietaire.md

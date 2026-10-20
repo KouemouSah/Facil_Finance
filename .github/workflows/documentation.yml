@@ -1,0 +1,76 @@
+name: Documentation (GitHub Pages)
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop, main]
+    paths: ["docs/**", "manuel/**", "outils/construire_portail.py", ".github/workflows/documentation.yml"]
+  schedule:
+    - cron: "0 5 * * 1"   # lundi : rafraîchit le tableau de bord (jalons, tickets)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  issues: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  PYTHONUTF8: "1"
+
+jobs:
+  construire:
+    name: Construire le site (gardes strictes)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: docs/requirements.txt
+      - run: pip install -r docs/requirements.txt pymupdf
+
+      - name: Documentation projet (MkDocs strict, parité du menu, hors ligne)
+        env:
+          # La liste des noms confidentiels n'existe pas en CI : la garde nominative est déléguée à
+          # outils/garde_confidentialite.py (empreintes HMAC), exigée juste après sur le site construit.
+          DOC_CONFIDENTIALITE_DELEGUEE: outils/garde_confidentialite.py
+        run: python docs/outils/construire_site.py
+
+      - name: Portail (tableau de bord, manuels) et assemblage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python outils/construire_portail.py --sortie _site
+
+      - name: Garde de confidentialité sur le site construit
+        env:
+          FACIL_CLE_CONFIDENTIALITE: ${{ secrets.FACIL_CLE_CONFIDENTIALITE }}
+        run: |
+          if [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; then
+            python outils/garde_confidentialite.py --dossier _site
+          else
+            python outils/garde_confidentialite.py --dossier _site --exiger-cle
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with: {path: _site}
+
+  publier:
+    name: Publier sur GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/develop'
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4

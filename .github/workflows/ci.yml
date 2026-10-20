@@ -1,0 +1,103 @@
+name: CI
+
+on:
+  push:
+    branches: [develop, main, "feat/**", "fix/**", "claude/**"]
+  pull_request:
+    branches: [develop, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: utf-8
+
+jobs:
+  confidentialite:
+    name: Confidentialité (données de clients, secrets, classeurs)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: pip install pymupdf
+      - name: Garde nominative (empreintes HMAC) et motifs génériques
+        env:
+          FACIL_CLE_CONFIDENTIALITE: ${{ secrets.FACIL_CLE_CONFIDENTIALITE }}
+        # La clé est exigée sur les branches du dépôt ; une demande venue d'un fork n'a pas accès aux secrets :
+        # le contrôle générique s'applique seul, et le journal le dit.
+        run: |
+          if [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; then
+            python outils/garde_confidentialite.py
+          else
+            python outils/garde_confidentialite.py --exiger-cle
+          fi
+      - name: Classeurs purgés (liaisons externes, noms cachés, auteurs)
+        run: git ls-files -z '*.xlsx' | xargs -0 -r python outils/purger_classeur.py --verifier
+      - name: Analyse de secrets (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lint:
+    name: Lint (erreurs de syntaxe et noms indéfinis)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: pip install ruff pyyaml
+      - run: ruff check .
+      - name: README conforme à ses sources (feuille de route ← calendrier.yml)
+        run: python outils/maj_readme.py --check
+
+  moteur:
+    name: Moteur et packs (verifier_tout)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - run: pip install -r requirements-dev.txt
+      - name: Packs + tests + parité noyau ↔ plugin
+        run: python outils/verifier_tout.py
+
+  plugin:
+    name: Facil DEF — gardes du plugin
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: plugin/compta-ohada/serveur/requirements*.txt
+      - name: Dépendances (OCR à version figée, installé sans dépendances comme le runtime embarqué)
+        run: |
+          pip install -r plugin/compta-ohada/serveur/requirements.txt
+          pip install --no-deps rapidocr_onnxruntime==1.4.4
+      - name: Bibliothèques système d'OpenCV
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libgl1 libglib2.0-0
+      - name: Toutes les gardes (tests/test_*.py)
+        env:
+          FACIL_PDF: natif
+        run: python plugin/compta-ohada/tools/gardes_ci.py

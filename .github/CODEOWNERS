@@ -1,0 +1,9 @@
+# Relecteur obligatoire par zone. Le moteur fiscal et les packs engagent des montants déclarés : relecture humaine.
+*                         @KouemouSah
+/facil_moteur/            @KouemouSah
+/packs/                   @KouemouSah
+/plugin/compta-ohada/     @KouemouSah
+/outils/garde_confidentialite.py  @KouemouSah
+/outils/confidentialite.empreintes @KouemouSah
+/.github/                 @KouemouSah
+/docs/adr/                @KouemouSah

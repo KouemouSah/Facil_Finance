@@ -1,0 +1,39 @@
+name: Fonctionnalité
+description: Un besoin nouveau, à instruire avant d'être planifié
+title: "[Fonctionnalité] "
+labels: ["type:fonctionnalite"]
+body:
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Le besoin, du point de vue de l'utilisateur
+      description: Qui, dans quelle situation, pour obtenir quoi.
+    validations: {required: true}
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+  - type: dropdown
+    id: priorite
+    attributes:
+      label: Priorité
+      options: ["Haute (bloque une vente ou un dépôt)", "Moyenne", "Basse"]
+    validations: {required: true}
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version visée
+      options: ["V1.0 Socle", "V1.1 Kaem texte", "V1.2 Production", "V2.0 SaaS", "V2.1 Voix", "Facil DEF (extension)", "À décider"]
+    validations: {required: true}
+  - type: textarea
+    id: criteres
+    attributes:
+      label: Critères d'acceptation
+      value: |
+        - [ ]
+    validations: {required: true}
+  - type: textarea
+    id: cycle
+    attributes:
+      label: Cycle de vie
+      description: Qui la crée ? se corrige-t-elle ? se suspend-elle ? où lit-on son état et son historique ? qui est prévenu ? que se passe-t-il si on la rejoue ? que devient la donnée à la fin ? quels droits ?

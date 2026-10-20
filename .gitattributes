@@ -1,0 +1,22 @@
+# Fins de ligne normalisées dans le dépôt ; les scripts Windows gardent CRLF, les scripts shell LF.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.sh  text eol=lf
+
+# Binaires : jamais de conversion, jamais de diff texte.
+*.xlsx binary
+*.xls  binary
+*.docx binary
+*.pptx binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.ico  binary
+*.woff2 binary
+*.ttf  binary
+
+# Bibliothèques tierces et sorties générées : hors statistiques de langage.
+docs/assets/mermaid.min.js linguist-vendored
+packs/**/*.json linguist-generated=false

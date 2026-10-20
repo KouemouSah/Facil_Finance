@@ -1,0 +1,53 @@
+name: Tâche
+description: Un travail planifié d'un sprint (ce que Claude Code ou un développeur doit livrer)
+title: "[Tâche] "
+labels: ["type:tache"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Une tâche se termine par une **preuve en exécution**, pas par « le code est écrit ». N'y mettez **aucune donnée de client**.
+  - type: dropdown
+    id: zone
+    attributes:
+      label: Zone
+      options: [moteur, packs, plugin (Facil DEF), base, api, interface, installeurs, kaem, saas, docs, ci]
+    validations: {required: true}
+  - type: input
+    id: exigence
+    attributes:
+      label: Exigence(s)
+      description: Identifiants du PRD (docs/prd.md), par exemple EX-IMP-4, EX-PLAT-2
+      placeholder: EX-…
+  - type: dropdown
+    id: taille
+    attributes:
+      label: Taille
+      options: ["XS (< 2 h)", "S (une demi-journée)", "M (une journée)", "L (2 à 3 jours)", "XL (plus de 3 jours : à découper)"]
+    validations: {required: true}
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte et décision
+      description: Pourquoi cette tâche ; ADR et pages de documentation concernées.
+    validations: {required: true}
+  - type: textarea
+    id: perimetre
+    attributes:
+      label: Périmètre
+      description: Cases à cocher ; ce qui n'est pas fait devient une autre tâche datée.
+      value: |
+        - [ ]
+    validations: {required: true}
+  - type: textarea
+    id: fait
+    attributes:
+      label: Définition de « fait »
+      value: |
+        - [ ] Preuve en exécution (sortie de commande) dans la demande de fusion
+        - [ ] Gardes ajoutées falsifiées (une mutation par garde)
+        - [ ] SQL relu : filtre indexé, pas de N+1, lecture bornée, verrou
+        - [ ] Portée mesurée (qui d'autre lit, appelle, dépend)
+        - [ ] Documentation rendue fausse corrigée
+        - [ ] Cycle de vie complet (créer, corriger, suspendre, reprendre, tracer, purger, droits)
+    validations: {required: true}
