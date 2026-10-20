@@ -119,16 +119,12 @@ Recette métier avec l'expert-comptable et 2 ou 3 pilotes ; banc de Kaem sur les
 
 ## 4. Reprise
 
-- **Dépôt du code** : `C:\DSF\facil-finance` (git local, branche `master`). Dernier commit : `git -C C:\DSF\facil-finance log --oneline -1` (fin du sprint 1, rien depuis).
-- **Vérifier l'état** : `.venv\Scripts\python.exe outils\verifier_tout.py` (packs, tests, parité avec le plugin). À rejouer AVANT le premier changement du sprint 2 : le noyau publié vers le plugin n'a pas bougé, mais le plugin, lui, a évolué (voir ci-dessous).
-- **Dernière tâche close** : sprint 1 (format du pack, packs OHADA, CEMAC, CM et GQ, noyau extrait).
-- **Entre le sprint 1 et le sprint 2** (travail hors `facil-finance`) :
-    - le plugin `compta-ohada` est passé en 0.13.0 : DSF précédente scannée lue par OCR et prouvée par les formules, analyse financière pluriannuelle (reprise : `C:\DSF\documentation\analyse\plan-plugin-autonome.md`, section Reprise) ;
-    - manuel d'utilisation, présentation commerciale et flyer, en français (DSF) et en espagnol (DEF), dans `C:\DSF\manuel\livrable` ;
-    - plugin `documents-pro` en 1.1.4 (libellés de mise en page configurables, pour les documents en espagnol).
-- **Prochain geste exact** : sprint 2, lundi ({{cal:periode:s2}}). Schéma de la base (écritures immuables, versions, droits, audit) et migrations, dans `facil-finance/`. Les calculs ne se réécrivent pas : le noyau (source unique dans `facil-finance`) et `analyse_financiere.py` (encore dans le plugin seulement, à extraire dans le noyau quand le socle en aura besoin) s'appellent.
-- **Question ouverte au porteur** : passer l'interface du plugin en « DSF » en français (boutons « Régénérer la DEF… », options « DEF précédente… ») dans une 0.13.1, avec de nouvelles captures pour le manuel. Tant qu'elle n'est pas tranchée, le manuel français cite ces libellés tels quels.
-- **Non commité** : rien dans `facil-finance` (le crochet refuse un commit rouge). `projet_doc`, `compta-ohada` et `manuel` ne sont pas des dépôts git.
+- **Dépôt** : [KouemouSah/Facil_Finance](https://github.com/KouemouSah/Facil_Finance), public, branche par défaut `develop` (`main` = versions). Sur le poste : `C:\DSF\facil-finance` ; `C:\DSF\compta-ohada`, `C:\DSF\projet_doc` et `C:\DSF\manuel` sont des jonctions vers `plugin/compta-ohada`, `docs/` et `manuel/`. Dernier commit : `git -C C:\DSF\facil-finance log --oneline -1`.
+- **Vérifier l'état** : `python outils/verifier_tout.py` (packs, tests, parité), `python outils/garde_confidentialite.py`, et l'état de la CI : `gh run list -R KouemouSah/Facil_Finance --limit 5`.
+- **Dernière tâche close** : dépôt public normalisé, CI/CD et GitHub Pages, tâches créées (jalons par sprint) ; avant cela, sprint 1 et Facil DEF 0.13.0.
+- **Prochain geste exact** : ticket #1 du jalon « Sprint 2 · V1.0 Socle » ({{cal:periode:s2}}) : schéma de la base et migrations. Les calculs ne se réécrivent pas : le noyau (`facil_moteur/noyau`) et `analyse_financiere.py` (encore dans le plugin) s'appellent.
+- **Questions ouvertes au porteur** : ticket #21 (interface de Facil DEF en « DSF » en français, 0.13.1) ; ticket #26 (balances des années passées dans l'analyse).
+- **Non commité** : rien (le crochet refuse un commit rouge ou une donnée de client). La clé de la garde de confidentialité est dans `~/.facil/cle_confidentialite` et dans le secret `FACIL_CLE_CONFIDENTIALITE` ; la liste des noms reste hors dépôt.
 
 ## 5. Capacité — l'hypothèse qu'il faut surveiller
 

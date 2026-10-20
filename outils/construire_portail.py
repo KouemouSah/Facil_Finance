@@ -37,6 +37,10 @@ MANUELS = [  # (langue, titre, chemin relatif à manuel/livrable, icône)
 ]
 
 
+ICONES_REQUISES = ["list-checks", "circle-check", "circle-dot", "gauge", "milestone", "book-open", "network",
+                   "calendar-range", "file-check", "code-xml", "presentation", "file-text"]
+
+
 def icone(nom: str, classe: str = "ic") -> str:
     p = ICONES / f"{nom}.svg"
     if not p.exists():
@@ -228,6 +232,8 @@ def main() -> int:
     p.add_argument("--site-doc", type=Path, default=DEPOT / "docs" / "site")
     a = p.parse_args()
 
+    for nom in ICONES_REQUISES:            # toutes, quelles que soient les données : un chemin non emprunté reste vérifié
+        icone(nom)
     if not (a.site_doc / "index.html").exists():
         print(f"site de documentation absent ({a.site_doc}) : lancer d'abord docs/outils/construire_site.py")
         return 1
