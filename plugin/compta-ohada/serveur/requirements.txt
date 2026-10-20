@@ -1,6 +1,6 @@
 openpyxl>=3.1,<4
 xlrd>=2.0,<3
-pillow>=10
+pillow>=13.0.0
 pymupdf>=1.24
 mcp>=1.10,<2
 # lecture LOCALE des DEF scannées (ocr_def.py) : OCR RapidOCR sur onnxruntime, rien ne quitte le poste. Le paquet
