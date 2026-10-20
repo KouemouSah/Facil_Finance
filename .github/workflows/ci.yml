@@ -23,9 +23,9 @@ jobs:
     name: Confidentialité (données de clients, secrets, classeurs)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {fetch-depth: 0}
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: {python-version: "3.13"}
       - run: pip install pymupdf
       - name: Garde nominative (empreintes HMAC) et motifs génériques
@@ -42,7 +42,7 @@ jobs:
       - name: Classeurs purgés (liaisons externes, noms cachés, auteurs)
         run: git ls-files -z '*.xlsx' | xargs -0 -r python outils/purger_classeur.py --verifier
       - name: Analyse de secrets (gitleaks)
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -50,8 +50,8 @@ jobs:
     name: Lint (erreurs de syntaxe et noms indéfinis)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: {python-version: "3.13"}
       - run: pip install ruff pyyaml
       - run: ruff check .
@@ -66,8 +66,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
           cache: pip
@@ -84,8 +84,8 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
           cache: pip
